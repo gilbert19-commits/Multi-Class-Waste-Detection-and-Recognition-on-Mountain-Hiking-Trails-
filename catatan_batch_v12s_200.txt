@@ -1,0 +1,4 @@
+aug_waste_yolov12s_e200 | awal training (epoch 1) | args.batch=7 | batch dipakai=7
+aug_waste_yolov12s_e200 | akhir training | batch dipakai=7
+waste_yolov12s_e200 | awal training (epoch 1) | args.batch=7 | batch dipakai=7
+waste_yolov12s_e200 | akhir training | batch dipakai=7

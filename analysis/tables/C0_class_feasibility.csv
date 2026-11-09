@@ -1,0 +1,5 @@
+Class ID,Class Name,Full Test Instances,Strict (Only Proven Leak Removed),Strict (All Overlap Stems Removed)
+0,kertas_tisu,233,233,84
+1,logam_kaleng_kaca,129,129,30
+2,plastik,767,767,276
+3,puntung_rokok,2,2,2

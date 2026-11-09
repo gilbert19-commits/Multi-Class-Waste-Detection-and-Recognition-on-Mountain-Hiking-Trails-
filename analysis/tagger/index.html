@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Source Tagger — Tugas Akhir IEEE</title>
+    <style>
+        :root {
+            --bg-color: #121417;
+            --surface-color: #1e2228;
+            --surface-hover: #2a3038;
+            --border-color: #363d47;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-uav: #388bfd;
+            --accent-taco: #f0883e;
+            --accent-burangrang: #3fb950;
+            --accent-ragu: #d29922;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        header {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-title h1 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #58a6ff;
+        }
+        .header-title p {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        button.btn-export {
+            background-color: #238636;
+            color: #fff;
+            border: 1px solid rgba(240, 246, 252, 0.1);
+            padding: 6px 14px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button.btn-export:hover {
+            background-color: #2ea043;
+        }
+        .guide-banner {
+            background: rgba(30, 34, 40, 0.85);
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 24px;
+            display: flex;
+            gap: 20px;
+            font-size: 0.82rem;
+            justify-content: center;
+        }
+        .guide-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+        .badge-uav { background: rgba(56, 139, 253, 0.2); color: var(--accent-uav); border: 1px solid var(--accent-uav); }
+        .badge-taco { background: rgba(240, 136, 62, 0.2); color: var(--accent-taco); border: 1px solid var(--accent-taco); }
+        .badge-burangrang { background: rgba(63, 185, 80, 0.2); color: var(--accent-burangrang); border: 1px solid var(--accent-burangrang); }
+        .badge-ragu { background: rgba(210, 153, 34, 0.2); color: var(--accent-ragu); border: 1px solid var(--accent-ragu); }
+
+        main {
+            flex: 1;
+            display: flex;
+            padding: 12px 24px;
+            gap: 20px;
+            overflow: hidden;
+        }
+        .viewer-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0d1117;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            position: relative;
+        }
+        .image-frame {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .image-frame img {
+            max-height: calc(100vh - 270px);
+            min-height: 520px;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            border: 1px solid var(--border-color);
+        }
+        .image-meta {
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .tag-indicator {
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 12px;
+        }
+
+        .sidebar {
+            width: 290px;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .sidebar h2 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+            background: #161b22;
+            border-radius: 6px;
+            font-size: 0.84rem;
+        }
+        .stat-val {
+            font-weight: 700;
+            font-family: monospace;
+        }
+        .progress-bar-container {
+            background: #21262d;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #58a6ff;
+            width: 0%;
+            transition: width 0.2s ease;
+        }
+
+        footer {
+            background-color: var(--surface-color);
+            border-top: 1px solid var(--border-color);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .btn-tag {
+            flex: 1;
+            max-width: 220px;
+            padding: 10px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.15s ease;
+        }
+        .btn-tag span.kbd {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.8rem;
+        }
+        .btn-uav { background: #1f385c; color: #58a6ff; border-color: #388bfd; }
+        .btn-uav:hover { background: #264a7a; transform: translateY(-1px); }
+        .btn-taco { background: #4a2818; color: #ffab70; border-color: #f0883e; }
+        .btn-taco:hover { background: #61341e; transform: translateY(-1px); }
+        .btn-burangrang { background: #1a3824; color: #7ee787; border-color: #3fb950; }
+        .btn-burangrang:hover { background: #224c30; transform: translateY(-1px); }
+        .btn-ragu { background: #413210; color: #e3b341; border-color: #d29922; }
+        .btn-ragu:hover { background: #564215; transform: translateY(-1px); }
+        .btn-back {
+            background: #21262d;
+            color: #c9d1d9;
+            border-color: #30363d;
+            max-width: 130px;
+        }
+        .btn-back:hover { background: #30363d; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Tool Tagging Sumber Dataset — Tugas Akhir IEEE</h1>
+            <p>Memetakan asal sumber citra Test Set: UAVVaste, TACO, atau Gunung Burangrang</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn-export" onclick="exportCSV()">📥 Export manual_source_tags.csv</button>
+        </div>
+    </header>
+
+    <div class="guide-banner">
+        <div class="guide-item">
+            <span class="badge badge-uav">[1] UAVVaste</span>
+            <span>Foto drone tegak lurus dari atas (bird's-eye view), objek kecil</span>
+        </div>
+        <div class="guide-item">
+            <span class="badge badge-taco">[2] TACO</span>
+            <span>Lingkungan urban / pantai, latar aspal, trotoar, rumput taman, pasir</span>
+        </div>
+        <div class="guide-item">
+            <span class="badge badge-burangrang">[3] Burangrang</span>
+            <span>Jalur hutan tropis alami, tanah gembur/berlumpur, serasah daun rapat</span>
+        </div>
+        <div class="guide-item">
+            <span class="badge badge-ragu">[4 / R] Ragu</span>
+            <span>Jika tidak yakin 100% (akan dieksklusi dari domain split)</span>
+        </div>
+    </div>
+
+    <main>
+        <div class="viewer-container">
+            <div class="image-frame">
+                <img id="main-image" src="" alt="Citra Test Set">
+            </div>
+            <div class="image-meta">
+                <span id="counter-text">Citra 1 / 530</span>
+                <span id="filename-text" style="color: #58a6ff;">-</span>
+                <span id="status-tag" class="tag-indicator badge-ragu" style="display:none;">Belum Ditag</span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h2>Progres Penandaan</h2>
+            <div class="stats-grid">
+                <div class="stat-row">
+                    <span>Total Citra:</span>
+                    <span id="stat-total" class="stat-val">530</span>
+                </div>
+                <div class="stat-row" style="color: #7ee787;">
+                    <span>Sudah Ditag:</span>
+                    <span id="stat-done" class="stat-val">0</span>
+                </div>
+                <div class="stat-row" style="color: #8b949e;">
+                    <span>Sisa:</span>
+                    <span id="stat-remain" class="stat-val">530</span>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <h2 style="margin-top: 10px;">Rincian Kategori</h2>
+            <div class="stats-grid">
+                <div class="stat-row" style="color: var(--accent-uav);">
+                    <span>UAVVaste:</span>
+                    <span id="stat-uav" class="stat-val">0</span>
+                </div>
+                <div class="stat-row" style="color: var(--accent-taco);">
+                    <span>TACO:</span>
+                    <span id="stat-taco" class="stat-val">0</span>
+                </div>
+                <div class="stat-row" style="color: var(--accent-burangrang);">
+                    <span>Burangrang:</span>
+                    <span id="stat-burangrang" class="stat-val">0</span>
+                </div>
+                <div class="stat-row" style="color: var(--accent-ragu);">
+                    <span>Ragu:</span>
+                    <span id="stat-ragu" class="stat-val">0</span>
+                </div>
+            </div>
+
+            <div style="margin-top: auto; font-size: 0.76rem; color: var(--text-secondary); line-height: 1.4;">
+                <p>💡 <b>Tips:</b> Gunakan tombol angka <b>1, 2, 3, 4</b> atau <b>R</b> di keyboard untuk tagging cepat. Tekan <b>Backspace</b> untuk kembali jika salah memilih.</p>
+                <p style="margin-top: 6px;">Progres tersimpan otomatis di localStorage browser.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <button class="btn-tag btn-back" onclick="prevImage()">
+            <span class="kbd">Bksp</span> Kembali
+        </button>
+        <button class="btn-tag btn-uav" onclick="tagImage('UAVVaste')">
+            <span class="kbd">1</span> UAVVaste
+        </button>
+        <button class="btn-tag btn-taco" onclick="tagImage('TACO')">
+            <span class="kbd">2</span> TACO
+        </button>
+        <button class="btn-tag btn-burangrang" onclick="tagImage('Burangrang')">
+            <span class="kbd">3</span> Burangrang
+        </button>
+        <button class="btn-tag btn-ragu" onclick="tagImage('Ragu')">
+            <span class="kbd">4 / R</span> Ragu
+        </button>
+    </footer>
+
+    <script>
+        const images = ["000005_jpg.rf.8202052ff39bd394b28d5122f68a5fab.jpg", "000007_jpg.rf.937b02d351b12e28087c256424ca8d9a.jpg", "000012_jpg.rf.00f8eaa317e2ca5b68046b351dde3531.jpg", "000015_jpg.rf.a6dd372912ce2f5a7950ed34a1a6a2d0.jpg", "000022_jpg.rf.912e2c04da1ded80f6d4ed496ac14c3a.jpg", "000024_jpg.rf.fb23facac8f9cb0ff5895055d729f238.jpg", "000025_jpg.rf.5c9c8a7930b3e0a59945a2275f350fd5.jpg", "000026_jpg.rf.0749b4f179d478a7b90b262463cfd33c.jpg", "000029_jpg.rf.0770c93761e591846cc8a08a83c6805b.jpg", "000030_jpg.rf.92831479d652829d66ff4b51ca6db8f7.jpg", "000031_jpg.rf.263586a01db92c3bc038c6b06ff17bed.jpg", "000035_jpg.rf.8cf987a06c72b4fd68d37f6d2db67f10.jpg", "000044_jpg.rf.8433d5e2e4934b975333a69ae7279e5a.jpg", "000046_jpg.rf.f8ec944cad74a141cabf2260d4d7866c.jpg", "000050_jpg.rf.acb26dc3d1299e4ff0efb177ab46c729.jpg", "000054_jpg.rf.0ac2ac39ac3004515873154ef215aeb9.jpg", "000058_jpg.rf.9cb66b754ad3407530645682603a7805.jpg", "000060_jpg.rf.aca713b77d71c4d1f4767dee6f0728f1.jpg", "000061_jpg.rf.ff23cae268557befc9857782cc7470e9.jpg", "000070_jpg.rf.a2e1c7d32d985f400670cdb1184c29b5.jpg", "000074_JPG.rf.45a51cb0c664488992af77013e687b91.jpg", "000077_jpg.rf.59307395b28a31c9a0bb1fa813c3db1d.jpg", "000093_JPG.rf.209e28811d1882ad46f0bff7f5e9b775.jpg", "000095_jpg.rf.1d1ae2688ffcbba3e566380ad50d3bbc.jpg", "000098_JPG.rf.3d4fad0b43422f58696c1f43accdae16.jpg", "000102_JPG.rf.ddf1a8776d5835416015ca12b2cb5873.jpg", "000105_JPG.rf.bc48a53a8d0895e8b4685df9b64ae499.jpg", "000106_JPG.rf.c1b2177669267f3fd06cfb85ba7d156a.jpg", "000110_JPG.rf.68977901da5039751a498623107bf2e0.jpg", "000111_JPG.rf.9a025ee87593e5e6e28ff871f889efb1.jpg", "000115_JPG.rf.99751ff95dc7a32ba05815c9452a3e13.jpg", "BATCH_d06_img_1640_jpg.rf.6c7fb6200e784e0067bfa1af3f556b46.jpg", "BATCH_d06_img_1750_jpg.rf.6fd68583d1d4396ab2a249f88edd2a70.jpg", "BATCH_d06_img_1790_jpg.rf.60b2d1642874fc94057c8c5879f7935d.jpg", "BATCH_d06_img_200_jpg.rf.ab3ac35c2801c36cdf8373a695bbde3f.jpg", "BATCH_d06_img_2360_jpg.rf.f5595dcfc3bcc73af985fe318f8770cc.jpg", "BATCH_d06_img_2400_jpg.rf.e77ed964b327b0886a840df8f2e67343.jpg", "BATCH_d06_img_270_jpg.rf.5a957cdfd9cc1a5cf7d33fcf48a2e8b8.jpg", "BATCH_d06_img_3120_jpg.rf.77a456b4e93c75165b7af9298ae5fbde.jpg", "BATCH_d06_img_710_jpg.rf.692d311cfffcb99d387b454980b6bab7.jpg", "BATCH_d06_img_920_jpg.rf.13c444ed69d23ce17d91f79a6bd31119.jpg", "BATCH_d07_img_1450_jpg.rf.a5474d5abdedd3acb3255942d3b431d6.jpg", "BATCH_d07_img_1830_jpg.rf.7415f812281bea1399a3e43d4721f70d.jpg", "BATCH_d07_img_2270_jpg.rf.b5b295f82dd71f8d1defeedc300a5c26.jpg", "BATCH_d07_img_2760_jpg.rf.d1fe80aa61d36da9616abc8dd3642352.jpg", "BATCH_d07_img_3270_jpg.rf.c43974a08c9079bf5259ae264e8d9a64.jpg", "BATCH_d07_img_3380_jpg.rf.32cf95972cbe10dd7658e687ca3ca7e7.jpg", "BATCH_d07_img_3860_jpg.rf.c4e03402066a12ef52da1ba071d97fd7.jpg", "BATCH_d07_img_4310_jpg.rf.6fc66cb553d81ec24853e9b830a0102b.jpg", "BATCH_d07_img_5900_jpg.rf.76f7c8119c220131db446716b2f57111.jpg", "BATCH_d07_img_5960_jpg.rf.bf5d728fc9c9f9e65468bd6145163060.jpg", "BATCH_d07_img_6020_jpg.rf.b219283c2e44f97e0e7d7b6d5e54de92.jpg", "BATCH_d07_img_610_jpg.rf.f2892cd64c01745d071ceda2ab918d1c.jpg", "BATCH_d07_img_6110_jpg.rf.e75ea79f5a0900bb7dcff676c2774578.jpg", "BATCH_d07_img_6160_jpg.rf.017d833c7955e1a9b45ec753d68e0c8f.jpg", "BATCH_d07_img_6200_jpg.rf.204c77dc60be4093c7175ee0af2e0025.jpg", "BATCH_d07_img_6360_jpg.rf.2123755b3cba2048c2bcc2517bb4beff.jpg", "BATCH_d07_img_650_jpg.rf.b1001ec915404a90ccb0d805f24647a9.jpg", "BATCH_d07_img_6740_jpg.rf.88ff502637ce4bf75b0ea7b2102a5145.jpg", "BATCH_d07_img_6940_jpg.rf.847cd03fcce6127ef9c8ec452183d729.jpg", "BATCH_d07_img_810_jpg.rf.81081aebdd4ccb6560155f1765f9963a.jpg", "BATCH_d07_img_880_jpg.rf.7938a8c662d09aabdaf0ab63f84af29a.jpg", "BATCH_d08_img_1030_jpg.rf.be7c93a2af9e2457e4e42cd680c8c139.jpg", "BATCH_d08_img_1510_jpg.rf.68d857ff411733a0962c2a544e9b8469.jpg", "BATCH_d08_img_1630_jpg.rf.b400fbe194fd5ccba21555b8ea940724.jpg", "BATCH_d08_img_1760_jpg.rf.e2be04f0ab439dacf2dbeabb27c7679e.jpg", "BATCH_d08_img_2210_jpg.rf.ea11d8a45369ce3dabc52b10ee37463d.jpg", "BATCH_d08_img_2500_jpg.rf.2ba34b848900279acdf1d37439fbdaf8.jpg", "BATCH_d08_img_2640_jpg.rf.5af3fdaf342202af84e4f2ad611b7a4f.jpg", "BATCH_d08_img_350_jpg.rf.a6e369f3ac2486a8a4dc336bda25b3dd.jpg", "BATCH_d08_img_4150_jpg.rf.1804bb82a7052750d324cd7dc1e40406.jpg", "BATCH_d08_img_4290_jpg.rf.39c6f04eb4621fb274dbf81303905d1d.jpg", "BATCH_d08_img_440_jpg.rf.39a884f4a5f7c3cac84ac6d65c0f1a0a.jpg", "BATCH_d08_img_4460_jpg.rf.63a9d0c6c0ab5bacf0644ebf83d8ffdd.jpg", "BATCH_d08_img_4700_jpg.rf.f0815e09313b8ff162b40b0813337ba5.jpg", "BATCH_d08_img_490_jpg.rf.61ccff75dad199baea1c535fc0328216.jpg", "BATCH_d08_img_5050_jpg.rf.1ffd981ba6d64c0e46610a4e8c037e7b.jpg", "BATCH_d08_img_5470_jpg.rf.9addc160f171dbdb276adc7ea0f89f48.jpg", "BATCH_d08_img_590_jpg.rf.12df3c2c2982bbfdb02af83228f552d2.jpg", "BATCH_d08_img_660_jpg.rf.f1d831a7da382f4b1701285d5cbf31ec.jpg", "BATCH_d08_img_820_jpg.rf.2b32998b1b8b3c3d7cae994ad0273a1f.jpg", "BATCH_s03_img_1160_jpg.rf.dfdcd83f04654df53fb218a787ee6018.jpg", "BATCH_s03_img_1640_jpg.rf.3304557d60bbca555a4c6ebb67e43ce6.jpg", "BATCH_s03_img_2080_jpg.rf.393db394b884da19548de6ce28f59adb.jpg", "BATCH_s03_img_2200_jpg.rf.c18e825cdd6e3363187694c4cb0f7331.jpg", "BATCH_s03_img_3460_jpg.rf.7645d8ec2dfb1d445e403e4f3bebb0e0.jpg", "BATCH_s03_img_3920_jpg.rf.dcd0c4b6041a1e5575b3ed9f7465c61f.jpg", "BATCH_s03_img_4300_jpg.rf.58131683813970fb36684d276e5ec946.jpg", "BATCH_s03_img_440_jpg.rf.c7073608f6cfb67c3674556aef4a3853.jpg", "BATCH_s03_img_660_jpg.rf.7adb70cfe0759d6b0e1b00d5a0ba16e7.jpg", "BATCH_s04_img_2640_jpg.rf.d7d2f487bbfae64bc2f0916722fc9ae8.jpg", "BATCH_s04_img_3400_jpg.rf.27006ce741de34735e95299557de399b.jpg", "BATCH_s04_img_4640_jpg.rf.d303d2f3e0de14eca58d689f4db2d213.jpg", "BATCH_s04_img_5600_jpg.rf.d1cd81f783df31e137dde78f5e16cb4d.jpg", "BATCH_s04_img_5800_jpg.rf.95f8ab64a22ef2f0625718e01d39b828.jpg", "BATCH_s04_img_6920_jpg.rf.b0c6526c0f804a7f94da2528877010d0.jpg", "BATCH_s04_img_7240_jpg.rf.12be74b66a537a508b977e5ad72fcf03.jpg", "BATCH_s04_img_7380_jpg.rf.7e8ce5fa204eed76dec2e33323b0cb25.jpg", "BATCH_s04_img_8280_jpg.rf.470b4b74cb1fa38094a3ae9d9e0bcec5.jpg", "BATCH_s04_img_8360_jpg.rf.b51855c56b6977a5f908ba74c03b1c50.jpg", "BATCH_s04_img_8600_jpg.rf.dd9ed9be366d5f87ee914170d745a686.jpg", "BATCH_s04_img_9300_jpg.rf.3d5bb59ee98dd36116151a3924ff0fcf.jpg", "BATCH_s04_img_9840_jpg.rf.c4d679e96be5859fc37726b335a2a93c.jpg", "BATCH_s05_img_1960_jpg.rf.584e595d8eb61018cde2d0a6e339b5a3.jpg", "BATCH_s05_img_3520_jpg.rf.62a03f3ab22e4a2e4407ca0487427a81.jpg", "BATCH_s05_img_3940_jpg.rf.0724a4f9cefdbaf7e1eec7889137ab73.jpg", "BATCH_s05_img_4250_jpg.rf.f18b6032f7385e62f8190389c02fc295.jpg", "BATCH_s05_img_5740_jpg.rf.30759eac56ed6d2149621ad2e6217c9e.jpg", "BATCH_s05_img_6490_jpg.rf.261ea87b048dbe233ff4ef213cbd568f.jpg", "BATCH_s05_img_7260_jpg.rf.d5deb685b88e863159734fd9406bb83d.jpg", "BATCH_s05_img_7690_jpg.rf.40aa429fccaee3542a43a23581d54d95.jpg", "BATCH_s05_img_8100_jpg.rf.045fc7d1fd7b1332b2f039f6ea6c5f60.jpg", "BATCH_s05_img_8470_jpg.rf.f34767e3c78d72f6588e9e5a05dd4891.jpg", "BATCH_s05_img_9220_jpg.rf.51949e5fc33d53115fefa3ed77997029.jpg", "BATCH_s05_img_9400_jpg.rf.85fdf57d21d16e1c8f6473643a793e53.jpg", "GOPR0020_JPG.rf.0b37416a324e0ad1270aae7835f01fdd.jpg", "GOPR0024_JPG.rf.642c36d8c79ee4eb61416ac1a419641e.jpg", "GOPR0029_JPG.rf.cb05b12249c4b8a536af8377f15272f6.jpg", "GOPR0037_JPG.rf.41efb0a24984c6fa01f8939075cc83ac.jpg", "GOPR0046_JPG.rf.b7f38f38e9608803bf437b3496f16a85.jpg", "IMG_4856_JPG.rf.1152374833523907da046c33418e0988.jpg", "IMG_4879_JPG.rf.4d9b2bf52459d0c8f3fda8f36ca21d8d.jpg", "IMG_4898_JPG.rf.e256576ef6bdf607c7ae7f46ada3ca6c.jpg", "IMG_4901_JPG.rf.44b71e09b3558b3faf3627f86a015dfc.jpg", "IMG_4914_JPG.rf.420f3880a73efbab019f379e3dce82b7.jpg", "IMG_4916_JPG.rf.f515cf3bb41577ae40db7278cc6cbaaa.jpg", "IMG_4967_JPG.rf.3cfe83c2a497c0d335081f89d63e7ae3.jpg", "IMG_5002_JPG.rf.bbe88b98a7e0006dbb579e013fe71b6f.jpg", "IMG_5044_JPG.rf.514b279f2d7ddf07f0f1a7228ecace13.jpg", "IMG_5052_JPG.rf.0fc73a917d60f8d9d334c35397013b71.jpg", "IMG_5053_JPG.rf.b3c4f57ac9b24b5469d150fc075fc241.jpg", "IMG_5055_JPG.rf.e7fe864d960a2dd1be91ae6633c517e0.jpg", "IMG_5146_JPG_jpg.rf.65422c01f60c7a1a6610fa871150769f.jpg", "IMG_5147_JPG_jpg.rf.42b61700149fa1a7d0f915347741cdd1.jpg", "IMG_5148_JPG_jpg.rf.3fdc5231e655f60dbc230ebe0f87131c.jpg", "IMG_5155_JPG_jpg.rf.e902fe5fae1b3f85105818b6e78ee1df.jpg", "IMG_5156_JPG_jpg.rf.0ad8baa7ac14d6d07f13aee045246f6c.jpg", "IMG_5157_JPG_jpg.rf.0d589ca925f6f919455273f138968c9b.jpg", "IMG_5158_JPG_jpg.rf.dc502bd68497b63acdcb4572dd501b7c.jpg", "IMG_5161_JPG_jpg.rf.fc80046fb8a8ed5d13867a25af711305.jpg", "IMG_5163_JPG_jpg.rf.81b8c4bedb105748f84d0145096be170.jpg", "IMG_5166_JPG_jpg.rf.8b63abe4ca68973ed5320c285bd3f9c1.jpg", "IMG_5167_JPG_jpg.rf.701b5cb2b2a08936da2d6454e87cb828.jpg", "IMG_5170_JPG_jpg.rf.e6f71b4e348fbeda1caa76523fb7b55d.jpg", "IMG_5175_JPG_jpg.rf.b516c8a9ec88ed61509e6ea9077495e2.jpg", "IMG_5178_JPG_jpg.rf.c64ae005d1212fbd6b167a9391e182ef.jpg", "IMG_5182_JPG_jpg.rf.325efe14cf0948235e3edb0b699cd761.jpg", "IMG_5186_JPG_jpg.rf.951eb2523bb4582c4056a075d8b78fb0.jpg", "IMG_5190_JPG_jpg.rf.71fe214df38fc6b3294455bc99d5b5bd.jpg", "IMG_5191_JPG_jpg.rf.4701ccc629815470a2fdc7e91adf858a.jpg", "IMG_5193_JPG_jpg.rf.bc9afd9f9a1bb411d6dee869b35e73d1.jpg", "IMG_5194_JPG_jpg.rf.44095719629b31932f56425fa81ccffd.jpg", "IMG_5198_JPG_jpg.rf.3764b4bba0b775e26f47c8aa0cc6ec98.jpg", "IMG_5203_JPG_jpg.rf.837157577524bf3724119bef11d3bfc8.jpg", "IMG_5208_JPG_jpg.rf.ee2534f925c336cb9c730d0e157e518c.jpg", "IMG_5209_JPG_jpg.rf.5ed0ccbc528a279797cf796e94648688.jpg", "IMG_5216_JPG_jpg.rf.f1824d7ce7b7db301d2d94fdf97fb9b7.jpg", "IMG_5220_JPG_jpg.rf.25ab0a5f1197356530bddc44806f3119.jpg", "IMG_5222_JPG_jpg.rf.99f07801318fbb344ff5dd74c3ab88c3.jpg", "IMG_5223_JPG_jpg.rf.1baa77e07d73cfe5272d4c8886f076ec.jpg", "IMG_5224_JPG_jpg.rf.5d141e86033408c63ad8663bbedf6e53.jpg", "IMG_5225_JPG_jpg.rf.a6788ddac104843f7a0f6a351ddaeec8.jpg", "IMG_5228_JPG_jpg.rf.8596648a915c581c79e10488e9768eee.jpg", "IMG_5229_JPG_jpg.rf.3bbf8b1d1ec478993e85936ff76a01fb.jpg", "IMG_5231_JPG_jpg.rf.189002d4cdc80129ca4f61be9622b3ab.jpg", "IMG_5232_JPG_jpg.rf.41eabf5cba2aaa6cc24e2017b491ad47.jpg", "IMG_5233_JPG_jpg.rf.c2b176c279afaac504cfad08b10bb9f8.jpg", "IMG_5234_JPG_jpg.rf.c82ceaaf82514ddaa652b1058e15c6aa.jpg", "IMG_5235_JPG_jpg.rf.37a5dab073745e9e33642637a6a01dce.jpg", "IMG_5236_JPG_jpg.rf.14e2f2a0b759465c835553a0960ee249.jpg", "IMG_5241_JPG_jpg.rf.86e0fc54cdd06895e179167eafe8aaa9.jpg", "IMG_5243_JPG_jpg.rf.32a1ebdf6fe0a1a611bed8c8abb3e52c.jpg", "IMG_5244_JPG_jpg.rf.57b8964a56ca72c11d3487877f3a2d7c.jpg", "IMG_5246_JPG_jpg.rf.3e1cebe90b874fed31da5daf19817358.jpg", "IMG_5248_JPG_jpg.rf.a7caae53eb2b3d26619c61098d7ef6ee.jpg", "IMG_5249_JPG_jpg.rf.0ef08b53f503c0168d8d70e189dd1fcb.jpg", "IMG_5250_JPG_jpg.rf.63bb693f0d4248ad4980308abe1c981a.jpg", "IMG_5251_JPG_jpg.rf.223c5743a862779ee6a7c8370b15c2f7.jpg", "IMG_5254_JPG_jpg.rf.ea9da3258dfb967db15e6058fe59ddb0.jpg", "IMG_5256_JPG_jpg.rf.987d40873df9225d6022b62fb52bf7f3.jpg", "IMG_5262_JPG_jpg.rf.d08b29f498a2812ee2f6b363997a69d8.jpg", "IMG_5271_JPG_jpg.rf.e01571ad7493efbf3a34c83d02cb2ba9.jpg", "IMG_5274_JPG_jpg.rf.12013b1f7e7c4aa667e94d590b5691af.jpg", "IMG_5277_JPG_jpg.rf.a47f6fbe46f725a3049c7b7f2a9bf736.jpg", "IMG_5282_JPG_jpg.rf.3eec15dc663b23d4f313dc095a4c7678.jpg", "IMG_5285_JPG_jpg.rf.6ad0f88adebf636da831c7be60ccef1e.jpg", "IMG_5286_JPG_jpg.rf.1e34f8c432c1b813311154db067d925d.jpg", "IMG_5290_JPG_jpg.rf.b26168acf966296e81909165548b0685.jpg", "IMG_5291_JPG_jpg.rf.8348a1fa5c112369ce4580059613c47e.jpg", "IMG_5297_JPG_jpg.rf.b92b5f420c8209015de4c8d138c129b7.jpg", "IMG_5298_JPG_jpg.rf.d13e1323311294b657bfd83e74432b15.jpg", "IMG_5300_JPG_jpg.rf.40874e57a5717a7858008bd7c52dd3e8.jpg", "IMG_5301_JPG_jpg.rf.c82d599ff46393a88a1fec967005b0bf.jpg", "IMG_5310_JPG_jpg.rf.fcbc39b03943c94d1e382beff1da796e.jpg", "IMG_5311_JPG_jpg.rf.938ff728884c22d3d429e588f1aabddf.jpg", "IMG_5313_JPG_jpg.rf.ba82911b562c2bf221cdfa8698e6fa7a.jpg", "IMG_5315_JPG_jpg.rf.c35347d54408fc4d4ad3485a4669fe35.jpg", "IMG_5317_JPG_jpg.rf.912f7f56ecde254b10797d95a264073f.jpg", "IMG_5318_JPG_jpg.rf.a3d8c6d45490b3cfb4445e9e2a649134.jpg", "IMG_5319_JPG_jpg.rf.1969954092abfcc1f9103bd405f41f11.jpg", "IMG_5325_JPG_jpg.rf.207dc41dedc41e8f4a6e41d360efa07d.jpg", "IMG_5328_JPG_jpg.rf.469997d99e40b6f6d6bf7ba34f76ee58.jpg", "IMG_5330_JPG_jpg.rf.d0fb7d2a72146b0ca4e5e0a0efd51731.jpg", "IMG_5332_JPG_jpg.rf.6230be644561d90e8af6a05556612e87.jpg", "IMG_5334_JPG_jpg.rf.0df14a4aacb9aafaae480f1746010919.jpg", "IMG_5337_JPG_jpg.rf.62ea875e3b12f0adc011307085bb0ed1.jpg", "IMG_5342_JPG_jpg.rf.d91c321cc088ec70c20339fccc44d78e.jpg", "IMG_5351_JPG_jpg.rf.ec44f2ddfd86b84faa09fecd046d4b79.jpg", "IMG_5353_JPG_jpg.rf.286fdf2f6a013e49ef71aa8a5af11423.jpg", "IMG_5354_JPG_jpg.rf.cbd3dbc6eb352dee19d9ad96fab48d4f.jpg", "IMG_5355_JPG_jpg.rf.3c3c655f0f2b2a61b0765fb3f9aca48f.jpg", "IMG_5356_JPG_jpg.rf.69ab44156f645865fcc6bf1f1361ee7a.jpg", "IMG_5357_JPG_jpg.rf.39674ec9c2eb0a77fd688eacf734e1aa.jpg", "IMG_5358_JPG_jpg.rf.25fa208bf9da404fcff3df3152a94b48.jpg", "IMG_5409_JPG_jpg.rf.87656a64439143c58dbf387a2e4412ee.jpg", "IMG_5410_JPG_jpg.rf.1837c919a4e0992b9bff0a1c09b72c68.jpg", "IMG_5413_JPG_jpg.rf.8a136f10e70a649143a8ebc1d0dbe829.jpg", "IMG_5415_JPG_jpg.rf.2fffa77117c6add80e778cbbea25cb3c.jpg", "IMG_5420_JPG_jpg.rf.6bdb433970af1bc136b202f1917c838d.jpg", "IMG_5422_JPG_jpg.rf.40241009c4983eee209d74aba6bdfba2.jpg", "IMG_5423_JPG_jpg.rf.0b8f65d57125df0973e90afd21d21961.jpg", "IMG_5462_JPG_jpg.rf.086e6189c4207ac0e909f228c0a56cb8.jpg", "IMG_5464_JPG_jpg.rf.a4b713de85ae73b11fb6e1de912a2576.jpg", "IMG_5466_JPG_jpg.rf.376afa0bec61392b7381316f363b4d60.jpg", "IMG_5468_JPG_jpg.rf.e91a06b28bbf24da6243eb9ac32d4502.jpg", "IMG_5470_JPG_jpg.rf.3f7c2c40867bcd242c669eed4e510022.jpg", "IMG_5471_JPG_jpg.rf.1364c1d96ff213fc898e1f22e3e22a6c.jpg", "IMG_5472_JPG_jpg.rf.71019aee489f3fa233aaf7b711950364.jpg", "IMG_5502_JPG_jpg.rf.14b420ea883cfc75cb05f86da2bbc2b9.jpg", "IMG_5509_JPG_jpg.rf.6dc74f6957327208082d75fd5a2c42e0.jpg", "IMG_5510_JPG_jpg.rf.846a958ba9c727dca96699e2942731e4.jpg", "IMG_5526_JPG_jpg.rf.21bbaac4bc6dec5d6f870d1345c2bfc5.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000000_jpg.rf.e9ddfa42990a8c39089b1efdc3e08730.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000003_jpg.rf.fe502f19c36ef2f1555d832d2e308cb6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000011_jpg.rf.bcbd0dc50e9ae959cb6347195be497c1.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000016_jpg.rf.f8210a10bf8ac30289f4acc3e91b5e4e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000020_jpg.rf.caba2e03935d2cfa14364cdcd3a0d165.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000028_jpg.rf.312eed19205c27fe820dc3bf0c5d5852.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000031_jpg.rf.09d9dfaf9d9fea571c01c632c142e8fe.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000032_jpg.rf.844f91d62ba73fa4aab57b8f00841db7.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000033_jpg.rf.16840f8fc4d60f9c7f54eed42bd92774.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000043_jpg.rf.1b3f93d874940016cfe66902e2b75237.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000044_jpg.rf.e0d0c9bf25ff3612cb78ed95c0fec404.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000045_jpg.rf.f5e12c133a6dca325cf4dab89835b3fa.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000048_jpg.rf.6665e07819718a499bc5f776c37c899c.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000054_jpg.rf.c83848a110e6d960797bb9a914750cf3.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000055_jpg.rf.5fe307b53bdfa3d3ea3c73a9c35e8376.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000056_jpg.rf.13618ba061546587b045065d5b7edd9a.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000060_jpg.rf.8a97771287ba0fd4ea1f8e8e4c0587eb.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000062_jpg.rf.49d21c0990ddb1dc073db407cf5f50c5.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000064_jpg.rf.9411b22a2b8eb03ea98691f891be94e6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000067_jpg.rf.e5bb59d8be7bef6262c9c123c82f3a37.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000068_jpg.rf.c31cb27811858dd421ee7e5c935e83ef.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000071_jpg.rf.743db3a22d40a94af59dcbdfed573335.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000074_jpg.rf.f3c4a5785448e6091fb4480b80219345.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000080_jpg.rf.a7cec9c306c508ff3127ff2da949e43b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000084_jpg.rf.7d41b8dfcded29f39928a7798e1245fc.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000085_jpg.rf.3ef4301c736afb944ed7f5443c9f7ee1.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000087_jpg.rf.09cae8ed73529742a9dfbe346e4fe5f8.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000091_jpg.rf.42bd498e69f583cd4a9c073a42c8c1a6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000098_jpg.rf.08b94fd4bcd01dfbe8e379ee35739cd4.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000099_jpg.rf.e8cda08cfa216113eef6e799e9258ff6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000101_jpg.rf.8fa772daa43feaed27d811d9b13563f5.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000102_jpg.rf.4742f59f214d97c9553b39c0569c8aa6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000107_jpg.rf.5dbd3a758a49814dba942b207a088d96.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000110_jpg.rf.fd712519522fd0aa2a9301d4722b75ca.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000114_jpg.rf.bf816902a1355c766ad3b8c7dca4bcd0.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000117_jpg.rf.64acd78ecda68c4f65dd40e6a601a8f9.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000118_jpg.rf.5a472126cfcbca15091249ae2ecf6f52.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000119_jpg.rf.c39051aa11209ff0593ff910f9c36621.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000121_jpg.rf.12e106d8dda54ce2f925a015773b2c80.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000124_jpg.rf.907ae199fe3fbf2140417c5edf0b0c00.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000125_jpg.rf.7a2e6a21cf1c598a56a20aa2dec838c6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000130_jpg.rf.ab3f83851d7de114be7c6ea320af944b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000131_jpg.rf.3a3800411be344163553fe97cf42a239.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000132_jpg.rf.be16be60300bc7b21ac81e2dfe1e4864.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000138_jpg.rf.40348f8884fed635ca300f7aaa5a0ae1.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000141_jpg.rf.cd65f9236ee00def15c479591c787bec.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000144_jpg.rf.7766668cbe48bf37f8bb777838cabb43.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000145_jpg.rf.483171ee55b6142b889192feed4fa2e4.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000147_jpg.rf.720e317696eeb92053d2546fc9f951f3.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000149_jpg.rf.98a52d724ad5a06f61cb102b387dc923.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000150_jpg.rf.513d2b674b5d97d8a86410ce9086098e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000154_jpg.rf.c10f45a95115484c268564339539289d.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000157_jpg.rf.e08202203a64b45799cc2cb3141f3f3b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000158_jpg.rf.d4e920b53db7c90ae5c656b1238d5236.jpg", "WhatsApp-Video-2026-04-20-at-13-01-12_frame_000160_jpg.rf.870ecf32e84708709a1c9b07def6ee3a.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000001_jpg.rf.904416ee59a3a6818a7787a06d2710e6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000005_jpg.rf.da7383e9a46f850518b5332edfbc1d42.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000007_jpg.rf.6bffa8b74bb468cb8200a838bbe8810e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000011_jpg.rf.fc7f48d3c1e26785c50eb8a9eb2862ca.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000016_jpg.rf.e4634a6d2e1fe374e16917e8a7ed9b06.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000017_jpg.rf.0d61991f96aeec368ab41eab24a181dc.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000018_jpg.rf.d0ea49eaf6b77dc8255d7d50f80c140f.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000021_jpg.rf.b8d9b692334315535f317a7876569e40.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000022_jpg.rf.80aa1b4bfba08afcfb5e061f5d546069.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000024_jpg.rf.4859afa077e20f88b3677e7fa5e46bcd.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000025_jpg.rf.a77506d91a2d650d623bf43bb5ff3465.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000026_jpg.rf.c6887b5a49c805268aaa70b9af949a67.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000035_jpg.rf.8fe0be27a22d4ab77312b68b8171dfe4.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000038_jpg.rf.34d33c485d209aa64c1fbdbd4d145b1b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000042_jpg.rf.2488da7b456f0933005de7b1bbdd9ee8.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000047_jpg.rf.0f7e69e10379a86e7d37d2dadbe1b061.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000049_jpg.rf.2c47e559731bb46cf3944c628e672a57.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000050_jpg.rf.c88b6b3523846e0e4cf963566f448c24.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000054_jpg.rf.8f406b8fd60d8ddd76f8f5dcbc8323bd.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000055_jpg.rf.d9b86bf370ccc52d0c7108b475f812db.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000057_jpg.rf.3ef1b9fc5970e516969f5df9de08b88b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000058_jpg.rf.59aa559b94c53aaf99385aa4d1507bba.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000060_jpg.rf.6cd19302484542c828b38bc01b7c41f1.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000061_jpg.rf.21a59433743120686dad26d023bf8f14.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000063_jpg.rf.a9dc5ba5adc35503dcfc839a85d69c67.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000064_jpg.rf.4ad595140a808248692d7e6f18256c8e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000066_jpg.rf.db94e6df2135fc8388844697597bbb31.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000069_jpg.rf.8c7602416760686c5c1bc14ccef193e5.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000070_jpg.rf.387233761c238ea322931f6fcb51a53d.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000072_jpg.rf.074cd10f7cfd98ecf0442ecd40077e16.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000080_jpg.rf.d1d5e460d8afca76f01bd003fe52fba3.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000081_jpg.rf.406876e07d88e1161f7a850b8869cd43.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000083_jpg.rf.a54d5de3326d622dfcbc5e2a4d8540b9.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000086_jpg.rf.250159066c621f5c2250528bfb4fc673.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000087_jpg.rf.981eebdbb2d0f186fc1d56ceaf19cc72.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000088_jpg.rf.0e1611a2d57150b47dc3fa16c6d79931.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000089_jpg.rf.ef5b544e21e4a28031cc9e58feecc5d3.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000090_jpg.rf.4da1fc6675f4b9f75d157c0725301f84.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000092_jpg.rf.e6003424dd83a6b59d232675792f26d8.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000094_jpg.rf.ff5b747d4dab5830ee37443fc3c638db.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000096_jpg.rf.f9b6b90cf6a4d9aa3ee5795f792b45db.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000097_jpg.rf.6c988c8756048847ad4589dc5a1acb27.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000098_jpg.rf.7eee43357b9038f3ff6df8eb9c641d37.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000099_jpg.rf.960c718b5328ac047d49235af1e9f433.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000100_jpg.rf.68a66d6ecdb6fbe862ef6217f675e98d.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000101_jpg.rf.ceda09628e09945ebec8c065d1b2360e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000102_jpg.rf.350a70ec619922d4db184d146f6f1273.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000106_jpg.rf.208d02338f9e6b9bcb5146ca00b0e8f0.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000107_jpg.rf.082d2cb08785345cbfbb1672ad595f3d.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000108_jpg.rf.fa1f1f2af927bc0b66e683fe503cb7de.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000113_jpg.rf.322236bd12f50ff4d763668983b3aacc.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000114_jpg.rf.2fd05b6dfc41350b0b6cd285136257d6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000118_jpg.rf.1629015a2addcddc90fe6d641b73f9e0.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000119_jpg.rf.13b5ffad27f6720394cfc07c416dc661.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000120_jpg.rf.a6fc48324d3450cd5f5cfc990a6d22c2.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000121_jpg.rf.22f8584c9b23745fc31312271cceab0b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000127_jpg.rf.292042c28ba6c958ade0c3fcfe8908d3.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000129_jpg.rf.a645db588430c25b0ee1954314e20612.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000131_jpg.rf.31047b49d33328b199cc8c7b1e3635c8.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000132_jpg.rf.c63754c262260704b8b18f8a7ce6f723.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000135_jpg.rf.4055255143a0b778f559acf1050f2027.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000136_jpg.rf.5f9d17e1bcb1853fae0ed0647c41c9cd.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000138_jpg.rf.c0fdd14a19a308d82a7e35e26145db9f.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000139_jpg.rf.012871c3de894db0eecd2f7ff69e9b9e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000143_jpg.rf.f20042e85d3f0ced739fb9485d7b9410.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000146_jpg.rf.a60c1f834f0e4fd715ae2320e95211ae.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000147_jpg.rf.8e33e4b9f600ef6ec44c50c480c3ad9b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000148_jpg.rf.92ca8d8e244051598048e310c04eaaca.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000154_jpg.rf.797f47c8847b2ab609e5ee60b4517848.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000155_jpg.rf.93c4044807e11430fa215457367763e4.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000156_jpg.rf.12006fa1883fa3a8eca6f1b288515482.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000158_jpg.rf.194bbdfd9cd65525640d8f9b09ed31ee.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000160_jpg.rf.1ff191ef2149df7d8a02076700716393.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000162_jpg.rf.1353954b64384981869b56c246045e56.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000163_jpg.rf.7c6b5c3326733c1b27401be6cd13a291.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000164_jpg.rf.1241468a8da8a98f354ced47c1819786.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000168_jpg.rf.7af8bf3104473af62e45270fc53baaa7.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000173_jpg.rf.87c70603b641410ab30b0390f064a702.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000176_jpg.rf.c089c22dc8b4c5f9b0a55c53041e6b92.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000177_jpg.rf.6307940687d5fe9e8dee2953d7f5581c.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000181_jpg.rf.c1c387b836c3bc7a1b5c70fc0c11843a.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000182_jpg.rf.f2acab958bd37d57c8ac731fa0bcf9d2.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000183_jpg.rf.3774d516dcddb80fbe87936053d01355.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000184_jpg.rf.2e28b03fdbd0652c3a1a09e153531388.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000185_jpg.rf.3cbd68585b28773c3e94886fc4c533ea.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000191_jpg.rf.e4fc1db52d76176f80393dea34fb5ee1.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000199_jpg.rf.402c4d482fa534ff36b2ef483b13257a.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000200_jpg.rf.185364f45e47de5ac779d71b5cb85373.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000201_jpg.rf.f5ed89783e0483c7065e25cdfa02e0a3.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000203_jpg.rf.7f402c45ac8f2cded37da6d405241d2b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000211_jpg.rf.d42948c7f2e26c147050641b8250664d.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000213_jpg.rf.fb4974afa23c4a377565ce97d7303aa6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000219_jpg.rf.62f1c2127c858c680d2f66e0dbaeb7a6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000223_jpg.rf.13555e8fda60b0ef42e3f80e37392c93.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000224_jpg.rf.3e0efbe5066b7a4684c4515abb67f398.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000235_jpg.rf.7a3edbc3de34da58846f3cad20866209.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000236_jpg.rf.81b6237b01a76df1790ce1ad307ad588.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000246_jpg.rf.fa26f2dd4a8af192fd91cfb9ea171fc9.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000249_jpg.rf.3e7f8101df873a9d1a3bde733fa40f82.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000252_jpg.rf.030666c44dc317962092dcbeee85b12b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000253_jpg.rf.9d3c10f11ad2bbb9ebee92cbbdc80603.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000254_jpg.rf.0424c60694c172ff7544a082a2b62b27.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000255_jpg.rf.42117be94726f71e9a3c847c1da6a9c6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000257_jpg.rf.4b902c6fd6cbeda44b44ef0c42deb9c2.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000259_jpg.rf.bdfb3fb7c54a13867c03fd1ba304dd72.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000262_jpg.rf.df36916ca1ad64911825f22bf2a30bb9.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000265_jpg.rf.36659386238ac1facab6799def41d682.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000268_jpg.rf.601372d63ac28552b5d4e4a4c5096642.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000269_jpg.rf.2129aec7983d1e71d4e653a3a3bb646d.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000270_jpg.rf.5e984073ba2c9bf9a625cca0d8580227.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000271_jpg.rf.612abac7a78405417abf84ae98b5ae50.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000276_jpg.rf.f3aa64e58649b783190f3f0e264c4247.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000277_jpg.rf.ea0935817c91f24076f1588c40d35a1d.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000278_jpg.rf.58604803afc64a9ed96712e86788b79b.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000281_jpg.rf.69e4e71c622907203a3011f20910a545.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000282_jpg.rf.fa45bf6036d0c4faf87479bac272e034.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000283_jpg.rf.6cf03adcdd94d93537587f5b2219d0a2.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000285_jpg.rf.e21dcc241be197350df03e5f86169656.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000288_jpg.rf.bdbfa89412ca19bdb721a67063fae943.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000290_jpg.rf.f881c4a3d5831b8340a4541de6a7ad5e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000291_jpg.rf.843be81962b454ab1c0a0a840f28f6c6.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000292_jpg.rf.7cff9d076c9ac5561bad583b7a79e0fb.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000299_jpg.rf.d9a3f194a6e1402ae096dde3ab8b9023.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000303_jpg.rf.33829453c5ec6ea4393c9658bfaa8595.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000306_jpg.rf.6be9078704df36e27db19a4a3be27b0e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000314_jpg.rf.9c17fa8521cdf1a072cccf254954098c.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000315_jpg.rf.19265b77278b2f8a95540f1afb544a01.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000323_jpg.rf.22fc3efbbe9c412e48679528468155b5.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000325_jpg.rf.30eaeafa327a19b5bb208c2fd5027111.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000326_jpg.rf.fd5d08ef43c4cae30e7306c8ff198f53.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000327_jpg.rf.669da5e5a621acba1406ea3630a5ae0e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000333_jpg.rf.a3e5f46246055c69d3742258abe84d5e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000335_jpg.rf.98cddfc16ccaf0eb056978f123dc221f.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000337_jpg.rf.f5f4f754b31f459ac582970e56c06cfb.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000339_jpg.rf.1d47cba59a5b391ff46eec5a1b96835c.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000342_jpg.rf.88e2ca9c60e57b378d353a84c834b7f8.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000343_jpg.rf.fcb5b9c506910965f5570d7a2739aaea.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000345_jpg.rf.3b75e087d71d5422e3a224849272ef29.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000346_jpg.rf.e75409fd4e9a07bb17453162e42b248e.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000353_jpg.rf.e2055286edf3e08703ea8bb6f78032cc.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000356_jpg.rf.52be6df899dd37a019802547b881ca33.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000357_jpg.rf.1a177f9abfd5eda80343375b22fdcbd1.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000358_jpg.rf.1740fe399c2e1cd239dc0d90741e6fa9.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000359_jpg.rf.4e558ef0ee41a55008e784fd52c723aa.jpg", "WhatsApp-Video-2026-04-20-at-13-01-17_frame_000364_jpg.rf.6a5f2eaf3328ff602598717a1c3be0c8.jpg", "batch_01_frame_14_jpg.rf.c0404671b3ab491a0034f096d65eef51.jpg", "batch_01_frame_15_jpg.rf.64ed50a301448e1921dc2cc7a8e460a0.jpg", "batch_01_frame_19_jpg.rf.84dc4f11cfff54a9fd8f5a146ad28fed.jpg", "batch_01_frame_22_jpg.rf.e66653958a46fd52dc0b5b2e5f1094a6.jpg", "batch_01_frame_26_jpg.rf.5ffcfb26b03403fcc78633ae9e05d107.jpg", "batch_01_frame_28_jpg.rf.2b6a10b6734cbf72d0301cb3801ff553.jpg", "batch_01_frame_9_jpg.rf.1d280e9d9af54e8f511cf3496b554dad.jpg", "batch_02_img_1140_jpg.rf.498a60b1021446cd82cb96010f439c24.jpg", "batch_02_img_1460_jpg.rf.6bf84d258b4d31f466564c2cfa0162e6.jpg", "batch_02_img_20_jpg.rf.7ab1d1d3f070aad267fb3d2a7c12ffbc.jpg", "batch_02_img_2360_jpg.rf.5c0343a0e993183db140c603cb337c42.jpg", "batch_02_img_2540_jpg.rf.5b823dbb385ecb5a9e9be61262d25412.jpg", "batch_02_img_2800_jpg.rf.81a2ddb72132415be7d23b778ac73598.jpg", "batch_02_img_3580_jpg.rf.028ba26011108658e7073b1de37876cb.jpg", "batch_02_img_3640_jpg.rf.ae4257966d5f34db816e9f6c5f9463fe.jpg", "batch_03_img_2160_jpg.rf.e92c6817376a57f9c4d46e6d18c6d602.jpg", "batch_03_img_2480_jpg.rf.55e40ec4dc400c43fdf17fe78133f2c9.jpg", "batch_03_img_2720_jpg.rf.90f12e77cd0815b9169767ebd2c143c1.jpg", "batch_03_img_3020_jpg.rf.c178912f86d8e87fa1b0ad15e2db0f4d.jpg", "batch_03_img_3120_jpg.rf.80a33a1d2d717e242638529d6b53ef33.jpg", "batch_03_img_3340_jpg.rf.49b7e31d7ef00ea610b2614dbfcdd267.jpg", "batch_03_img_720_jpg.rf.7e800f7288c7f742c5a5322567081ed3.jpg", "batch_04_img_1320_jpg.rf.06214ba485b0a4dfd01822a24c51679e.jpg", "batch_04_img_2860_jpg.rf.4447e22c60be7053383e3b59dd780caa.jpg", "batch_04_img_3080_jpg.rf.43cfe73afa4b8e02480267886fc1ccf6.jpg", "batch_04_img_3360_jpg.rf.96a1467e57f45059e4ad2de5dc599e99.jpg", "batch_04_img_3680_jpg.rf.1e8e21dea1bcef75ce516a3770574f6c.jpg", "batch_04_img_3760_jpg.rf.8b7b561a11174b4e3b934e6c38d1adaf.jpg", "batch_04_img_4140_jpg.rf.c5fe1f4fa36d2d5c8287eaeb9f1fcc46.jpg", "batch_04_img_4660_jpg.rf.902f1728e2497ed2cd9299261b824908.jpg", "batch_04_img_680_jpg.rf.7398ce162453b0c3a8c042bb655cdd74.jpg", "batch_05_img_1060_jpg.rf.4c4d616590ba1fe78c37f836020cbeed.jpg", "batch_05_img_1080_jpg.rf.015ea387c450bfec8962cdb8455b4759.jpg", "batch_05_img_1620_jpg.rf.852f20319ce384380b9ac2b1b243fc59.jpg", "batch_05_img_1720_jpg.rf.f60514443de607f95fa5d21bdce409d0.jpg", "batch_05_img_2180_jpg.rf.9a666088bcbba242093761237b9594d2.jpg", "batch_05_img_3580_jpg.rf.10b8f51c9735265a7f36a76fab42fab6.jpg", "batch_05_img_4040_jpg.rf.4adf38ae567ef8f3a10b2f9d303e0a7a.jpg", "batch_05_img_4240_jpg.rf.bf01895562b06192d974ea263fe18f25.jpg", "batch_05_img_4460_jpg.rf.f011d52e542614565f2f1292a98b07b5.jpg", "batch_05_img_4840_jpg.rf.63cc6b3036c15bb056366c6f7ebe9f0c.jpg", "batch_05_img_5080_jpg.rf.a517f952eb69512f6be54b050e2a5426.jpg", "batch_05_img_5760_jpg.rf.1e01a625d1c6736103b16ac88414eacf.jpg", "batch_s01_img_1160_jpg.rf.7220815b505b978906690dfdeae213d2.jpg", "batch_s01_img_1320_jpg.rf.eedf91a914b80bbedb286ed53e26e52d.jpg", "batch_s01_img_1660_jpg.rf.7b174410771a4172d89e2ab34c3ef900.jpg", "batch_s01_img_1700_jpg.rf.52857aa3925dc634b14591da5f22002b.jpg", "batch_s01_img_1760_jpg.rf.c69b73496faf36d732e8bc99991ecfcb.jpg", "batch_s01_img_1920_jpg.rf.189def155a6ee1dba5d66f216e5d9b21.jpg", "batch_s01_img_2300_jpg.rf.6be4ae0f2d6eea045de1df268ceda3bc.jpg", "batch_s01_img_2360_jpg.rf.91d6a79af4d4966ab3e77e739d921365.jpg", "batch_s01_img_2680_jpg.rf.82ca694be195f65c8c628bc56b0bec29.jpg", "batch_s01_img_2720_jpg.rf.42a0bc3d80baee7450c5db4c2feed478.jpg", "batch_s01_img_620_jpg.rf.0da1e55b2f8b4376fdfaa285e05a6d2b.jpg", "batch_s02_img_100_jpg.rf.d19d4ea024df61dd230dfe23a8b755c9.jpg", "batch_s02_img_103_jpg.rf.25c82e8b5a20a969f1a330bc4a3c3d08.jpg", "batch_s02_img_114_jpg.rf.a35d80b12f9ad88eac0f3da9e31194d7.jpg", "batch_s02_img_116_jpg.rf.1ee6f4ce2e3a36c063064a77e9934d41.jpg", "batch_s02_img_126_jpg.rf.4fe66d30258c5c0ded15782d5702a1d0.jpg", "batch_s02_img_129_jpg.rf.82a449c9f3b8ccbaba0fa4d7b035789c.jpg", "batch_s02_img_133_jpg.rf.4266c712053aa01b0121d5c14eca603f.jpg", "batch_s02_img_135_jpg.rf.c89a551e3302f5a69f5124cd51653611.jpg", "batch_s02_img_142_jpg.rf.ad5ee18fc88ee9ff1a3d8505ddffc250.jpg", "batch_s02_img_145_jpg.rf.a07fd959c626b43458f317184a027e31.jpg", "batch_s02_img_146_jpg.rf.55d7fd5fcac71626ec516a77d66f287a.jpg", "batch_s02_img_149_jpg.rf.3a30565e54217e8c9a9b91cbe70ecf9c.jpg", "batch_s02_img_14_jpg.rf.d54a7194fef35fee95a044fb6901e85c.jpg", "batch_s02_img_152_jpg.rf.b1124eb7cf8e4c337324bc7301e1ea12.jpg", "batch_s02_img_16_jpg.rf.18b6d2a4d88c34b27bb020ff48846d0c.jpg", "batch_s02_img_17_jpg.rf.65d10521e8dc1a6c4743020a7573948f.jpg", "batch_s02_img_18_jpg.rf.87940eb224cd42a1a42d8214e659ab1f.jpg", "batch_s02_img_19_jpg.rf.28dbd9bef47a3c8d49dcf5e246d57c8f.jpg", "batch_s02_img_21_jpg.rf.72aac0846cd984b56e2858ce409c9539.jpg", "batch_s02_img_25_jpg.rf.415c4dbea578b3b720508cca85929dec.jpg", "batch_s02_img_2_jpg.rf.3ac202e87c30a5bb97f7fba7ec691b2c.jpg", "batch_s02_img_33_jpg.rf.8381e718f9027f52541524c5bbc61cd4.jpg", "batch_s02_img_3_jpg.rf.7ab3f2c5cbafc7e99bd6be2184776b04.jpg", "batch_s02_img_49_jpg.rf.5a07053fddde367b177f93b3d0d44156.jpg", "batch_s02_img_50_jpg.rf.9f5c27cbc9f3a961ebdecf6cc7ad6e48.jpg", "batch_s02_img_53_jpg.rf.5039693e43b926aceeffe93b9617bdc9.jpg", "batch_s02_img_54_jpg.rf.b4445adc9124e6843df479893e63c6fd.jpg", "batch_s02_img_55_jpg.rf.e34987755dd5308e5a38cd9784a691b8.jpg", "batch_s02_img_56_jpg.rf.926d205d5b970504c1fa869daf4cae96.jpg", "batch_s02_img_60_jpg.rf.e0fdf3b359bdb7fe9e2d1ff99d320860.jpg", "batch_s02_img_66_jpg.rf.f40e66b228336f0bce41573410c1be94.jpg", "batch_s02_img_69_jpg.rf.cc38a7704b6bf4d6e96512287f9abed8.jpg", "batch_s02_img_71_jpg.rf.40b8bbb9b32f4e767f462a87dec87b3b.jpg", "batch_s02_img_73_jpg.rf.93e8de5b5d0c9d97e688a1f4d73d59af.jpg", "batch_s02_img_78_jpg.rf.c345bc6262e21d06feca0f17360d4c60.jpg", "batch_s02_img_82_jpg.rf.13b6de18736cd82b598faf7bb5cc0b23.jpg", "batch_s02_img_86_jpg.rf.c1b411e0875acd424b7e2ad2ff2d61d0.jpg", "batch_s02_img_91_jpg.rf.31d89e21d5e1f2e4e393dd07a9d9b563.jpg", "batch_s02_img_93_jpg.rf.a2f322705d3014700c975b3ce08b680c.jpg", "batch_s02_img_95_jpg.rf.f8929c0977f3dc3ebf148d88a42e1e99.jpg", "batch_s02_img_9_jpg.rf.35cf24cd24aaf391594f6fdba7420338.jpg", "camera_img_0_jpg.rf.b606aa5d7421ba999216f1fe87e53458.jpg", "camera_img_2_jpg.rf.22292c175723455ec94c1bbca4e14fcb.jpg", "camera_img_3_jpg.rf.20e2c4501c90d21e999d9e254f48dfbe.jpg"];
+        const STORAGE_KEY = "manual_source_tags_v1";
+        let tags = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        let currentIndex = 0;
+
+        // Cari indeks pertama yang belum ditag
+        for (let i = 0; i < images.length; i++) {
+            if (!tags[images[i]]) {
+                currentIndex = i;
+                break;
+            }
+        }
+
+        function updateUI() {
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex >= images.length) currentIndex = images.length - 1;
+
+            const fname = images[currentIndex];
+            document.getElementById("main-image").src = "images/" + fname;
+            document.getElementById("filename-text").innerText = fname;
+            document.getElementById("counter-text").innerText = `Citra ${currentIndex + 1} / ${images.length}`;
+
+            const currentTag = tags[fname];
+            const tagIndicator = document.getElementById("status-tag");
+            if (currentTag) {
+                tagIndicator.style.display = "inline-block";
+                tagIndicator.innerText = currentTag;
+                tagIndicator.className = "tag-indicator badge badge-" + currentTag.toLowerCase();
+            } else {
+                tagIndicator.style.display = "inline-block";
+                tagIndicator.innerText = "Belum Ditag";
+                tagIndicator.className = "tag-indicator badge";
+                tagIndicator.style.background = "#21262d";
+                tagIndicator.style.color = "#8b949e";
+            }
+
+            updateStats();
+        }
+
+        function updateStats() {
+            let counts = { UAVVaste: 0, TACO: 0, Burangrang: 0, Ragu: 0 };
+            let done = 0;
+            for (let f of images) {
+                const t = tags[f];
+                if (t && counts[t] !== undefined) {
+                    counts[t]++;
+                    done++;
+                }
+            }
+
+            document.getElementById("stat-done").innerText = done;
+            document.getElementById("stat-remain").innerText = images.length - done;
+            document.getElementById("stat-uav").innerText = counts.UAVVaste;
+            document.getElementById("stat-taco").innerText = counts.TACO;
+            document.getElementById("stat-burangrang").innerText = counts.Burangrang;
+            document.getElementById("stat-ragu").innerText = counts.Ragu;
+
+            const pct = (done / images.length) * 100;
+            document.getElementById("progress-bar").style.width = pct + "%";
+        }
+
+        function tagImage(source) {
+            const fname = images[currentIndex];
+            tags[fname] = source;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(tags));
+
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            }
+            updateUI();
+        }
+
+        function prevImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateUI();
+            }
+        }
+
+        function exportCSV() {
+            let csv = "filename,source\n";
+            for (let f of images) {
+                const s = tags[f] || "Belum_Ditag";
+                csv += `${f},${s}\n`;
+            }
+
+            const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "manual_source_tags.csv";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Keyboard navigation
+        window.addEventListener("keydown", function(e) {
+            if (e.key === "1") {
+                tagImage("UAVVaste");
+            } else if (e.key === "2") {
+                tagImage("TACO");
+            } else if (e.key === "3") {
+                tagImage("Burangrang");
+            } else if (e.key === "4" || e.key.toLowerCase() === "r") {
+                tagImage("Ragu");
+            } else if (e.key === "Backspace" || e.key === "ArrowLeft") {
+                prevImage();
+            } else if (e.key === "ArrowRight") {
+                if (currentIndex < images.length - 1) {
+                    currentIndex++;
+                    updateUI();
+                }
+            }
+        });
+
+        updateUI();
+    </script>
+</body>
+</html>

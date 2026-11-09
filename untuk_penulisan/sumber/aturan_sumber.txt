@@ -1,0 +1,12 @@
+Aturan penentuan sumber. Keduanya hanya berdasarkan nama file setelah akhiran Roboflow (_jpg.rf.<hash> atau _JPG.rf.<hash>) dibuang.
+
+ATURAN LAMA, dipakai di seluruh hasil_2kelas (hk_common.source_of, dari scripts/fase1_scene_groups.py)
+1. Awalan batch_ atau BATCH_                 -> UAVVaste
+2. Nama seluruhnya angka (contoh 000015)     -> TACO
+3. Awalan WhatsApp-Video, IMG_, atau GOPR    -> Burangrang
+4. Selain itu (camera_img_, photo_, DJI_)    -> Unknown
+
+ATURAN USULAN, menunggu konfirmasi (up_common.source_bukti; bukti di bukti_nama_TACO_UAVVaste.csv)
+1. batch_, BATCH_, GOPR, camera_img_, photo_, DJI_    -> UAVVaste  (semua nama ada di anotasi UAVVaste)
+2. Nama seluruhnya angka, file IMG_####_JPG.rf.*      -> TACO      (semua nama ada di anotasi TACO; IMG_ ada di batch_3)
+3. WhatsApp-Video, file IMG_####_JPG_jpg.rf.*         -> Burangrang (tidak ada di kedua anotasi; asal ini perlu dipastikan pemilik data)

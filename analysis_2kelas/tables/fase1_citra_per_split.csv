@@ -1,0 +1,5 @@
+split,citra,background,file_campuran_poligon_box,file_hanya_poligon,baris_box,baris_poligon
+train,8409,2401,54,4964,2747,18054
+valid,595,98,3,469,77,1946
+test,550,238,2,242,210,921
+total,9554,2737,59,5675,3034,20921

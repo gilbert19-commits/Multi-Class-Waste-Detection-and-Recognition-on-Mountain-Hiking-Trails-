@@ -1,0 +1,5 @@
+Metrik,Nilai,Persentase
+Total Citra Test Set,550,100.00%
+Citra Test Memiliki Duplikat Eksak/Piksel di Train,0,0.00%
+Instans Objek (BBox) Test Terdampak Duplikasi Eksak,0,0.00%
+Citra Test Asal Sesi Burangrang yang Muncul di Train (Video+Burst),313,56.91%

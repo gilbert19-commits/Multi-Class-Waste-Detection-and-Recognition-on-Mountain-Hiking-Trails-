@@ -1,0 +1,4 @@
+split,gambar_di_folder,gambar_label_kosong,gambar_label_seluruhnya_poligon,gambar_label_campuran_dihitung_ulang,objek_hilang_lightweight_litter,objek_hilang_metal_and_glass,gambar_dipindai_cache,hilang_cache,background_cache,diabaikan_corrupt_cache,dipakai_training,alasan_di_cache,n_pesan_cache,hasil_scan_di_log,jumlah_scan_di_log
+train,8409,2401,4964,54,168,39,8409.0,0.0,2401.0,54.0,8355,ignoring corrupt image/label: labels mix segment and detection rows,54.0,"8409 images, 2401 backgrounds, 54 corrupt",33.0
+valid,595,98,469,3,14,2,595.0,0.0,98.0,3.0,592,ignoring corrupt image/label: labels mix segment and detection rows,3.0,"595 images, 98 backgrounds, 3 corrupt",19.0
+test,550,238,242,2,4,0,,,,,0,tidak ada labels.cache: training tidak pernah memindai split test,,,

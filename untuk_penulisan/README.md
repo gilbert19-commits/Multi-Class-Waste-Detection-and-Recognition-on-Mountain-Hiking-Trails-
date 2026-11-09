@@ -1,0 +1,201 @@
+# Isi untuk_penulisan.zip
+
+Berisi 197 file. Mulai dari `laporan.md`. Skrip di `scripts/` mengharapkan folder `untuk_penulisan/scripts/` berada di akar proyek, dengan `hasil_2kelas/`, `runs_2kelas/`, dan `dataset-2kelas/` di sebelahnya.
+
+- `hasil_2kelas/_cache/boot_idx.npy`: Indeks 1000 resample bootstrap 550 citra, seed 0
+- `hasil_2kelas/_cache/boot_yolo26l.npy`: AP per kelas tiap resample bootstrap, YOLO26l
+- `hasil_2kelas/_cache/boot_yolo26m.npy`: AP per kelas tiap resample bootstrap, YOLO26m
+- `hasil_2kelas/_cache/boot_yolo26n.npy`: AP per kelas tiap resample bootstrap, YOLO26n
+- `hasil_2kelas/_cache/boot_yolo26s.npy`: AP per kelas tiap resample bootstrap, YOLO26s
+- `hasil_2kelas/_cache/boot_yolo26x.npy`: AP per kelas tiap resample bootstrap, YOLO26x
+- `hasil_2kelas/_cache/boot_yolov12l.npy`: AP per kelas tiap resample bootstrap, YOLOv12l
+- `hasil_2kelas/_cache/boot_yolov12m.npy`: AP per kelas tiap resample bootstrap, YOLOv12m
+- `hasil_2kelas/_cache/boot_yolov12n.npy`: AP per kelas tiap resample bootstrap, YOLOv12n
+- `hasil_2kelas/_cache/boot_yolov12s.npy`: AP per kelas tiap resample bootstrap, YOLOv12s
+- `hasil_2kelas/_cache/boot_yolov12x.npy`: AP per kelas tiap resample bootstrap, YOLOv12x
+- `hasil_2kelas/_cache/boot_yolov8l.npy`: AP per kelas tiap resample bootstrap, YOLOv8l
+- `hasil_2kelas/_cache/boot_yolov8m.npy`: AP per kelas tiap resample bootstrap, YOLOv8m
+- `hasil_2kelas/_cache/boot_yolov8n.npy`: AP per kelas tiap resample bootstrap, YOLOv8n
+- `hasil_2kelas/_cache/boot_yolov8s.npy`: AP per kelas tiap resample bootstrap, YOLOv8s
+- `hasil_2kelas/_cache/boot_yolov8x.npy`: AP per kelas tiap resample bootstrap, YOLOv8x
+- `hasil_2kelas/_cache/yolo26l_2kelas_test.pkl`: Prediksi per gambar YOLO26l pada split test
+- `hasil_2kelas/_cache/yolo26l_2kelas_val.pkl`: Prediksi per gambar YOLO26l pada split val
+- `hasil_2kelas/_cache/yolo26m_2kelas_test.pkl`: Prediksi per gambar YOLO26m pada split test
+- `hasil_2kelas/_cache/yolo26m_2kelas_val.pkl`: Prediksi per gambar YOLO26m pada split val
+- `hasil_2kelas/_cache/yolo26n_2kelas_test.pkl`: Prediksi per gambar YOLO26n pada split test
+- `hasil_2kelas/_cache/yolo26n_2kelas_val.pkl`: Prediksi per gambar YOLO26n pada split val
+- `hasil_2kelas/_cache/yolo26s_2kelas_test.pkl`: Prediksi per gambar YOLO26s pada split test
+- `hasil_2kelas/_cache/yolo26s_2kelas_val.pkl`: Prediksi per gambar YOLO26s pada split val
+- `hasil_2kelas/_cache/yolo26x_2kelas_test.pkl`: Prediksi per gambar YOLO26x pada split test
+- `hasil_2kelas/_cache/yolo26x_2kelas_val.pkl`: Prediksi per gambar YOLO26x pada split val
+- `hasil_2kelas/_cache/yolov12l_2kelas_test.pkl`: Prediksi per gambar YOLOv12l pada split test
+- `hasil_2kelas/_cache/yolov12l_2kelas_val.pkl`: Prediksi per gambar YOLOv12l pada split val
+- `hasil_2kelas/_cache/yolov12m_2kelas_test.pkl`: Prediksi per gambar YOLOv12m pada split test
+- `hasil_2kelas/_cache/yolov12m_2kelas_val.pkl`: Prediksi per gambar YOLOv12m pada split val
+- `hasil_2kelas/_cache/yolov12n_2kelas_test.pkl`: Prediksi per gambar YOLOv12n pada split test
+- `hasil_2kelas/_cache/yolov12n_2kelas_val.pkl`: Prediksi per gambar YOLOv12n pada split val
+- `hasil_2kelas/_cache/yolov12s_2kelas_test.pkl`: Prediksi per gambar YOLOv12s pada split test
+- `hasil_2kelas/_cache/yolov12s_2kelas_val.pkl`: Prediksi per gambar YOLOv12s pada split val
+- `hasil_2kelas/_cache/yolov12x_2kelas_test.pkl`: Prediksi per gambar YOLOv12x pada split test
+- `hasil_2kelas/_cache/yolov12x_2kelas_val.pkl`: Prediksi per gambar YOLOv12x pada split val
+- `hasil_2kelas/_cache/yolov8l_2kelas_test.pkl`: Prediksi per gambar YOLOv8l pada split test
+- `hasil_2kelas/_cache/yolov8l_2kelas_val.pkl`: Prediksi per gambar YOLOv8l pada split val
+- `hasil_2kelas/_cache/yolov8m_2kelas_test.pkl`: Prediksi per gambar YOLOv8m pada split test
+- `hasil_2kelas/_cache/yolov8m_2kelas_val.pkl`: Prediksi per gambar YOLOv8m pada split val
+- `hasil_2kelas/_cache/yolov8n_2kelas_test.pkl`: Prediksi per gambar YOLOv8n pada split test
+- `hasil_2kelas/_cache/yolov8n_2kelas_val.pkl`: Prediksi per gambar YOLOv8n pada split val
+- `hasil_2kelas/_cache/yolov8s_2kelas_test.pkl`: Prediksi per gambar YOLOv8s pada split test
+- `hasil_2kelas/_cache/yolov8s_2kelas_val.pkl`: Prediksi per gambar YOLOv8s pada split val
+- `hasil_2kelas/_cache/yolov8x_2kelas_test.pkl`: Prediksi per gambar YOLOv8x pada split test
+- `hasil_2kelas/_cache/yolov8x_2kelas_val.pkl`: Prediksi per gambar YOLOv8x pada split val
+- `hasil_2kelas/_eval_raw.json`: Hasil mentah validator per model dan split
+- `hasil_2kelas/bootstrap.csv`: Bootstrap mAP standar antar model
+- `hasil_2kelas/confusion/cm_YOLO26l_mentah.csv`: Confusion matrix mentah YOLO26l, data
+- `hasil_2kelas/confusion/cm_YOLO26l_mentah.png`: Confusion matrix mentah YOLO26l, gambar untuk paper
+- `hasil_2kelas/confusion/cm_YOLO26l_ternormalisasi.csv`: Confusion matrix ternormalisasi YOLO26l, data
+- `hasil_2kelas/confusion/cm_YOLO26l_ternormalisasi.png`: Confusion matrix ternormalisasi YOLO26l, gambar untuk paper
+- `hasil_2kelas/confusion/cm_YOLOv12l_mentah.csv`: Confusion matrix mentah YOLOv12l, data
+- `hasil_2kelas/confusion/cm_YOLOv12l_mentah.png`: Confusion matrix mentah YOLOv12l, gambar untuk paper
+- `hasil_2kelas/confusion/cm_YOLOv12l_ternormalisasi.csv`: Confusion matrix ternormalisasi YOLOv12l, data
+- `hasil_2kelas/confusion/cm_YOLOv12l_ternormalisasi.png`: Confusion matrix ternormalisasi YOLOv12l, gambar untuk paper
+- `hasil_2kelas/confusion/cm_YOLOv8l_mentah.csv`: Confusion matrix mentah YOLOv8l, data
+- `hasil_2kelas/confusion/cm_YOLOv8l_mentah.png`: Confusion matrix mentah YOLOv8l, gambar untuk paper
+- `hasil_2kelas/confusion/cm_YOLOv8l_ternormalisasi.csv`: Confusion matrix ternormalisasi YOLOv8l, data
+- `hasil_2kelas/confusion/cm_YOLOv8l_ternormalisasi.png`: Confusion matrix ternormalisasi YOLOv8l, gambar untuk paper
+- `hasil_2kelas/confusion/ultralytics_YOLO26l_confusion_matrix.png`: Confusion matrix YOLO26l versi plot Ultralytics
+- `hasil_2kelas/confusion/ultralytics_YOLO26l_confusion_matrix_normalized.png`: Confusion matrix ternormalisasi YOLO26l versi plot Ultralytics
+- `hasil_2kelas/confusion/ultralytics_YOLOv12l_confusion_matrix.png`: Confusion matrix YOLOv12l versi plot Ultralytics
+- `hasil_2kelas/confusion/ultralytics_YOLOv12l_confusion_matrix_normalized.png`: Confusion matrix ternormalisasi YOLOv12l versi plot Ultralytics
+- `hasil_2kelas/confusion/ultralytics_YOLOv8l_confusion_matrix.png`: Confusion matrix YOLOv8l versi plot Ultralytics
+- `hasil_2kelas/confusion/ultralytics_YOLOv8l_confusion_matrix_normalized.png`: Confusion matrix ternormalisasi YOLOv8l versi plot Ultralytics
+- `hasil_2kelas/curves/yolo26l_2kelas_results.csv`: Kurva training per epoch YOLO26l
+- `hasil_2kelas/curves/yolo26m_2kelas_results.csv`: Kurva training per epoch YOLO26m
+- `hasil_2kelas/curves/yolo26n_2kelas_results.csv`: Kurva training per epoch YOLO26n
+- `hasil_2kelas/curves/yolo26s_2kelas_results.csv`: Kurva training per epoch YOLO26s
+- `hasil_2kelas/curves/yolo26x_2kelas_results.csv`: Kurva training per epoch YOLO26x
+- `hasil_2kelas/curves/yolov12l_2kelas_results.csv`: Kurva training per epoch YOLOv12l
+- `hasil_2kelas/curves/yolov12m_2kelas_results.csv`: Kurva training per epoch YOLOv12m
+- `hasil_2kelas/curves/yolov12n_2kelas_results.csv`: Kurva training per epoch YOLOv12n
+- `hasil_2kelas/curves/yolov12s_2kelas_results.csv`: Kurva training per epoch YOLOv12s
+- `hasil_2kelas/curves/yolov12x_2kelas_results.csv`: Kurva training per epoch YOLOv12x
+- `hasil_2kelas/curves/yolov8l_2kelas_results.csv`: Kurva training per epoch YOLOv8l
+- `hasil_2kelas/curves/yolov8m_2kelas_results.csv`: Kurva training per epoch YOLOv8m
+- `hasil_2kelas/curves/yolov8n_2kelas_results.csv`: Kurva training per epoch YOLOv8n
+- `hasil_2kelas/curves/yolov8s_2kelas_results.csv`: Kurva training per epoch YOLOv8s
+- `hasil_2kelas/curves/yolov8x_2kelas_results.csv`: Kurva training per epoch YOLOv8x
+- `hasil_2kelas/dataset_stats.csv`: Statistik dataset per split; bagian sumber memakai aturan lama
+- `hasil_2kelas/environment.txt`: Versi perangkat dan paket yang dipakai
+- `hasil_2kelas/figures/fig_akurasi_vs_kecepatan.png`: Gambar akurasi vs kecepatan, 15 model
+- `hasil_2kelas/figures/fig_kurva_training_terbaik.png`: Gambar kurva training model terbaik tiap family
+- `hasil_2kelas/label_campuran_diperbaiki.csv`: Label campuran yang dikonversi pada salinan evaluasi
+- `hasil_2kelas/metrics_per_class.csv`: Metrik standar per kelas di test, 15 model
+- `hasil_2kelas/metrics_test.csv`: Tabel utama mAP standar di test, params, GFLOPs, 15 model
+- `hasil_2kelas/metrics_test_tanpa_tumpang_tindih.csv`: mAP standar pada 364 citra test tanpa tumpang tindih
+- `hasil_2kelas/metrics_val.csv`: Metrik di valid dan cek silang dengan angka training
+- `hasil_2kelas/recall_breakdown.csv`: Recall per kelas, ukuran, dan sumber; sumber memakai aturan lama
+- `hasil_2kelas/runs_dikecualikan.csv`: Run yang tidak dipakai beserta alasannya
+- `hasil_2kelas/runs_inventory.csv`: Daftar 15 run yang dipakai
+- `hasil_2kelas/s0_inventaris.log`: Log keluaran script s0_inventaris
+- `hasil_2kelas/s2_eval.log`: Log keluaran script s2_eval
+- `hasil_2kelas/s3_speed.log`: Log keluaran script s3_speed
+- `hasil_2kelas/s4_bootstrap.log`: Log keluaran script s4_bootstrap
+- `hasil_2kelas/s5_error.log`: Log keluaran script s5_error
+- `hasil_2kelas/s6_figures.log`: Log keluaran script s6_figures
+- `hasil_2kelas/samples/sample_1_correct.png`: Contoh deteksi nomor 1 kategori correct
+- `hasil_2kelas/samples/sample_2_correct.png`: Contoh deteksi nomor 2 kategori correct
+- `hasil_2kelas/samples/sample_3_wrong_class.png`: Contoh deteksi nomor 3 kategori wrong class
+- `hasil_2kelas/samples/sample_4_wrong_class.png`: Contoh deteksi nomor 4 kategori wrong class
+- `hasil_2kelas/samples/sample_5_small_missed.png`: Contoh deteksi nomor 5 kategori small missed
+- `hasil_2kelas/samples/sample_6_small_missed.png`: Contoh deteksi nomor 6 kategori small missed
+- `hasil_2kelas/samples/sample_7_false_positive.png`: Contoh deteksi nomor 7 kategori false positive
+- `hasil_2kelas/samples/sample_8_false_positive.png`: Contoh deteksi nomor 8 kategori false positive
+- `hasil_2kelas/samples/samples.csv`: File asal dan isi tiap contoh deteksi
+- `hasil_2kelas/samples/samples_grid.png`: Gabungan 8 contoh deteksi untuk paper
+- `hasil_2kelas/sanity_check_map.csv`: Cek bahwa mAP hitung ulang sama dengan validator
+- `hasil_2kelas/scripts/hk_common.py`: Konstanta dan fungsi bersama hasil_2kelas, termasuk aturan sumber lama
+- `hasil_2kelas/scripts/s0_inventaris.py`: Langkah 0: inventaris run dan setting
+- `hasil_2kelas/scripts/s1_dataset.py`: Langkah 1: statistik dataset dan deteksi tumpang tindih
+- `hasil_2kelas/scripts/s2_eval.py`: Langkah 2: evaluasi seragam dan penyimpanan prediksi per gambar
+- `hasil_2kelas/scripts/s3_speed.py`: Langkah 3: pengukuran kecepatan
+- `hasil_2kelas/scripts/s4_bootstrap.py`: Langkah 4: tabel metrik dan bootstrap
+- `hasil_2kelas/scripts/s5_error.py`: Langkah 5: confusion matrix dan recall
+- `hasil_2kelas/scripts/s6_figures.py`: Langkah 6: gambar dan contoh deteksi
+- `hasil_2kelas/scripts/s7_summary.py`: Menulis summary.md dan hasil_2kelas.zip
+- `hasil_2kelas/settings_all_runs.csv`: Seluruh setting training tiap run
+- `hasil_2kelas/settings_berbeda.csv`: Setting yang berbeda antar run
+- `hasil_2kelas/speed.csv`: Kecepatan inferensi per model
+- `hasil_2kelas/speed_ulangan.csv`: Kecepatan inferensi per ulangan
+- `hasil_2kelas/summary.md`: Laporan hasil_2kelas; bagian per sumber memakai aturan lama
+- `hasil_2kelas/tumpang_tindih_train.csv`: Skor ORB tiap citra test dan valid yang namanya sama dengan citra train
+- `class_agnostic/bootstrap_agnostic.csv`: Bootstrap versi 3 antar model, CI efek salah kelas, p-value, dan Holm
+- `class_agnostic/efek_rumus_ap_lama.csv`: mAP dengan rumus Ultralytics terpasang vs rumus lama, per model
+- `class_agnostic/metrics_4versi.csv`: Empat versi mAP, efek bobot, efek salah kelas, efek NMS ulang, 15 model
+- `class_agnostic/rincian_per_kelas.csv`: Persen kelas benar, kelas salah, dan tidak terdeteksi per kelas GT, model terbaik tiap family
+- `class_agnostic/verifikasi_a_standar_vs_ultralytics.csv`: Verifikasi a: mAP standar script vs Ultralytics dan jumlah sel TP berbeda
+- `class_agnostic/verifikasi_b_single_cls.csv`: Verifikasi b: model.val(single_cls=True) vs versi 3 dan versi 4
+- `class_agnostic/verifikasi_c_contoh_kecil.csv`: Verifikasi c: contoh kecil, script vs manual dengan dua rumus AP
+- `class_agnostic/verifikasi_d_v3_vs_v2.csv`: Verifikasi d: versi 3 vs versi 2 per model dan metrik
+- `pelengkap/batch_dan_patience.csv`: Batch sebenarnya, asal batch, akumulasi, patience, dan tanda batch kecil, 15 model
+- `pelengkap/bootstrap_holm_ringkasan.csv`: Jumlah perbandingan yang signifikan per metrik dan varian Holm
+- `pelengkap/bootstrap_pvalue_holm.csv`: p-value dua sisi dan Holm untuk bootstrap mAP standar hasil_2kelas
+- `pelengkap/label_diabaikan_daftar.csv`: Daftar file berlabel campuran polygon dan box, dengan jumlah objeknya
+- `pelengkap/label_diabaikan_per_split.csv`: Citra yang diabaikan Ultralytics per split, dari cache, log, dan hitung ulang label
+- `sumber/aturan_sumber.txt`: Aturan penentuan sumber: aturan lama dan aturan usulan
+- `sumber/bukti_nama_TACO_UAVVaste.csv`: Kecocokan nama tiap pola dengan anotasi TACO dan UAVVaste, plus objek per split
+- `sumber/contact_sheet_GOPR.csv`: Daftar file pada contact sheet GOPR
+- `sumber/contact_sheet_GOPR.png`: 24 thumbnail acak citra GOPR, yang cocok dengan UAVVaste
+- `sumber/contact_sheet_IMG.csv`: Daftar file pada contact_sheet_IMG.png
+- `sumber/contact_sheet_IMG.png`: 24 thumbnail acak citra berawalan IMG_ dengan nama filenya
+- `sumber/contact_sheet_IMG_pola_tanpa_akhiran_JPG.csv`: Daftar file pada contact sheet pola IMG_####_JPG.rf.*
+- `sumber/contact_sheet_IMG_pola_tanpa_akhiran_JPG.png`: 24 thumbnail acak khusus pola IMG_####_JPG.rf.*, yang cocok dengan TACO
+- `sumber/jumlah_per_sumber_dua_aturan.csv`: Jumlah citra dan objek per sumber dan split, dengan kedua aturan
+- `sumber/pola_nama_file.csv`: Semua pola nama file, jumlah per split, dan sumber menurut aturan lama
+- `sumber/recall_per_sumber_dua_aturan.csv`: Recall model terbaik per sumber dan per pola, dengan kedua aturan
+- `contoh_dataset/crop/lightweight_litter_1_16x14.png`: Crop objek lightweight litter nomor 1, 16x14 piksel, resolusi asli
+- `contoh_dataset/crop/lightweight_litter_2_28x22.png`: Crop objek lightweight litter nomor 2, 28x22 piksel, resolusi asli
+- `contoh_dataset/crop/lightweight_litter_3_38x44.png`: Crop objek lightweight litter nomor 3, 38x44 piksel, resolusi asli
+- `contoh_dataset/crop/lightweight_litter_4_42x98.png`: Crop objek lightweight litter nomor 4, 42x98 piksel, resolusi asli
+- `contoh_dataset/crop/lightweight_litter_5_118x106.png`: Crop objek lightweight litter nomor 5, 118x106 piksel, resolusi asli
+- `contoh_dataset/crop/lightweight_litter_6_153x177.png`: Crop objek lightweight litter nomor 6, 153x177 piksel, resolusi asli
+- `contoh_dataset/crop/lightweight_litter_7_254x332.png`: Crop objek lightweight litter nomor 7, 254x332 piksel, resolusi asli
+- `contoh_dataset/crop/lightweight_litter_8_501x438.png`: Crop objek lightweight litter nomor 8, 501x438 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_1_19x15.png`: Crop objek metal and glass nomor 1, 19x15 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_2_36x19.png`: Crop objek metal and glass nomor 2, 36x19 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_3_62x25.png`: Crop objek metal and glass nomor 3, 62x25 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_4_59x54.png`: Crop objek metal and glass nomor 4, 59x54 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_5_118x74.png`: Crop objek metal and glass nomor 5, 118x74 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_6_209x105.png`: Crop objek metal and glass nomor 6, 209x105 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_7_212x176.png`: Crop objek metal and glass nomor 7, 212x176 piksel, resolusi asli
+- `contoh_dataset/crop/metal_and_glass_8_265x352.png`: Crop objek metal and glass nomor 8, 265x352 piksel, resolusi asli
+- `contoh_dataset/daftar_contoh.csv`: File asal, sumber, kelas, dan ukuran setiap contoh dataset
+- `contoh_dataset/utuh/Burangrang_1.png`: Citra utuh Burangrang nomor 1, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/Burangrang_2.png`: Citra utuh Burangrang nomor 2, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/Burangrang_3.png`: Citra utuh Burangrang nomor 3, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/Burangrang_4.png`: Citra utuh Burangrang nomor 4, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/TACO_1.png`: Citra utuh TACO nomor 1, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/TACO_2.png`: Citra utuh TACO nomor 2, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/TACO_3.png`: Citra utuh TACO nomor 3, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/TACO_4.png`: Citra utuh TACO nomor 4, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/UAVVaste_1.png`: Citra utuh UAVVaste nomor 1, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/UAVVaste_2.png`: Citra utuh UAVVaste nomor 2, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/UAVVaste_3.png`: Citra utuh UAVVaste nomor 3, resolusi asli, dengan kotak ground truth
+- `contoh_dataset/utuh/UAVVaste_4.png`: Citra utuh UAVVaste nomor 4, resolusi asli, dengan kotak ground truth
+- `scripts/a1_contoh_kecil.py`: Verifikasi c: contoh kecil dan hitungan manual
+- `scripts/a2_singlecls_gpu.py`: Verifikasi b: menjalankan model.val(single_cls=True) di GPU
+- `scripts/a3_empat_versi.py`: Empat versi mAP, verifikasi a, b, d, rincian per kelas, efek rumus lama
+- `scripts/a4_bootstrap.py`: Bootstrap versi 3 dan efek salah kelas
+- `scripts/b1_statistik.py`: Bagian B1 sampai B3: Holm, tabel batch dan patience, citra yang diabaikan
+- `scripts/b2_gambar.py`: Bagian B4 dan B5: pola nama, contact sheet, contoh dataset
+- `scripts/b3_bukti_sumber.py`: Pencocokan nama dengan anotasi TACO dan UAVVaste, recall per sumber
+- `scripts/up_common.py`: Fungsi bersama: pencocokan, NMS ulang, empat versi, Holm, aturan sumber usulan
+- `scripts/z_paket.py`: Menulis laporan.md dan README.md, lalu membuat zip
+- `log/a1_contoh_kecil.log`: Log keluaran script a1_contoh_kecil
+- `log/a2_singlecls.log`: Log keluaran script a2_singlecls
+- `log/a3_empat_versi.log`: Log keluaran script a3_empat_versi
+- `log/a4_bootstrap.log`: Log keluaran script a4_bootstrap
+- `log/b1_statistik.log`: Log keluaran script b1_statistik
+- `log/b2_gambar.log`: Log keluaran script b2_gambar
+- `log/b3_bukti_sumber.log`: Log keluaran script b3_bukti_sumber
+- `class_agnostic/hasil_single_cls_mentah.json`: Keluaran mentah model.val(single_cls=True) untuk 15 model
+- `laporan.md`: Laporan utama: ringkasan Bagian A dan B, keempat verifikasi, temuan, dan hal yang aneh
+- `README.md`: Daftar semua file di dalam zip ini

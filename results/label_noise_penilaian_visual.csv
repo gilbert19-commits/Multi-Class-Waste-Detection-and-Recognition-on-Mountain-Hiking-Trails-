@@ -1,0 +1,41 @@
+no,penilaian,catatan
+1,ambigu,lembaran kusut putih-cokelat; bisa kantong kertas atau karung plastik
+2,ambigu,objek yang sama dengan #1 (frame berurutan)
+3,tak_terbaca,"18x66 px dari drone, putih polos"
+4,ambigu,lembaran putih agak transparan; condong plastik tapi tidak pasti
+5,ambigu,kemasan jajanan bercetak; bisa kotak karton atau bungkus plastik
+6,model_salah,botol semprot plastik ungu; label plastik benar
+7,model_salah,kantong plastik bening kusut; label plastik benar
+8,label_salah,bungkus snack mengkilap (film plastik/metalized) dilabeli kertas
+9,tak_terbaca,"26x50 px dari drone, buram"
+10,ambigu,kemasan merah-putih datar; condong karton tapi tidak pasti
+11,tak_terbaca,"31x17 px dari drone"
+12,model_salah,bentuk kantong plastik putih dengan pegangan; label plastik masuk akal
+13,ambigu,"objek cokelat 15x38 px, tekstur seperti kertas/karton"
+14,model_salah,bungkus kusut biru-hijau tampak plastik; label plastik benar
+15,ambigu,gumpalan krem; bisa tisu
+16,tak_terbaca,"9x17 px dari drone"
+17,tak_terbaca,"11x11 px dari drone"
+18,label_salah,karton/kotak kertas penyok dilabeli plastik
+19,tak_terbaca,"30x17 px dari drone, buram gerak"
+20,ambigu,serpihan biru muda
+21,ambigu,kotak biru-putih dari drone; bisa karton atau plastik
+22,ambigu,batang putih tipis (sedotan/stik)
+23,tak_terbaca,"14x11 px dari drone"
+24,ambigu,objek ungu mengkilap dari drone; condong plastik
+25,ambigu,persegi biru muda
+26,ambigu,kotak biru-merah dari drone; condong karton minuman
+27,ambigu,persegi putih
+28,tak_terbaca,"9x18 px dari drone"
+29,tak_terbaca,"16x31 px dari drone"
+30,tak_terbaca,"17x32 px dari drone"
+31,model_salah,wadah/nampan putih (foil atau plastik); bukan kertas
+32,ambigu,kemasan merah-oranye bercetak; karton atau plastik
+33,ambigu,sachet/serpihan putih
+34,tak_terbaca,"12x22 px dari drone"
+35,ambigu,batang putih panjang; bisa sedotan plastik atau stik kertas
+36,ambigu,kotak putih dari drone (styrofoam/karton?)
+37,tak_terbaca,"30x16 px dari drone, putih polos"
+38,ambigu,lembaran putih-kebiruan agak transparan; condong plastik
+39,tak_terbaca,"24x14 px dari drone"
+40,label_salah,lembaran putih kusut transparan tampak kantong plastik; dilabeli kertas

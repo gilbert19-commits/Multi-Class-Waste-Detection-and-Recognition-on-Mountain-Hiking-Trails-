@@ -1,0 +1,5 @@
+split,kertas_plastik_puntungRokok,logam_kaleng_kaca,total
+train,17614,3187,20801
+valid,1741,282,2023
+test,1002,129,1131
+total,20357,3598,23955

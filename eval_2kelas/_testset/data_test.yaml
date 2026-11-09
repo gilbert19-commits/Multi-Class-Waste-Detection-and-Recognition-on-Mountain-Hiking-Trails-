@@ -1,0 +1,8 @@
+path: D:/Goji/gilbert/Halomok/Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-/eval_2kelas/_testset
+train: images
+val: images
+test: images
+nc: 2
+names:
+- kertas_plastik_puntungRokok
+- logam_kaleng_kaca

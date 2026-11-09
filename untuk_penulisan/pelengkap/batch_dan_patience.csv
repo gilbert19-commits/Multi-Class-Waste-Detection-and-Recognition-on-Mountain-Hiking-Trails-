@@ -1,0 +1,16 @@
+model,family,skala,batch_dipakai,sumber_batch,batch_di_args_yaml,autobatch_log,batch_per_sesi,akumulasi_gradien,weight_decay_efektif,patience_args_yaml,patience_sesi_pertama_dari_log,patience_per_sesi_ckpt,batch_kecil,tanda_skala_x_batch_kecil,mAP50_95_test_persen
+YOLOv8n,YOLOv8,n,16,ditetapkan manual,16,tidak ada,e1:16;e68:16;e75:16,4,0.0005,50,50,e1:50;e68:50;e75:50,False,False,34.88566628869073
+YOLOv8s,YOLOv8,s,16,ditetapkan manual,16,tidak ada,e1:16,4,0.0005,50,50,e1:50,False,False,38.928066083510856
+YOLOv8m,YOLOv8,m,11,AutoBatch,-1,11,e1:11,6,0.000515625,50,50,e1:50,False,False,39.2874157574359
+YOLOv8l,YOLOv8,l,5,AutoBatch,-1,5,e1:5,13,0.0005078125,50,50,e1:50,False,False,39.88429853649958
+YOLOv8x,YOLOv8,x,3,AutoBatch,-1,3,e1:3,21,0.0004921875,50,50,e1:50,True,True,38.6215660578271
+YOLOv12n,YOLOv12,n,23,AutoBatch,-1,23,e1:23,3,0.0005390625,100,100,e1:TIDAK TERCATAT,False,False,35.945073555407916
+YOLOv12s,YOLOv12,s,12,AutoBatch,-1,12,e1:12,5,0.00046875,100,100,e1:TIDAK TERCATAT,False,False,39.43475277983623
+YOLOv12m,YOLOv12,m,6,AutoBatch,-1,6,e1:6,11,0.000515625,100,100,e1:TIDAK TERCATAT,False,False,39.33693336029575
+YOLOv12l,YOLOv12,l,3,AutoBatch,3,3,e1:3;e47:3,21,0.0004921875,50,100,e1:TIDAK TERCATAT;e47:50,True,False,40.67431173949282
+YOLOv12x,YOLOv12,x,2,AutoBatch,-1,2,e1:2,32,0.0005,50,50,e1:50,True,True,40.00655690879834
+YOLO26n,YOLO26,n,27,AutoBatch,-1,27,e1:27,2,0.000421875,50,50,e1:50,False,False,37.23385804766013
+YOLO26s,YOLO26,s,14,AutoBatch,-1,14,e1:14,5,0.000546875,50,50,e1:50,False,False,38.91276266478697
+YOLO26m,YOLO26,m,7,AutoBatch,-1,7,e1:7,9,0.0004921875,50,50,e1:50,False,False,39.3143689780833
+YOLO26l,YOLO26,l,4,AutoBatch,-1,4,e1:4,16,0.0005,50,50,e1:50,True,False,39.80776257406686
+YOLO26x,YOLO26,x,2,AutoBatch,-1,2,e1:2,32,0.0005,50,50,e1:50,True,True,39.664627412333445

@@ -1,0 +1,4 @@
+,pred kertas_plastik_puntungRokok,pred logam_kaleng_kaca,pred latar
+GT kertas_plastik_puntungRokok,683,24,291
+GT logam_kaleng_kaca,39,66,24
+GT latar,121,22,0

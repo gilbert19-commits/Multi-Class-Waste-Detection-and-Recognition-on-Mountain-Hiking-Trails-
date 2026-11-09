@@ -1,0 +1,3 @@
+metrik,n_perbandingan,signifikan_tanpa_koreksi,signifikan_holm_keluarga_15,signifikan_holm_keluarga_30,signifikan_holm_15_plus1,signifikan_holm_30_plus1,p_terkecil,p_holm_15_terkecil,p_holm_30_terkecil
+mAP50,15,0,0,0,0,0,0.12,1.0,1.0
+mAP50_95,15,1,0,0,0,0,0.032,0.48,0.96

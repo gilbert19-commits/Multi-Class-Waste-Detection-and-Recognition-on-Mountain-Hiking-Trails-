@@ -1,0 +1,13 @@
+model,ukuran,kelas,GT,TP,FN_terlewat,FN_salah_kelas,recall
+YOLOv12l,kecil (<32²),kertas_plastik_puntungRokok,803.0,559.0,223.0,21.0,0.6961394769613948
+YOLOv12l,kecil (<32²),logam_kaleng_kaca,105.0,51.0,22.0,32.0,0.4857142857142857
+YOLOv12l,sedang (32²–96²),kertas_plastik_puntungRokok,175.0,128.0,47.0,0.0,0.7314285714285714
+YOLOv12l,sedang (32²–96²),logam_kaleng_kaca,18.0,13.0,1.0,4.0,0.7222222222222222
+YOLOv12l,besar (>96²),kertas_plastik_puntungRokok,20.0,18.0,1.0,1.0,0.9
+YOLOv12l,besar (>96²),logam_kaleng_kaca,6.0,4.0,0.0,2.0,0.6666666666666666
+YOLOv8l,kecil (<32²),kertas_plastik_puntungRokok,803.0,568.0,206.0,29.0,0.7073474470734745
+YOLOv8l,kecil (<32²),logam_kaleng_kaca,105.0,55.0,20.0,30.0,0.5238095238095238
+YOLOv8l,sedang (32²–96²),kertas_plastik_puntungRokok,175.0,118.0,54.0,3.0,0.6742857142857143
+YOLOv8l,sedang (32²–96²),logam_kaleng_kaca,18.0,12.0,2.0,4.0,0.6666666666666666
+YOLOv8l,besar (>96²),kertas_plastik_puntungRokok,20.0,19.0,0.0,1.0,0.95
+YOLOv8l,besar (>96²),logam_kaleng_kaca,6.0,4.0,0.0,2.0,0.6666666666666666

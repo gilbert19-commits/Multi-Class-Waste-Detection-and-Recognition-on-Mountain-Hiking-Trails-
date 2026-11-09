@@ -1,0 +1,154 @@
+model,family,dimensi,kategori,kelas,n_objek,n_gambar_berobjek,TP,FN_salah_kelas,FN_terlewat,recall,conf,iou
+YOLOv8l,YOLOv8,aturan_lama,Burangrang,semua,252,83,108,3,141,0.42857142857142855,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,Burangrang,lightweight litter,238,79,103,0,135,0.4327731092436975,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,Burangrang,metal and glass,14,7,5,3,6,0.35714285714285715,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,TACO,semua,73,32,51,3,19,0.6986301369863014,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,TACO,lightweight litter,64,28,45,1,18,0.703125,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,TACO,metal and glass,9,8,6,2,1,0.6666666666666666,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,UAVVaste,semua,803,195,634,49,120,0.7895392278953923,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,UAVVaste,lightweight litter,697,186,572,20,105,0.8206599713055954,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,UAVVaste,metal and glass,106,66,62,29,15,0.5849056603773585,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,Unknown,semua,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLOv8l,YOLOv8,aturan_lama,Unknown,lightweight litter,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,Burangrang,semua,208,68,85,1,122,0.40865384615384615,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,Burangrang,lightweight litter,207,67,85,0,122,0.4106280193236715,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,Burangrang,metal and glass,1,1,0,1,0,0.0,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,TACO,semua,97,45,67,5,25,0.6907216494845361,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,TACO,lightweight litter,80,38,57,1,22,0.7125,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,TACO,metal and glass,17,12,10,4,3,0.5882352941176471,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,UAVVaste,semua,826,199,642,49,135,0.7772397094430993,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,UAVVaste,lightweight litter,715,190,579,20,116,0.8097902097902098,0.25,0.5
+YOLOv8l,YOLOv8,aturan_usulan,UAVVaste,metal and glass,111,68,63,29,19,0.5675675675675675,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,#,semua,73,32,51,3,19,0.6986301369863014,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,#,lightweight litter,64,28,45,1,18,0.703125,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,#,metal and glass,9,8,6,2,1,0.6666666666666666,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,BATCH_d#_img_#,semua,191,55,166,12,13,0.8691099476439791,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,BATCH_d#_img_#,lightweight litter,172,52,154,6,12,0.8953488372093024,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,BATCH_d#_img_#,metal and glass,19,10,12,6,1,0.631578947368421,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,BATCH_s#_img_#,semua,148,36,116,9,23,0.7837837837837838,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,BATCH_s#_img_#,lightweight litter,128,34,102,5,21,0.796875,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,BATCH_s#_img_#,metal and glass,20,14,14,4,2,0.7,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,GOPR#,semua,20,2,7,0,13,0.35,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,GOPR#,lightweight litter,15,2,6,0,9,0.4,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,GOPR#,metal and glass,5,2,1,0,4,0.2,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,IMG_#,semua,24,13,16,2,6,0.6666666666666666,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,IMG_#,lightweight litter,16,10,12,0,4,0.75,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,IMG_#,metal and glass,8,4,4,2,2,0.5,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,IMG_#_JPG,semua,195,55,81,1,113,0.4153846153846154,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,IMG_#_JPG,lightweight litter,194,54,81,0,113,0.4175257731958763,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,IMG_#_JPG,metal and glass,1,1,0,1,0,0.0,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,WhatsApp-Video-#-#-#-at-#-#-#_frame_#,semua,13,13,4,0,9,0.3076923076923077,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,WhatsApp-Video-#-#-#-at-#-#-#_frame_#,lightweight litter,13,13,4,0,9,0.3076923076923077,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_#_frame_#,semua,32,8,27,5,0,0.84375,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_#_frame_#,lightweight litter,26,7,25,1,0,0.9615384615384616,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_#_frame_#,metal and glass,6,4,2,4,0,0.3333333333333333,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_#_img_#,semua,128,42,100,11,17,0.78125,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_#_img_#,lightweight litter,106,40,86,4,16,0.8113207547169812,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_#_img_#,metal and glass,22,15,14,7,1,0.6363636363636364,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_s#_img_#,semua,304,54,225,12,67,0.7401315789473685,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_s#_img_#,lightweight litter,265,53,205,4,56,0.7735849056603774,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,batch_s#_img_#,metal and glass,39,23,20,8,11,0.5128205128205128,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,camera_img_#,semua,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLOv8l,YOLOv8,pola_nama,camera_img_#,lightweight litter,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,Burangrang,semua,252,83,122,3,127,0.48412698412698413,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,Burangrang,lightweight litter,238,79,117,0,121,0.49159663865546216,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,Burangrang,metal and glass,14,7,5,3,6,0.35714285714285715,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,TACO,semua,73,32,53,2,18,0.726027397260274,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,TACO,lightweight litter,64,28,45,1,18,0.703125,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,TACO,metal and glass,9,8,8,1,0,0.8888888888888888,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,UAVVaste,semua,803,195,612,44,147,0.7621419676214197,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,UAVVaste,lightweight litter,697,186,553,14,130,0.793400286944046,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,UAVVaste,metal and glass,106,66,59,30,17,0.5566037735849056,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,Unknown,semua,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLOv12l,YOLOv12,aturan_lama,Unknown,lightweight litter,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,Burangrang,semua,208,68,94,1,113,0.4519230769230769,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,Burangrang,lightweight litter,207,67,94,0,113,0.45410628019323673,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,Burangrang,metal and glass,1,1,0,1,0,0.0,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,TACO,semua,97,45,70,4,23,0.7216494845360825,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,TACO,lightweight litter,80,38,58,1,21,0.725,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,TACO,metal and glass,17,12,12,3,2,0.7058823529411765,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,UAVVaste,semua,826,199,624,44,158,0.7554479418886199,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,UAVVaste,lightweight litter,715,190,564,14,137,0.7888111888111888,0.25,0.5
+YOLOv12l,YOLOv12,aturan_usulan,UAVVaste,metal and glass,111,68,60,30,21,0.5405405405405406,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,#,semua,73,32,53,2,18,0.726027397260274,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,#,lightweight litter,64,28,45,1,18,0.703125,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,#,metal and glass,9,8,8,1,0,0.8888888888888888,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,BATCH_d#_img_#,semua,191,55,165,9,17,0.8638743455497382,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,BATCH_d#_img_#,lightweight litter,172,52,151,4,17,0.877906976744186,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,BATCH_d#_img_#,metal and glass,19,10,14,5,0,0.7368421052631579,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,BATCH_s#_img_#,semua,148,36,103,11,34,0.6959459459459459,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,BATCH_s#_img_#,lightweight litter,128,34,91,6,31,0.7109375,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,BATCH_s#_img_#,metal and glass,20,14,12,5,3,0.6,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,GOPR#,semua,20,2,11,0,9,0.55,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,GOPR#,lightweight litter,15,2,10,0,5,0.6666666666666666,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,GOPR#,metal and glass,5,2,1,0,4,0.2,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,IMG_#,semua,24,13,17,2,5,0.7083333333333334,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,IMG_#,lightweight litter,16,10,13,0,3,0.8125,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,IMG_#,metal and glass,8,4,4,2,2,0.5,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,IMG_#_JPG,semua,195,55,89,1,105,0.4564102564102564,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,IMG_#_JPG,lightweight litter,194,54,89,0,105,0.4587628865979381,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,IMG_#_JPG,metal and glass,1,1,0,1,0,0.0,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,WhatsApp-Video-#-#-#-at-#-#-#_frame_#,semua,13,13,5,0,8,0.38461538461538464,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,WhatsApp-Video-#-#-#-at-#-#-#_frame_#,lightweight litter,13,13,5,0,8,0.38461538461538464,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_#_frame_#,semua,32,8,28,4,0,0.875,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_#_frame_#,lightweight litter,26,7,26,0,0,1.0,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_#_frame_#,metal and glass,6,4,2,4,0,0.3333333333333333,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_#_img_#,semua,128,42,98,8,22,0.765625,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_#_img_#,lightweight litter,106,40,83,2,21,0.7830188679245284,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_#_img_#,metal and glass,22,15,15,6,1,0.6818181818181818,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_s#_img_#,semua,304,54,218,12,74,0.7171052631578947,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_s#_img_#,lightweight litter,265,53,202,2,61,0.7622641509433963,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,batch_s#_img_#,metal and glass,39,23,16,10,13,0.41025641025641024,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,camera_img_#,semua,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLOv12l,YOLOv12,pola_nama,camera_img_#,lightweight litter,3,2,1,0,2,0.3333333333333333,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,Burangrang,semua,252,83,112,6,134,0.4444444444444444,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,Burangrang,lightweight litter,238,79,108,1,129,0.453781512605042,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,Burangrang,metal and glass,14,7,4,5,5,0.2857142857142857,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,TACO,semua,73,32,52,6,15,0.7123287671232876,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,TACO,lightweight litter,64,28,45,4,15,0.703125,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,TACO,metal and glass,9,8,7,2,0,0.7777777777777778,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,UAVVaste,semua,803,195,640,54,109,0.797011207970112,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,UAVVaste,lightweight litter,697,186,575,26,96,0.8249641319942611,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,UAVVaste,metal and glass,106,66,65,28,13,0.6132075471698113,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,Unknown,semua,3,2,2,1,0,0.6666666666666666,0.25,0.5
+YOLO26l,YOLO26,aturan_lama,Unknown,lightweight litter,3,2,2,1,0,0.6666666666666666,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,Burangrang,semua,208,68,86,2,120,0.41346153846153844,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,Burangrang,lightweight litter,207,67,86,1,120,0.41545893719806765,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,Burangrang,metal and glass,1,1,0,1,0,0.0,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,TACO,semua,97,45,69,8,20,0.711340206185567,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,TACO,lightweight litter,80,38,58,4,18,0.725,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,TACO,metal and glass,17,12,11,4,2,0.6470588235294118,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,UAVVaste,semua,826,199,651,57,118,0.788135593220339,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,UAVVaste,lightweight litter,715,190,586,27,102,0.8195804195804196,0.25,0.5
+YOLO26l,YOLO26,aturan_usulan,UAVVaste,metal and glass,111,68,65,30,16,0.5855855855855856,0.25,0.5
+YOLO26l,YOLO26,pola_nama,#,semua,73,32,52,6,15,0.7123287671232876,0.25,0.5
+YOLO26l,YOLO26,pola_nama,#,lightweight litter,64,28,45,4,15,0.703125,0.25,0.5
+YOLO26l,YOLO26,pola_nama,#,metal and glass,9,8,7,2,0,0.7777777777777778,0.25,0.5
+YOLO26l,YOLO26,pola_nama,BATCH_d#_img_#,semua,191,55,171,10,10,0.8952879581151832,0.25,0.5
+YOLO26l,YOLO26,pola_nama,BATCH_d#_img_#,lightweight litter,172,52,156,6,10,0.9069767441860465,0.25,0.5
+YOLO26l,YOLO26,pola_nama,BATCH_d#_img_#,metal and glass,19,10,15,4,0,0.7894736842105263,0.25,0.5
+YOLO26l,YOLO26,pola_nama,BATCH_s#_img_#,semua,148,36,114,14,20,0.7702702702702703,0.25,0.5
+YOLO26l,YOLO26,pola_nama,BATCH_s#_img_#,lightweight litter,128,34,100,9,19,0.78125,0.25,0.5
+YOLO26l,YOLO26,pola_nama,BATCH_s#_img_#,metal and glass,20,14,14,5,1,0.7,0.25,0.5
+YOLO26l,YOLO26,pola_nama,GOPR#,semua,20,2,9,2,9,0.45,0.25,0.5
+YOLO26l,YOLO26,pola_nama,GOPR#,lightweight litter,15,2,9,0,6,0.6,0.25,0.5
+YOLO26l,YOLO26,pola_nama,GOPR#,metal and glass,5,2,0,2,3,0.0,0.25,0.5
+YOLO26l,YOLO26,pola_nama,IMG_#,semua,24,13,17,2,5,0.7083333333333334,0.25,0.5
+YOLO26l,YOLO26,pola_nama,IMG_#,lightweight litter,16,10,13,0,3,0.8125,0.25,0.5
+YOLO26l,YOLO26,pola_nama,IMG_#,metal and glass,8,4,4,2,2,0.5,0.25,0.5
+YOLO26l,YOLO26,pola_nama,IMG_#_JPG,semua,195,55,83,2,110,0.4256410256410256,0.25,0.5
+YOLO26l,YOLO26,pola_nama,IMG_#_JPG,lightweight litter,194,54,83,1,110,0.42783505154639173,0.25,0.5
+YOLO26l,YOLO26,pola_nama,IMG_#_JPG,metal and glass,1,1,0,1,0,0.0,0.25,0.5
+YOLO26l,YOLO26,pola_nama,WhatsApp-Video-#-#-#-at-#-#-#_frame_#,semua,13,13,3,0,10,0.23076923076923078,0.25,0.5
+YOLO26l,YOLO26,pola_nama,WhatsApp-Video-#-#-#-at-#-#-#_frame_#,lightweight litter,13,13,3,0,10,0.23076923076923078,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_#_frame_#,semua,32,8,27,5,0,0.84375,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_#_frame_#,lightweight litter,26,7,25,1,0,0.9615384615384616,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_#_frame_#,metal and glass,6,4,2,4,0,0.3333333333333333,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_#_img_#,semua,128,42,100,11,17,0.78125,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_#_img_#,lightweight litter,106,40,86,3,17,0.8113207547169812,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_#_img_#,metal and glass,22,15,14,8,0,0.6363636363636364,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_s#_img_#,semua,304,54,228,14,62,0.75,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_s#_img_#,lightweight litter,265,53,208,7,50,0.7849056603773585,0.25,0.5
+YOLO26l,YOLO26,pola_nama,batch_s#_img_#,metal and glass,39,23,20,7,12,0.5128205128205128,0.25,0.5
+YOLO26l,YOLO26,pola_nama,camera_img_#,semua,3,2,2,1,0,0.6666666666666666,0.25,0.5
+YOLO26l,YOLO26,pola_nama,camera_img_#,lightweight litter,3,2,2,1,0,0.6666666666666666,0.25,0.5

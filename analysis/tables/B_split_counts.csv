@@ -1,0 +1,7 @@
+Dataset,Split,Total File Citra,Citra Sumber Unik,Rasio Multiplikasi
+TA-1,train,2803,1234,2.27x
+TA-1,valid,595,504,1.18x
+TA-1,test,550,530,1.04x
+augmented,train,8409,1234,6.81x
+augmented,valid,595,504,1.18x
+augmented,test,550,530,1.04x

@@ -1,0 +1,582 @@
+{
+ "yolov12n": {
+  "model": "yolov12n",
+  "run": "yolov12n_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov12n_2kelas\\weights\\best.pt",
+  "params": 2568438,
+  "GFLOPs_512": 4.54885376,
+  "mAP50": 0.6157665902323093,
+  "mAP50_95": 0.3583621655214536,
+  "mAP75": 0.3567817798790943,
+  "precision": 0.7131215732536291,
+  "recall": 0.5969963182178311,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8158774989357145,
+    "recall": 0.6823647294589178,
+    "AP50": 0.7156793206101763,
+    "AP50_95": 0.39904576865572106,
+    "AP75": 0.39668288825035936
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6103656475715439,
+    "recall": 0.5116279069767442,
+    "AP50": 0.5158538598544422,
+    "AP50_95": 0.31767856238718617,
+    "AP75": 0.3168806715078293
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.44795328599951456,
+    "inference": 1.1915598526923326,
+    "loss": 0.0002919696271419525,
+    "postprocess": 0.6088554756342005
+   },
+   {
+    "preprocess": 0.4728691606530852,
+    "inference": 1.2189700734720015,
+    "loss": 0.000338687010816414,
+    "postprocess": 0.615422992481014
+   },
+   {
+    "preprocess": 0.4929454366669711,
+    "inference": 1.211908760643734,
+    "loss": 0.00031532874385262053,
+    "postprocess": 0.6267410578940362
+   }
+  ],
+  "peak_mem_alloc_MiB": 312.8173828125,
+  "peak_mem_reserved_MiB": 478.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 312.8173828125,
+  "peak_mem_reserved_MiB_proses_bersama": 478.0
+ },
+ "yolov12s": {
+  "model": "yolov12s",
+  "run": "yolov12s_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov12s_2kelas\\weights\\best.pt",
+  "params": 9253910,
+  "GFLOPs_512": 14.577664,
+  "mAP50": 0.6530196913979882,
+  "mAP50_95": 0.39541818844957033,
+  "mAP75": 0.3953295654919169,
+  "precision": 0.7210064508857872,
+  "recall": 0.6260272482950398,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8370759856450422,
+    "recall": 0.7094188376753507,
+    "AP50": 0.7462154771887738,
+    "AP50_95": 0.4252551362757715,
+    "AP75": 0.4238952826941332
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6049369161265323,
+    "recall": 0.5426356589147286,
+    "AP50": 0.5598239056072025,
+    "AP50_95": 0.36558124062336905,
+    "AP75": 0.36676384828970066
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.4468598546643816,
+    "inference": 2.466398540690514,
+    "loss": 0.00039051009858720497,
+    "postprocess": 0.5703896001987432
+   },
+   {
+    "preprocess": 0.4575888695956691,
+    "inference": 2.4198428838153503,
+    "loss": 0.00038886923737225745,
+    "postprocess": 0.6017120436928405
+   },
+   {
+    "preprocess": 0.5016049270749255,
+    "inference": 2.413793978532844,
+    "loss": 0.00034598378722902634,
+    "postprocess": 0.5892166068240402
+   }
+  ],
+  "peak_mem_alloc_MiB": 564.16259765625,
+  "peak_mem_reserved_MiB": 856.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 573.892578125,
+  "peak_mem_reserved_MiB_proses_bersama": 866.0
+ },
+ "yolov12m": {
+  "model": "yolov12m",
+  "run": "yolov12m_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov12m_2kelas\\weights\\best.pt",
+  "params": 20139030,
+  "GFLOPs_512": 44.692963328,
+  "mAP50": 0.648566626153444,
+  "mAP50_95": 0.3932439948783493,
+  "mAP75": 0.4200812915197154,
+  "precision": 0.6988108588216588,
+  "recall": 0.6394222553634401,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8199178340652715,
+    "recall": 0.7284569138276553,
+    "AP50": 0.7431393638733108,
+    "AP50_95": 0.42780689019309426,
+    "AP75": 0.4465170751143449
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.577703883578046,
+    "recall": 0.5503875968992248,
+    "AP50": 0.5539938884335772,
+    "AP50_95": 0.3586810995636044,
+    "AP75": 0.39364550792508585
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.5161085766808123,
+    "inference": 5.462785402268688,
+    "loss": 0.00042518232031351456,
+    "postprocess": 0.5876881386540885
+   },
+   {
+    "preprocess": 0.5101689777377802,
+    "inference": 5.494365876499754,
+    "loss": 0.0003990874435399136,
+    "postprocess": 0.5718423346784918
+   },
+   {
+    "preprocess": 0.44305164139228365,
+    "inference": 5.4048514605438625,
+    "loss": 0.00035310296654483695,
+    "postprocess": 0.5791618609393057
+   }
+  ],
+  "peak_mem_alloc_MiB": 1032.8359375,
+  "peak_mem_reserved_MiB": 1678.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 1077.86572265625,
+  "peak_mem_reserved_MiB_proses_bersama": 1712.0
+ },
+ "yolov12l": {
+  "model": "yolov12l",
+  "run": "yolov12l_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov12l_2kelas\\weights\\best.pt",
+  "params": 26390646,
+  "GFLOPs_512": 59.904114688,
+  "mAP50": 0.6673706586147301,
+  "mAP50_95": 0.40609178574579463,
+  "mAP75": 0.44575508143830966,
+  "precision": 0.7424799111709737,
+  "recall": 0.6334387926102298,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8221592629691246,
+    "recall": 0.7087380503367388,
+    "AP50": 0.7366026895470265,
+    "AP50_95": 0.42218665416113677,
+    "AP75": 0.4317001341248236
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6628005593728229,
+    "recall": 0.5581395348837209,
+    "AP50": 0.5981386276824338,
+    "AP50_95": 0.3899969173304524,
+    "AP75": 0.4598100287517958
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.45727755590579916,
+    "inference": 7.66800073048535,
+    "loss": 0.0004242696921701414,
+    "postprocess": 0.5790600374708101
+   },
+   {
+    "preprocess": 0.4510465345726124,
+    "inference": 7.644460765546337,
+    "loss": 0.00038065685870221057,
+    "postprocess": 0.5621135036841741
+   },
+   {
+    "preprocess": 0.43420492710518466,
+    "inference": 7.646895255077712,
+    "loss": 0.00034197128248693304,
+    "postprocess": 0.565898540960013
+   }
+  ],
+  "peak_mem_alloc_MiB": 1491.7822265625,
+  "peak_mem_reserved_MiB": 1994.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 1615.3408203125,
+  "peak_mem_reserved_MiB_proses_bersama": 2118.0
+ },
+ "yolov12x": {
+  "model": "yolov12x",
+  "run": "yolov12x_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov12x_2kelas\\weights\\best.pt",
+  "params": 59120694,
+  "GFLOPs_512": 131.906306048,
+  "mAP50": 0.6631210638342127,
+  "mAP50_95": 0.4004873410189428,
+  "mAP75": 0.40636466081946654,
+  "precision": 0.7635847656859618,
+  "recall": 0.6231260971555515,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8404024051193031,
+    "recall": 0.6803607214428857,
+    "AP50": 0.7351891154723003,
+    "AP50_95": 0.42159055457493827,
+    "AP75": 0.423320038861706
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6867671262526205,
+    "recall": 0.5658914728682171,
+    "AP50": 0.591053012196125,
+    "AP50_95": 0.37938412746294725,
+    "AP75": 0.3894092827772271
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.48610310148393365,
+    "inference": 13.491183759416897,
+    "loss": 0.0004063859194462752,
+    "postprocess": 0.5546678834846311
+   },
+   {
+    "preprocess": 0.46208558347497647,
+    "inference": 13.502807299059265,
+    "loss": 0.0003812040956894847,
+    "postprocess": 0.5455543801195267
+   },
+   {
+    "preprocess": 0.4437375914842489,
+    "inference": 13.445789050939664,
+    "loss": 0.0003563863884684813,
+    "postprocess": 0.5456631379473927
+   }
+  ],
+  "peak_mem_alloc_MiB": 2267.716796875,
+  "peak_mem_reserved_MiB": 2924.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 2368.595703125,
+  "peak_mem_reserved_MiB_proses_bersama": 3026.0
+ },
+ "yolov8n": {
+  "model": "yolov8n",
+  "run": "yolov8n_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov8n_2kelas\\weights\\best.pt",
+  "params": 3011238,
+  "GFLOPs_512": 5.24337152,
+  "mAP50": 0.6229786550618368,
+  "mAP50_95": 0.3467982012418869,
+  "mAP75": 0.3452094533072582,
+  "precision": 0.686205162395854,
+  "recall": 0.6051172111665191,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.7632799050610125,
+    "recall": 0.6753507014028056,
+    "AP50": 0.7074749875015589,
+    "AP50_95": 0.383513204330989,
+    "AP75": 0.3658766154373194
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6091304197306957,
+    "recall": 0.5348837209302325,
+    "AP50": 0.5384823226221146,
+    "AP50_95": 0.31008319815278496,
+    "AP75": 0.324542291177197
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.4792572997585211,
+    "inference": 0.9370074827516329,
+    "loss": 0.0003078458728744601,
+    "postprocess": 0.6266333945401449
+   },
+   {
+    "preprocess": 0.46898667992901627,
+    "inference": 0.8918547443705646,
+    "loss": 0.0002941589999644861,
+    "postprocess": 0.6364465314711368
+   },
+   {
+    "preprocess": 0.47847372309787434,
+    "inference": 0.811202738801167,
+    "loss": 0.00030474429678199066,
+    "postprocess": 0.6346684310374523
+   }
+  ],
+  "peak_mem_alloc_MiB": 280.7607421875,
+  "peak_mem_reserved_MiB": 392.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 641.77001953125,
+  "peak_mem_reserved_MiB_proses_bersama": 756.0
+ },
+ "yolov8s": {
+  "model": "yolov8s",
+  "run": "yolov8s_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov8s_2kelas\\weights\\best.pt",
+  "params": 11136374,
+  "GFLOPs_512": 18.332286976,
+  "mAP50": 0.6507079239020179,
+  "mAP50_95": 0.3884243326085295,
+  "mAP75": 0.38891112338015127,
+  "precision": 0.7390689399809116,
+  "recall": 0.6067582648559615,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8338658153540823,
+    "recall": 0.6940422063269384,
+    "AP50": 0.7476807980453513,
+    "AP50_95": 0.4231340486556065,
+    "AP75": 0.42106162506628864
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.644272064607741,
+    "recall": 0.5194743233849846,
+    "AP50": 0.5537350497586847,
+    "AP50_95": 0.35371461656145253,
+    "AP75": 0.3567606216940139
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.485685949696459,
+    "inference": 1.8470660570064001,
+    "loss": 0.0003748173981796216,
+    "postprocess": 0.5703531001714894
+   },
+   {
+    "preprocess": 0.46219470754374553,
+    "inference": 2.011590328383647,
+    "loss": 0.0003543809858443093,
+    "postprocess": 0.5666826631581533
+   },
+   {
+    "preprocess": 0.4627343074309837,
+    "inference": 1.9921087596164404,
+    "loss": 0.00032609461188098807,
+    "postprocess": 0.5683826633565889
+   }
+  ],
+  "peak_mem_alloc_MiB": 530.30029296875,
+  "peak_mem_reserved_MiB": 806.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 903.95751953125,
+  "peak_mem_reserved_MiB_proses_bersama": 1180.0
+ },
+ "yolov8m": {
+  "model": "yolov8m",
+  "run": "yolov8m_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov8m_2kelas\\weights\\best.pt",
+  "params": 25857478,
+  "GFLOPs_512": 50.599723008,
+  "mAP50": 0.6465209960640073,
+  "mAP50_95": 0.3936187687737399,
+  "mAP75": 0.3986275554677858,
+  "precision": 0.6687341053455119,
+  "recall": 0.6652879402215284,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.7923506271657675,
+    "recall": 0.7104208416833667,
+    "AP50": 0.7339564046061187,
+    "AP50_95": 0.4172553152172117,
+    "AP75": 0.41711987811066764
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.5451175835252563,
+    "recall": 0.6201550387596899,
+    "AP50": 0.5590855875218957,
+    "AP50_95": 0.369982222330268,
+    "AP75": 0.3801352328249039
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.4334824812347002,
+    "inference": 4.076362591335401,
+    "loss": 0.0004085744425219341,
+    "postprocess": 0.5786313860588809
+   },
+   {
+    "preprocess": 0.48366478129364826,
+    "inference": 4.224770255879683,
+    "loss": 0.0003726284502305254,
+    "postprocess": 0.5639532834196287
+   },
+   {
+    "preprocess": 0.48382080246755566,
+    "inference": 4.2492704386109095,
+    "loss": 0.0003483588297436707,
+    "postprocess": 0.5669572992236728
+   }
+  ],
+  "peak_mem_alloc_MiB": 868.65771484375,
+  "peak_mem_reserved_MiB": 1128.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 1286.595703125,
+  "peak_mem_reserved_MiB_proses_bersama": 1600.0
+ },
+ "yolov8l": {
+  "model": "yolov8l",
+  "run": "yolov8l_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov8l_2kelas\\weights\\best.pt",
+  "params": 43631382,
+  "GFLOPs_512": 105.855483904,
+  "mAP50": 0.6610413892352578,
+  "mAP50_95": 0.3987241325187082,
+  "mAP75": 0.42189183411512277,
+  "precision": 0.7970334000042352,
+  "recall": 0.5871273315700771,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8686459491156965,
+    "recall": 0.6626267561634102,
+    "AP50": 0.7347593707022048,
+    "AP50_95": 0.4153675236906819,
+    "AP75": 0.4053507961066751
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.7254208508927739,
+    "recall": 0.5116279069767442,
+    "AP50": 0.5873234077683109,
+    "AP50_95": 0.38208074134673453,
+    "AP75": 0.43843287212357046
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.47948029075824,
+    "inference": 6.865877008922126,
+    "loss": 0.00041843023164755234,
+    "postprocess": 0.5439213510215227
+   },
+   {
+    "preprocess": 0.4648271889466602,
+    "inference": 7.017352190854395,
+    "loss": 0.00037098461490151657,
+    "postprocess": 0.5487642330831312
+   },
+   {
+    "preprocess": 0.4613930661142906,
+    "inference": 6.907101279128017,
+    "loss": 0.00034397753485797966,
+    "postprocess": 0.5595985380252891
+   }
+  ],
+  "peak_mem_alloc_MiB": 1741.0068359375,
+  "peak_mem_reserved_MiB": 2028.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 2258.10986328125,
+  "peak_mem_reserved_MiB_proses_bersama": 2548.0
+ },
+ "yolov8x": {
+  "model": "yolov8x",
+  "run": "yolov8x_2kelas",
+  "best_pt": "D:\\Goji\\gilbert\\Halomok\\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\\runs_2kelas\\yolov8x_2kelas\\weights\\best.pt",
+  "params": 68154534,
+  "GFLOPs_512": 165.195317248,
+  "mAP50": 0.6473513407827314,
+  "mAP50_95": 0.38691855564068234,
+  "mAP75": 0.41100415897048,
+  "precision": 0.7418059435318847,
+  "recall": 0.6273691578046381,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 293,
+    "instances": 998,
+    "precision": 0.8265674713222809,
+    "recall": 0.6733429667720667,
+    "AP50": 0.7153205269245106,
+    "AP50_95": 0.4036914591735334,
+    "AP75": 0.4112763022845922
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6570444157414884,
+    "recall": 0.5813953488372093,
+    "AP50": 0.579382154640952,
+    "AP50_95": 0.37014565210783135,
+    "AP75": 0.41073201565636774
+   }
+  },
+  "n_images_scored": 548,
+  "speeds": [
+   {
+    "preprocess": 0.48349142315913074,
+    "inference": 11.144143612086637,
+    "loss": 0.00041952555536897517,
+    "postprocess": 0.5494089407105353
+   },
+   {
+    "preprocess": 0.43693357478677686,
+    "inference": 11.032029380936883,
+    "loss": 0.00042846531736372156,
+    "postprocess": 0.5489151460037016
+   },
+   {
+    "preprocess": 0.4884390522433567,
+    "inference": 11.460752373843379,
+    "loss": 0.0003684302757963212,
+    "postprocess": 0.5724202551756625
+   }
+  ],
+  "peak_mem_alloc_MiB": 2213.83642578125,
+  "peak_mem_reserved_MiB": 2512.0,
+  "device": "NVIDIA GeForce RTX 5070",
+  "peak_mem_alloc_MiB_proses_bersama": 2899.1708984375,
+  "peak_mem_reserved_MiB_proses_bersama": 3196.0
+ }
+}

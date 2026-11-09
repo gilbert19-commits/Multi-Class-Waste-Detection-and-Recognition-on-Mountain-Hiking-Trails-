@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasets
+TA-*/
+augmented/train/
+augmented/valid/
+augmented/test/
+dataset-2kelas/
+New goji preapprove/
+_data/
+_val/
+_val_singlecls/
+_cache/
+*.zip
+*.tar
+*.gz
+
+# Model Weights & Runs
+runs/
+*.pt
+*.onnx
+*.engine
+
+# Log & file lokal
+*.log
+*.pid
+*.lnk
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,9 @@
+no,huruf,kategori,file,sumber,n_gt,sumber_juga_di_train,crop,YOLOv8l_tp,YOLOv8l_wrong,YOLOv8l_miss,YOLOv8l_fp,YOLOv12l_tp,YOLOv12l_wrong,YOLOv12l_miss,YOLOv12l_fp,YOLO26l_tp,YOLO26l_wrong,YOLO26l_miss,YOLO26l_fp
+1,a,correct,batch_02_img_2360_jpg.rf.510d3403634b80cbe24eea7fc755f142.jpg,UAVVaste,2,False,True,2,0,0,0,2,0,0,0,2,0,0,0
+2,b,correct,IMG_4879_JPG.rf.4236d94aa39191714b7f151cafed3a2c.jpg,Burangrang,1,False,True,1,0,0,0,1,0,0,0,1,0,0,0
+3,c,wrong_class,000061_jpg.rf.d587c0c3b87960734bb1de61b665022a.jpg,TACO,1,False,True,0,1,0,0,0,1,0,0,0,1,0,0
+4,d,wrong_class,BATCH_d08_img_1760_jpg.rf.0771ebe2cb931640c9f47d47c8e55fe3.jpg,UAVVaste,1,False,True,0,1,0,0,0,1,0,0,0,1,0,0
+5,e,small_missed,BATCH_s05_img_9220_jpg.rf.6ac024b1f90a889d317b3e0682f9fabf.jpg,UAVVaste,9,False,False,3,1,5,2,3,1,5,2,3,4,2,2
+6,f,small_missed,IMG_5282_JPG_jpg.rf.a054cf184f1efe4649aeb2b30f3389be.jpg,Burangrang,7,False,True,2,0,5,1,3,0,4,0,2,0,5,1
+7,g,false_positive,IMG_5194_JPG_jpg.rf.97ed464fa75be5091191be5d9dece342.jpg,Burangrang,0,False,True,0,0,0,1,0,0,0,1,0,0,0,1
+8,h,false_positive,WhatsApp-Video-2026-04-20-at-13-01-12_frame_000114_jpg.rf.529a1630565e2380a622592421aa8d35.jpg,Burangrang,0,False,True,0,0,0,1,0,0,0,1,0,0,0,1

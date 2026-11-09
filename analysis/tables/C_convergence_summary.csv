@@ -1,0 +1,11 @@
+Model Key,Model,Regime,Params (M),Peak Val mAP@50,Peak Epoch,Ep100 Val mAP@50,Still Rising Ep100,Slope (Ep 90-100),Overfitting Onset Ep,Train Box Ep100,Val Box Ep100,Train Cls Ep100,Val Cls Ep100,Generalization Gap,Precision Ep100,Recall Ep100
+baseline_yolov12n,YOLOv12n,Baseline (TA-1),2.57,37.6,93,37.28,Tidak,0.00042,91,1.302,1.395,1.011,1.3734,0.4686,0.3929,0.4014
+baseline_yolov12s,YOLOv12s,Baseline (TA-1),9.25,60.85,94,36.55,Tidak,-0.00407,97,1.3321,1.4457,1.1655,1.4479,0.4791,0.382,0.4074
+baseline_yolov12m,YOLOv12m,Baseline (TA-1),20.14,32.6,87,31.95,Tidak,0.0005,93,1.393,1.3863,1.4102,1.4725,0.0707,0.3579,0.3489
+baseline_yolov12l,YOLOv12l,Baseline (TA-1),26.39,31.18,89,30.61,Tidak,-6e-05,100,1.3346,1.3692,1.4001,1.4716,0.1247,0.5947,0.3521
+baseline_yolov12x,YOLOv12x,Baseline (TA-1),59.12,28.3,83,27.08,Tidak,0.00046,88,1.026,1.387,1.0198,1.7593,1.392,0.5586,0.3136
+augmented_yolov12n,YOLOv12n,Augmented,2.57,40.71,75,38.92,Tidak,3e-05,69,1.1273,1.3356,0.6705,1.3717,0.9524,0.4252,0.4099
+augmented_yolov12s,YOLOv12s,Augmented,9.25,49.54,57,43.73,Ya,0.00219,73,1.0138,1.3118,0.5717,1.6016,1.4471,0.3922,0.671
+augmented_yolov12m,YOLOv12m,Augmented,20.14,41.55,68,39.75,Tidak,-0.00079,64,0.9971,1.2841,0.6048,1.459,1.2792,0.6786,0.4254
+augmented_yolov12l,YOLOv12l,Augmented,26.39,41.3,87,39.89,Tidak,-0.00118,88,0.9936,1.213,0.6059,1.2152,0.9541,0.6632,0.4465
+augmented_yolov12x,YOLOv12x,Augmented,59.12,38.9,71,36.45,Tidak,-0.00185,70,0.6882,1.2248,0.4079,1.4774,1.9612,0.6414,0.415

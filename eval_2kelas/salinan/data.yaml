@@ -1,0 +1,16 @@
+# Path diperbaiki agar menunjuk ke folder hasil ekstrak dataset_2class.zip.
+# Salinan asli dari Roboflow: data.roboflow.yaml
+path: D:/Goji/gilbert/Halomok/Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-/dataset-2kelas
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 2
+names: ['kertas_plastik_puntungRokok', 'logam_kaleng_kaca']
+
+roboflow:
+  workspace: weapon-mpr3p
+  project: ta-2-mmlaq
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/weapon-mpr3p/ta-2-mmlaq/dataset/1

@@ -1,0 +1,6 @@
+subpattern,test,train,valid,All
+BATCH_dXX_img (Uppercase Drone BATCH),55,297,86,438
+BATCH_sXX_img (Uppercase Second Series),36,245,60,341
+batch_01_frame (Lowercase Video Frame),8,63,19,90
+batch_XX_img (Lowercase Image),96,578,183,857
+All,195,1183,348,1726

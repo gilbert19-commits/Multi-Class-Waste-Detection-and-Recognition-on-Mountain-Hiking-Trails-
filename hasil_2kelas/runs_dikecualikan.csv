@@ -1,0 +1,33 @@
+path,data,model,epochs,epoch_tercatat,imgsz,ada_best_pt,alasan_dikecualikan
+New goji preapprove/runs/detect/train,d:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\New goji preapprove\TA-4data.yaml,yolo12n.pt,200,,514,False,"dataset 4 kelas (TA-4/data.yaml, nc=4)"
+New goji preapprove/runs/detect/train-2,d:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\New goji preapprove\TA-4/data.yaml,yolo12n.pt,200,,514,False,"dataset 4 kelas (TA-4/data.yaml, nc=4)"
+New goji preapprove/runs/detect/train-3,d:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\New goji preapprove\TA-4/data.yaml,yolo12n.pt,200,200.0,514,True,"dataset 4 kelas (TA-4/data.yaml, nc=4)"
+eval_2kelas/salinan/runs/yolov12l_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,last.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov12m_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov12m.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov12n_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov12n.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov12s_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov12s.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov12x_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov12x.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov8l_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov8l.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov8m_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov8m.pt,200,171.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov8n_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,last.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov8s_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov8s.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+eval_2kelas/salinan/runs/yolov8x_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov8x.pt,200,200.0,512,False,"salinan args.yaml dari run utama, bukan run"
+runs/detect/runs/augmented/aug_waste_yolov12l,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,last.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/augmented/aug_waste_yolov12m,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov12m.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/augmented/aug_waste_yolov12n,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov12n.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/augmented/aug_waste_yolov12s,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov12s.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/augmented/aug_waste_yolov12s_e200,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov12s.pt,200,200.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/augmented/aug_waste_yolov12x,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov12x.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/detect/waste_yolov12l,TA-1\data.yaml,yolov12l.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/detect/waste_yolov12m,TA-1\data.yaml,yolov12m.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/detect/waste_yolov12n,TA-1\data.yaml,yolov12n.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/detect/waste_yolov12s,TA-1\data.yaml,yolov12s.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/detect/waste_yolov12s_e200,TA-1\data.yaml,yolov12s.pt,200,200.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs/detect/waste_yolov12x,TA-1\data.yaml,yolov12x.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs_baseline/v8l,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov8l.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs_baseline/v8m,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov8m.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs_baseline/v8n,augmented\data.yaml,last.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs_baseline/v8n_test_3ep,augmented/data.yaml,yolov8n.pt,3,3.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs_baseline/v8s,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov8s.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs/detect/runs_baseline/v8x,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\augmented\data.yaml,yolov8x.pt,100,100.0,640,True,bukan dataset_2class (lihat kolom data)
+runs_2kelas/_dibatalkan_e100/yolov12s_2kelas,D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\dataset-2kelas\data.yaml,yolov12s.pt,100,16.0,512,True,"dataset 2 kelas, run dibatalkan dan digantikan runs_2kelas/yolov12s_2kelas"

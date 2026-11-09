@@ -1,0 +1,1697 @@
+{
+ "yolov8n|test": {
+  "model": "yolov8n",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 3011238,
+  "GFLOPs_512_tanpa_fuse": 5.24337152,
+  "params_fused": 3006038,
+  "GFLOPs_512_fused": 5.173641216,
+  "mAP50": 0.6206909271033928,
+  "mAP75": 0.3483349497682371,
+  "mAP50_95": 0.3488566628869073,
+  "precision": 0.685014793512672,
+  "recall": 0.6013902427702734,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.7624730344569893,
+    "recall": 0.6756487025948104,
+    "AP50": 0.70768274000516,
+    "AP75": 0.36509739135246805,
+    "AP50_95": 0.3848737204982777
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6075565525683546,
+    "recall": 0.5271317829457365,
+    "AP50": 0.5336991142016256,
+    "AP75": 0.3315725081840061,
+    "AP50_95": 0.31283960527553684
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.51493999929252,
+   "inference": 0.7855627262456851,
+   "loss": 0.0003969097848642956,
+   "postprocess": 0.7576949081637643
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    691.0,
+    34.0,
+    211.0
+   ],
+   [
+    36.0,
+    67.0,
+    24.0
+   ],
+   [
+    275.0,
+    28.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov8s|test": {
+  "model": "yolov8s",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 11136374,
+  "GFLOPs_512_tanpa_fuse": 18.332286976,
+  "params_fused": 11126358,
+  "GFLOPs_512_fused": 18.198331392,
+  "mAP50": 0.6481677478567207,
+  "mAP75": 0.3898565376361294,
+  "mAP50_95": 0.3892806608351086,
+  "precision": 0.734723873356538,
+  "recall": 0.607494313698185,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8308465767054535,
+    "recall": 0.6956087824351297,
+    "AP50": 0.7484469820772468,
+    "AP75": 0.42218467692571093,
+    "AP50_95": 0.4252046270610875
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6386011700076224,
+    "recall": 0.5193798449612403,
+    "AP50": 0.5478885136361946,
+    "AP75": 0.35752839834654787,
+    "AP50_95": 0.35335669460912966
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5542369093745947,
+   "inference": 1.855839636092159,
+   "loss": 0.00043072737753391266,
+   "postprocess": 1.2982609084892003
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    745.0,
+    38.0,
+    167.0
+   ],
+   [
+    36.0,
+    71.0,
+    31.0
+   ],
+   [
+    221.0,
+    20.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov8m|test": {
+  "model": "yolov8m",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 25857478,
+  "GFLOPs_512_tanpa_fuse": 50.599723008,
+  "params_fused": 25840918,
+  "GFLOPs_512_fused": 50.358484992,
+  "mAP50": 0.643849303435709,
+  "mAP75": 0.3991584375667217,
+  "mAP50_95": 0.39287415757435906,
+  "precision": 0.6623140145632502,
+  "recall": 0.6619899735412895,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.7895262881987519,
+    "recall": 0.7115768463073853,
+    "AP50": 0.7345708100644432,
+    "AP75": 0.41826677391384537,
+    "AP50_95": 0.4181660676033644
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.5351017409277484,
+    "recall": 0.6124031007751938,
+    "AP50": 0.5531277968069748,
+    "AP75": 0.38005010121959804,
+    "AP50_95": 0.3675822475453536
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5457438168708573,
+   "inference": 4.3244610900398,
+   "loss": 0.021712908690625973,
+   "postprocess": 0.8981387270614505
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    712.0,
+    38.0,
+    171.0
+   ],
+   [
+    53.0,
+    72.0,
+    34.0
+   ],
+   [
+    237.0,
+    19.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov8l|test": {
+  "model": "yolov8l",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 43631382,
+  "GFLOPs_512_tanpa_fuse": 105.855483904,
+  "params_fused": 43608150,
+  "GFLOPs_512_fused": 105.48035584,
+  "mAP50": 0.6603538029244752,
+  "mAP75": 0.42119118163876057,
+  "mAP50_95": 0.39884298536499585,
+  "precision": 0.7916487667538468,
+  "recall": 0.5873017292623658,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8657632801856896,
+    "recall": 0.6629755515479874,
+    "AP50": 0.7365195202260665,
+    "AP75": 0.4068276253371829,
+    "AP50_95": 0.41708923202781917
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.717534253322004,
+    "recall": 0.5116279069767442,
+    "AP50": 0.5841880856228839,
+    "AP75": 0.43555473794033817,
+    "AP50_95": 0.3805967387021724
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5155194542286071,
+   "inference": 7.117952362380244,
+   "loss": 0.003385089168494398,
+   "postprocess": 0.7167087283662775
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    718.0,
+    35.0,
+    140.0
+   ],
+   [
+    36.0,
+    74.0,
+    24.0
+   ],
+   [
+    248.0,
+    20.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov8x|test": {
+  "model": "yolov8x",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 68154534,
+  "GFLOPs_512_tanpa_fuse": 165.195317248,
+  "params_fused": 68125494,
+  "GFLOPs_512_fused": 164.726407168,
+  "mAP50": 0.6447536869278478,
+  "mAP75": 0.41100254085260035,
+  "mAP50_95": 0.38621566057827106,
+  "precision": 0.7361642067952574,
+  "recall": 0.6278419453051831,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8183220600609077,
+    "recall": 0.674288541773157,
+    "AP50": 0.7170110925956719,
+    "AP75": 0.4143113727308548,
+    "AP50_95": 0.4056327794504533
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6540063535296072,
+    "recall": 0.5813953488372093,
+    "AP50": 0.5724962812600238,
+    "AP75": 0.4076937089743459,
+    "AP50_95": 0.36679854170608883
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5099123648621819,
+   "inference": 11.29470745397901,
+   "loss": 0.0004458198831839995,
+   "postprocess": 0.5850985464216633
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    689.0,
+    37.0,
+    142.0
+   ],
+   [
+    37.0,
+    73.0,
+    22.0
+   ],
+   [
+    276.0,
+    19.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov12n|test": {
+  "model": "yolov12n",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 2568438,
+  "GFLOPs_512_tanpa_fuse": 4.54885376,
+  "params_fused": 2557118,
+  "GFLOPs_512_fused": 4.446486528,
+  "mAP50": 0.6138925121707619,
+  "mAP75": 0.36091512836709577,
+  "mAP50_95": 0.35945073555407925,
+  "precision": 0.7172333375101021,
+  "recall": 0.5942733441534496,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8120373623559178,
+    "recall": 0.6769187813301549,
+    "AP50": 0.7153769858528518,
+    "AP75": 0.3977161866164217,
+    "AP50_95": 0.40046520566298227
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6224293126642864,
+    "recall": 0.5116279069767442,
+    "AP50": 0.5124080384886721,
+    "AP75": 0.3241140701177698,
+    "AP50_95": 0.31843626544517634
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5126323635605249,
+   "inference": 1.2204639973457563,
+   "loss": 0.00040654643354090774,
+   "postprocess": 0.8712369093502109
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    717.0,
+    39.0,
+    171.0
+   ],
+   [
+    32.0,
+    65.0,
+    33.0
+   ],
+   [
+    253.0,
+    25.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov12s|test": {
+  "model": "yolov12s",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 9253910,
+  "GFLOPs_512_tanpa_fuse": 14.577664,
+  "params_fused": 9231654,
+  "GFLOPs_512_fused": 14.37843456,
+  "mAP50": 0.6494753972779377,
+  "mAP75": 0.39416389902727883,
+  "mAP50_95": 0.3943475277983623,
+  "precision": 0.7209510089992792,
+  "recall": 0.626108248619041,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8361591638204878,
+    "recall": 0.7095808383233533,
+    "AP50": 0.7451095043021405,
+    "AP75": 0.42434497486108425,
+    "AP50_95": 0.4263981694789659
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6057428541780706,
+    "recall": 0.5426356589147286,
+    "AP50": 0.5538412902537349,
+    "AP75": 0.3639828231934734,
+    "AP50_95": 0.36229688611775895
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5426276369359005,
+   "inference": 2.377878547730771,
+   "loss": 0.0004041829908435995,
+   "postprocess": 1.2231272725727071
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    737.0,
+    42.0,
+    132.0
+   ],
+   [
+    38.0,
+    67.0,
+    24.0
+   ],
+   [
+    227.0,
+    20.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov12m|test": {
+  "model": "yolov12m",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 20139030,
+  "GFLOPs_512_tanpa_fuse": 44.692963328,
+  "params_fused": 20106454,
+  "GFLOPs_512_fused": 44.293193728,
+  "mAP50": 0.646057667014176,
+  "mAP75": 0.42081995350206974,
+  "mAP50_95": 0.3933693336029575,
+  "precision": 0.7068608914101538,
+  "recall": 0.6284986909431044,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8235744603687052,
+    "recall": 0.7221136609559763,
+    "AP50": 0.7427312293299602,
+    "AP75": 0.44692262489651724,
+    "AP50_95": 0.429266401118495
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.5901473224516025,
+    "recall": 0.5348837209302325,
+    "AP50": 0.5493841046983918,
+    "AP75": 0.39471728210762225,
+    "AP50_95": 0.35747226608742
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5566574556922371,
+   "inference": 5.472586364485323,
+   "loss": 0.00793563752350482,
+   "postprocess": 0.82177963742817
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    737.0,
+    45.0,
+    125.0
+   ],
+   [
+    30.0,
+    64.0,
+    31.0
+   ],
+   [
+    235.0,
+    20.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov12l|test": {
+  "model": "yolov12l",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 26390646,
+  "GFLOPs_512_tanpa_fuse": 59.904114688,
+  "params_fused": 26340614,
+  "GFLOPs_512_fused": 59.351269376,
+  "mAP50": 0.6657723114892582,
+  "mAP75": 0.4467228045250984,
+  "mAP50_95": 0.40674311739492824,
+  "precision": 0.7405246866076305,
+  "recall": 0.6340201537872024,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.818248813842438,
+    "recall": 0.709900772690684,
+    "AP50": 0.7376049770090352,
+    "AP75": 0.4350307131355698,
+    "AP50_95": 0.42468886652683235
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6628005593728229,
+    "recall": 0.5581395348837209,
+    "AP50": 0.5939396459694812,
+    "AP75": 0.4584148959146269,
+    "AP50_95": 0.3887973682630242
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5059407266195525,
+   "inference": 7.875219816341997,
+   "loss": 0.00041872855614532125,
+   "postprocess": 0.56973490991037
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    719.0,
+    40.0,
+    122.0
+   ],
+   [
+    24.0,
+    67.0,
+    22.0
+   ],
+   [
+    259.0,
+    22.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov12x|test": {
+  "model": "yolov12x",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 59120694,
+  "GFLOPs_512_tanpa_fuse": 131.906306048,
+  "params_fused": 59045654,
+  "GFLOPs_512_fused": 131.07707904,
+  "mAP50": 0.6623073461189444,
+  "mAP75": 0.4058006828289147,
+  "mAP50_95": 0.4000655690879834,
+  "precision": 0.7600132367738469,
+  "recall": 0.6232080828660089,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8388457156106863,
+    "recall": 0.6805246928638009,
+    "AP50": 0.7357041467862937,
+    "AP75": 0.42386847729986676,
+    "AP50_95": 0.42226984987621785
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6811807579370075,
+    "recall": 0.5658914728682171,
+    "AP50": 0.588910545451595,
+    "AP75": 0.38773288835796255,
+    "AP50_95": 0.3778612882997491
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5442374542524869,
+   "inference": 13.523661091246389,
+   "loss": 0.00048109203238378876,
+   "postprocess": 0.6150149096819488
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ],
+  "confusion_matrix": [
+   [
+    694.0,
+    40.0,
+    118.0
+   ],
+   [
+    27.0,
+    67.0,
+    19.0
+   ],
+   [
+    281.0,
+    22.0,
+    0.0
+   ]
+  ]
+ },
+ "yolo26n|test": {
+  "model": "yolo26n",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 2504580,
+  "GFLOPs_512_tanpa_fuse": 3.74407168,
+  "params_fused": 2375226,
+  "GFLOPs_512_fused": 3.370647552,
+  "mAP50": 0.6239658561627157,
+  "mAP75": 0.3663736575874152,
+  "mAP50_95": 0.37233858047660134,
+  "precision": 0.7314041327405014,
+  "recall": 0.5877663278094973,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8398665645582631,
+    "recall": 0.6716566866267465,
+    "AP50": 0.7274106035678862,
+    "AP75": 0.4112852393776729,
+    "AP50_95": 0.4147519837083305
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6229417009227396,
+    "recall": 0.5038759689922481,
+    "AP50": 0.5205211087575451,
+    "AP75": 0.32146207579715746,
+    "AP50_95": 0.3299251772448723
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5406738191165708,
+   "inference": 0.9212901811538772,
+   "loss": 0.0003650911491025578,
+   "postprocess": 0.14928145630454476
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ],
+  "confusion_matrix": [
+   [
+    706.0,
+    35.0,
+    155.0
+   ],
+   [
+    39.0,
+    67.0,
+    19.0
+   ],
+   [
+    257.0,
+    27.0,
+    0.0
+   ]
+  ]
+ },
+ "yolo26s|test": {
+  "model": "yolo26s",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 9949412,
+  "GFLOPs_512_tanpa_fuse": 14.499446784,
+  "params_fused": 9465954,
+  "GFLOPs_512_fused": 13.233291264,
+  "mAP50": 0.6364811238478647,
+  "mAP75": 0.4094370673543295,
+  "mAP50_95": 0.38912762664786976,
+  "precision": 0.7053562616584361,
+  "recall": 0.6142168878902787,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8319513740825207,
+    "recall": 0.706531178500282,
+    "AP50": 0.7315167452471534,
+    "AP75": 0.4354139396574751,
+    "AP50_95": 0.4251748164084657
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.5787611492343516,
+    "recall": 0.5219025972802754,
+    "AP50": 0.541445502448576,
+    "AP75": 0.38346019505118384,
+    "AP50_95": 0.35308043688727386
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.563410181467506,
+   "inference": 1.983270545236089,
+   "loss": 0.00040800141339952296,
+   "postprocess": 0.15245909125290133
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ],
+  "confusion_matrix": [
+   [
+    725.0,
+    41.0,
+    148.0
+   ],
+   [
+    39.0,
+    70.0,
+    23.0
+   ],
+   [
+    238.0,
+    18.0,
+    0.0
+   ]
+  ]
+ },
+ "yolo26m|test": {
+  "model": "yolo26m",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 21775972,
+  "GFLOPs_512_tanpa_fuse": 47.920447488,
+  "params_fused": 20350994,
+  "GFLOPs_512_fused": 43.52114688,
+  "mAP50": 0.6457609073145696,
+  "mAP75": 0.4070197379789334,
+  "mAP50_95": 0.393143689780833,
+  "precision": 0.7206010260331256,
+  "recall": 0.6136331987188414,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8351984576393445,
+    "recall": 0.6846307385229541,
+    "AP50": 0.7545548736660751,
+    "AP75": 0.4385746759469885,
+    "AP50_95": 0.4338708924283031
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6060035944269067,
+    "recall": 0.5426356589147286,
+    "AP50": 0.5369669409630641,
+    "AP75": 0.3754648000108784,
+    "AP50_95": 0.35241648713336304
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.523345090279525,
+   "inference": 4.5760225453837355,
+   "loss": 0.037547454491934994,
+   "postprocess": 0.4961341835389083
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ],
+  "confusion_matrix": [
+   [
+    738.0,
+    35.0,
+    182.0
+   ],
+   [
+    45.0,
+    74.0,
+    26.0
+   ],
+   [
+    219.0,
+    20.0,
+    0.0
+   ]
+  ]
+ },
+ "yolo26l|test": {
+  "model": "yolo26l",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 26179428,
+  "GFLOPs_512_tanpa_fuse": 59.746942976,
+  "params_fused": 24747282,
+  "GFLOPs_512_fused": 55.249600512,
+  "mAP50": 0.6454322556986787,
+  "mAP75": 0.4264326689998852,
+  "mAP50_95": 0.39807762574066863,
+  "precision": 0.7212894015737159,
+  "recall": 0.6312491296476814,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.836658433718665,
+    "recall": 0.6966067864271457,
+    "AP50": 0.7324389294866541,
+    "AP75": 0.45563129326473983,
+    "AP50_95": 0.432255444317262
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6059203694287668,
+    "recall": 0.5658914728682171,
+    "AP50": 0.5584255819107034,
+    "AP75": 0.3972340447350305,
+    "AP50_95": 0.36389980716407516
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5652065443891016,
+   "inference": 5.655548181384802,
+   "loss": 0.03284109036692164,
+   "postprocess": 0.3682212730530988
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ],
+  "confusion_matrix": [
+   [
+    734.0,
+    38.0,
+    146.0
+   ],
+   [
+    40.0,
+    74.0,
+    21.0
+   ],
+   [
+    228.0,
+    17.0,
+    0.0
+   ]
+  ]
+ },
+ "yolo26x|test": {
+  "model": "yolo26x",
+  "split": "test",
+  "n_images": 550,
+  "params_tanpa_fuse": 58813188,
+  "GFLOPs_512_tanpa_fuse": 133.676335104,
+  "params_fused": 55635858,
+  "GFLOPs_512_fused": 123.97805568,
+  "mAP50": 0.6408561759815316,
+  "mAP75": 0.41122575544334905,
+  "mAP50_95": 0.3966462741233344,
+  "precision": 0.7414761958614066,
+  "recall": 0.6255230715934726,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 295,
+    "instances": 1002,
+    "precision": 0.8464964305873734,
+    "recall": 0.6946107784431138,
+    "AP50": 0.7278978515010786,
+    "AP75": 0.42902437672176247,
+    "AP50_95": 0.42505360131026093
+   },
+   "logam_kaleng_kaca": {
+    "images": 81,
+    "instances": 129,
+    "precision": 0.6364559611354397,
+    "recall": 0.5564353647438315,
+    "AP50": 0.5538145004619845,
+    "AP75": 0.3934271341649356,
+    "AP50_95": 0.36823894693640785
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5122325459325855,
+   "inference": 10.273497271436183,
+   "loss": 0.0022723644294522028,
+   "postprocess": 0.21861236542463303
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ],
+  "confusion_matrix": [
+   [
+    731.0,
+    37.0,
+    133.0
+   ],
+   [
+    33.0,
+    73.0,
+    22.0
+   ],
+   [
+    238.0,
+    19.0,
+    0.0
+   ]
+  ]
+ },
+ "yolov8n|val": {
+  "model": "yolov8n",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 3011238,
+  "GFLOPs_512_tanpa_fuse": 5.24337152,
+  "params_fused": 3006038,
+  "GFLOPs_512_fused": 5.173641216,
+  "mAP50": 0.604383425380671,
+  "mAP75": 0.33983448062650123,
+  "mAP50_95": 0.3482274560752482,
+  "precision": 0.6716986359642534,
+  "recall": 0.6019644401707582,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.7831571262658688,
+    "recall": 0.7024698449167145,
+    "AP50": 0.7422565411888026,
+    "AP75": 0.4047061546875629,
+    "AP50_95": 0.42104779673850123
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.560240145662638,
+    "recall": 0.5014590354248019,
+    "AP50": 0.4665103095725396,
+    "AP75": 0.27496280656543953,
+    "AP50_95": 0.27540711541199536
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.4747309252431913,
+   "inference": 1.020937815245961,
+   "loss": 0.0003657143312592466,
+   "postprocess": 0.8179129414385607
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov8s|val": {
+  "model": "yolov8s",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 11136374,
+  "GFLOPs_512_tanpa_fuse": 18.332286976,
+  "params_fused": 11126358,
+  "GFLOPs_512_fused": 18.198331392,
+  "mAP50": 0.6407969473447694,
+  "mAP75": 0.3820632413914347,
+  "mAP50_95": 0.3776002463300358,
+  "precision": 0.6838361143752356,
+  "recall": 0.6515677384400422,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.800691473086662,
+    "recall": 0.7570361860999426,
+    "AP50": 0.7820668789283589,
+    "AP75": 0.4666390682772792,
+    "AP50_95": 0.4595578611020651
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.5669807556638091,
+    "recall": 0.5460992907801419,
+    "AP50": 0.49952701576117986,
+    "AP75": 0.29748741450559024,
+    "AP50_95": 0.2956426315580065
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.47904319294235287,
+   "inference": 2.0806215120432507,
+   "loss": 0.0004102534637982104,
+   "postprocess": 0.7628139503644544
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov8m|val": {
+  "model": "yolov8m",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 25857478,
+  "GFLOPs_512_tanpa_fuse": 50.599723008,
+  "params_fused": 25840918,
+  "GFLOPs_512_fused": 50.358484992,
+  "mAP50": 0.6511290271827025,
+  "mAP75": 0.40571440945316506,
+  "mAP50_95": 0.3952617516537159,
+  "precision": 0.728884275528719,
+  "recall": 0.6395166018297912,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8536632450744015,
+    "recall": 0.7271000087454108,
+    "AP50": 0.7833310501560695,
+    "AP75": 0.4636136216541423,
+    "AP50_95": 0.46526956922478524
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.6041053059830367,
+    "recall": 0.5519331949141716,
+    "AP50": 0.5189270042093355,
+    "AP75": 0.3478151972521878,
+    "AP50_95": 0.3252539340826467
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.46619479074886366,
+   "inference": 4.143244537188351,
+   "loss": 0.00042302627899065736,
+   "postprocess": 0.7054048719495033
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov8l|val": {
+  "model": "yolov8l",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 43631382,
+  "GFLOPs_512_tanpa_fuse": 105.855483904,
+  "params_fused": 43608150,
+  "GFLOPs_512_fused": 105.48035584,
+  "mAP50": 0.6497091397336227,
+  "mAP75": 0.4050212452022103,
+  "mAP50_95": 0.3910540086827585,
+  "precision": 0.7368245448926554,
+  "recall": 0.6420405245212459,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8490454303088526,
+    "recall": 0.7415278575531303,
+    "AP50": 0.783097713644352,
+    "AP75": 0.4694630172899214,
+    "AP50_95": 0.46314198662910516
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.6246036594764582,
+    "recall": 0.5425531914893617,
+    "AP50": 0.5163205658228933,
+    "AP75": 0.3405794731144992,
+    "AP50_95": 0.31896603073641183
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.4552166384621328,
+   "inference": 6.929477310481192,
+   "loss": 0.0003887410862606113,
+   "postprocess": 0.7078114282652861
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov8x|val": {
+  "model": "yolov8x",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 68154534,
+  "GFLOPs_512_tanpa_fuse": 165.195317248,
+  "params_fused": 68125494,
+  "GFLOPs_512_fused": 164.726407168,
+  "mAP50": 0.6504383789121301,
+  "mAP75": 0.4035345517969119,
+  "mAP50_95": 0.3897784242590015,
+  "precision": 0.7199387895592433,
+  "recall": 0.626045396588738,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8340868092371243,
+    "recall": 0.7237219988512349,
+    "AP50": 0.7728264803742617,
+    "AP75": 0.46511672835879764,
+    "AP50_95": 0.458436955619396
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.6057907698813624,
+    "recall": 0.5283687943262412,
+    "AP50": 0.5280502774499984,
+    "AP75": 0.3419523752350262,
+    "AP50_95": 0.32111989289860704
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.4637500826864182,
+   "inference": 11.317883530522094,
+   "loss": 0.00045730951516067284,
+   "postprocess": 0.7204200004172676
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov12n|val": {
+  "model": "yolov12n",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 2568438,
+  "GFLOPs_512_tanpa_fuse": 4.54885376,
+  "params_fused": 2557118,
+  "GFLOPs_512_fused": 4.446486528,
+  "mAP50": 0.6176574535921527,
+  "mAP75": 0.35710494795382786,
+  "mAP50_95": 0.36148399448685437,
+  "precision": 0.6727572242848318,
+  "recall": 0.6156443879567054,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8001849327176065,
+    "recall": 0.7277426766226307,
+    "AP50": 0.7624566699162968,
+    "AP75": 0.4353597922904947,
+    "AP50_95": 0.4443734243481915
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.545329515852057,
+    "recall": 0.5035460992907801,
+    "AP50": 0.4728582372680087,
+    "AP75": 0.27885010361716095,
+    "AP50_95": 0.2785945646255173
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.47013394949378584,
+   "inference": 1.3557707558252983,
+   "loss": 0.00038353076689884443,
+   "postprocess": 0.8062294116948081
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov12s|val": {
+  "model": "yolov12s",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 9253910,
+  "GFLOPs_512_tanpa_fuse": 14.577664,
+  "params_fused": 9231654,
+  "GFLOPs_512_fused": 14.37843456,
+  "mAP50": 0.6407436249360923,
+  "mAP75": 0.3913218989739184,
+  "mAP50_95": 0.3857405674264688,
+  "precision": 0.7185898441137069,
+  "recall": 0.6363842822866128,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8363605277468787,
+    "recall": 0.7443997702469844,
+    "AP50": 0.786543740779984,
+    "AP75": 0.4698830999021919,
+    "AP50_95": 0.46857514356395685
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.6008191604805351,
+    "recall": 0.5283687943262412,
+    "AP50": 0.49494350909220064,
+    "AP75": 0.3127606980456449,
+    "AP50_95": 0.30290599128898077
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.49637747936326415,
+   "inference": 2.6559144551983147,
+   "loss": 0.00041075590841409536,
+   "postprocess": 0.7083040341234007
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov12m|val": {
+  "model": "yolov12m",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 20139030,
+  "GFLOPs_512_tanpa_fuse": 44.692963328,
+  "params_fused": 20106454,
+  "GFLOPs_512_fused": 44.293193728,
+  "mAP50": 0.6485972174956156,
+  "mAP75": 0.4084784899081862,
+  "mAP50_95": 0.39362032359747456,
+  "precision": 0.7386530787039487,
+  "recall": 0.6330220133693303,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8549424992648463,
+    "recall": 0.7447674309939796,
+    "AP50": 0.7974498034650729,
+    "AP75": 0.49121837915380695,
+    "AP50_95": 0.47993138707032895
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.6223636581430512,
+    "recall": 0.5212765957446809,
+    "AP50": 0.49974463152615844,
+    "AP75": 0.32573860066256544,
+    "AP50_95": 0.30730926012462023
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.46963613449024555,
+   "inference": 5.665203194063501,
+   "loss": 0.0003806726240059909,
+   "postprocess": 0.6967455469572744
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov12l|val": {
+  "model": "yolov12l",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 26390646,
+  "GFLOPs_512_tanpa_fuse": 59.904114688,
+  "params_fused": 26340614,
+  "GFLOPs_512_fused": 59.351269376,
+  "mAP50": 0.6459580851214655,
+  "mAP75": 0.3938730283889571,
+  "mAP50_95": 0.3858115162774101,
+  "precision": 0.7093755015586355,
+  "recall": 0.6452994325426408,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8218477461067726,
+    "recall": 0.7409534750143596,
+    "AP50": 0.7745563844465876,
+    "AP75": 0.46175928982472975,
+    "AP50_95": 0.45983451811335263
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.5969032570104984,
+    "recall": 0.549645390070922,
+    "AP50": 0.5173597857963432,
+    "AP75": 0.3259867669531844,
+    "AP50_95": 0.3117885144414675
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.45796554543453605,
+   "inference": 7.728562018043604,
+   "loss": 0.00048470761658263805,
+   "postprocess": 0.6953478990388768
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolov12x|val": {
+  "model": "yolov12x",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 59120694,
+  "GFLOPs_512_tanpa_fuse": 131.906306048,
+  "params_fused": 59045654,
+  "GFLOPs_512_fused": 131.07707904,
+  "mAP50": 0.6419590614120938,
+  "mAP75": 0.3872325035948665,
+  "mAP50_95": 0.37908397819144457,
+  "precision": 0.7008218366515178,
+  "recall": 0.6312653378295401,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8307951094658063,
+    "recall": 0.7247953495148004,
+    "AP50": 0.7727350474595285,
+    "AP75": 0.4476262215283002,
+    "AP50_95": 0.4533699059875363
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.5708485638372294,
+    "recall": 0.5377353261442797,
+    "AP50": 0.5111830753646592,
+    "AP75": 0.32683878566143276,
+    "AP50_95": 0.304798050395353
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.4499287426690845,
+   "inference": 13.524881177855766,
+   "loss": 0.00038789976544740824,
+   "postprocess": 0.7197900866980061
+  },
+  "end2end_validator": false,
+  "end2end_model": false,
+  "nms_end2end_arg": false,
+  "bentuk_output_model": [
+   16,
+   6,
+   6069
+  ]
+ },
+ "yolo26n|val": {
+  "model": "yolo26n",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 2504580,
+  "GFLOPs_512_tanpa_fuse": 3.74407168,
+  "params_fused": 2375226,
+  "GFLOPs_512_fused": 3.370647552,
+  "mAP50": 0.6050743557587855,
+  "mAP75": 0.3659953426412116,
+  "mAP50_95": 0.36068503046312966,
+  "precision": 0.6872215339642361,
+  "recall": 0.615840897471909,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.7999125659775105,
+    "recall": 0.7288914417001723,
+    "AP50": 0.7564796332097908,
+    "AP75": 0.44507581512643846,
+    "AP50_95": 0.44974247154429026
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.5745305019509618,
+    "recall": 0.5027903532436455,
+    "AP50": 0.4536690783077803,
+    "AP75": 0.2869148701559847,
+    "AP50_95": 0.27162758938196896
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5325398317874731,
+   "inference": 0.872972940227815,
+   "loss": 0.0003653774116219593,
+   "postprocess": 0.1659857144407114
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ]
+ },
+ "yolo26s|val": {
+  "model": "yolo26s",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 9949412,
+  "GFLOPs_512_tanpa_fuse": 14.499446784,
+  "params_fused": 9465954,
+  "GFLOPs_512_fused": 13.233291264,
+  "mAP50": 0.6334614047443334,
+  "mAP75": 0.42078983314555807,
+  "mAP50_95": 0.3906161605637499,
+  "precision": 0.6817115144084354,
+  "recall": 0.6487245834661528,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8180832934253472,
+    "recall": 0.7619881740245043,
+    "AP50": 0.7921572376520212,
+    "AP75": 0.5040184153024373,
+    "AP50_95": 0.4805503152261664
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.5453397353915235,
+    "recall": 0.5354609929078015,
+    "AP50": 0.4747655718366458,
+    "AP75": 0.3375612509886788,
+    "AP50_95": 0.3006820059013334
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.5187416809196231,
+   "inference": 2.058306050353816,
+   "loss": 0.00042386486061981747,
+   "postprocess": 0.17447999850729431
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ]
+ },
+ "yolo26m|val": {
+  "model": "yolo26m",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 21775972,
+  "GFLOPs_512_tanpa_fuse": 47.920447488,
+  "params_fused": 20350994,
+  "GFLOPs_512_fused": 43.52114688,
+  "mAP50": 0.6549810740381852,
+  "mAP75": 0.4279451473972513,
+  "mAP50_95": 0.4045486425897081,
+  "precision": 0.7192602552488243,
+  "recall": 0.639842798424318,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8522226458793041,
+    "recall": 0.730040206777714,
+    "AP50": 0.7908877191899483,
+    "AP75": 0.4918749338889463,
+    "AP50_95": 0.4778141467908549
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.5862978646183445,
+    "recall": 0.549645390070922,
+    "AP50": 0.5190744288864221,
+    "AP75": 0.36401536090555636,
+    "AP50_95": 0.33128313838856127
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.4692477314975582,
+   "inference": 4.666815295095454,
+   "loss": 0.0004082354677825415,
+   "postprocess": 0.1475226873641505
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ]
+ },
+ "yolo26l|val": {
+  "model": "yolo26l",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 26179428,
+  "GFLOPs_512_tanpa_fuse": 59.746942976,
+  "params_fused": 24747282,
+  "GFLOPs_512_fused": 55.249600512,
+  "mAP50": 0.6533752140609864,
+  "mAP75": 0.4280318447369873,
+  "mAP50_95": 0.4084573749705281,
+  "precision": 0.7013627292447872,
+  "recall": 0.6493956614146374,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8381770078823995,
+    "recall": 0.752692032049133,
+    "AP50": 0.7948232253257032,
+    "AP75": 0.5073168791775863,
+    "AP50_95": 0.4886409800216259
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.5645484506071748,
+    "recall": 0.5460992907801419,
+    "AP50": 0.5119272027962697,
+    "AP75": 0.3487468102963883,
+    "AP50_95": 0.32827376991943014
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.46308067306375306,
+   "inference": 5.579795796392845,
+   "loss": 0.0003852110606532137,
+   "postprocess": 0.15572521037289075
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ]
+ },
+ "yolo26x|val": {
+  "model": "yolo26x",
+  "split": "val",
+  "n_images": 595,
+  "params_tanpa_fuse": 58813188,
+  "GFLOPs_512_tanpa_fuse": 133.676335104,
+  "params_fused": 55635858,
+  "GFLOPs_512_fused": 123.97805568,
+  "mAP50": 0.6680502912439619,
+  "mAP75": 0.4245891926819339,
+  "mAP50_95": 0.40745615174702665,
+  "precision": 0.7428831384241901,
+  "recall": 0.639052807160102,
+  "per_class": {
+   "kertas_plastik_puntungRokok": {
+    "images": 470,
+    "instances": 1741,
+    "precision": 0.8697067619549911,
+    "recall": 0.7284602242492823,
+    "AP50": 0.7976384317975019,
+    "AP75": 0.4912855737333976,
+    "AP50_95": 0.48162819128818884
+   },
+   "logam_kaleng_kaca": {
+    "images": 165,
+    "instances": 282,
+    "precision": 0.616059514893389,
+    "recall": 0.549645390070922,
+    "AP50": 0.5384621506904217,
+    "AP75": 0.3578928116304702,
+    "AP50_95": 0.3332841122058644
+   }
+  },
+  "speed_batch16": {
+   "preprocess": 0.4515386546547172,
+   "inference": 10.273131932045857,
+   "loss": 0.00043630153879898936,
+   "postprocess": 0.1539964725834732
+  },
+  "end2end_validator": true,
+  "end2end_model": true,
+  "nms_end2end_arg": true,
+  "bentuk_output_model": [
+   16,
+   300,
+   6
+  ]
+ }
+}

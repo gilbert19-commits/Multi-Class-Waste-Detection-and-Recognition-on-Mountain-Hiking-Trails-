@@ -1,0 +1,14 @@
+pengecekan,harapan,hasil,cocok,jenis
+P1 di standar (IoU 0.5),TP,TP,True,syarat
+P2 di standar (IoU 0.5),FP,FP,True,syarat
+P2 di class-agnostic (IoU 0.5),TP,TP,True,syarat
+P3 di class-agnostic (IoU 0.5),FP,FP,True,syarat
+NMS ulang mempertahankan ketiga prediksi,3,3,True,syarat
+mAP@50 standar (v1): script vs manual rumus terpasang,0.2475,0.2475,True,syarat
+mAP@50 pooled class-aware (v2): script vs manual rumus terpasang,0.335,0.335,True,syarat
+mAP@50 class-agnostic (v3): script vs manual rumus terpasang,0.665,0.665,True,syarat
+mAP@50 class-agnostic tanpa NMS (v4): script vs manual rumus terpasang,0.665,0.665,True,syarat
+Perkiraan permintaan standar 0.29 vs manual rumus lama,0.29,0.29,True,informasi
+Perkiraan permintaan class-agnostic 0.78 vs manual rumus lama,0.78,0.7772,True,informasi
+Perkiraan permintaan standar 0.29 vs script (rumus terpasang),0.29,0.2475,False,informasi
+Perkiraan permintaan class-agnostic 0.78 vs script (rumus terpasang),0.78,0.665,False,informasi

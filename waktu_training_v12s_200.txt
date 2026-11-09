@@ -1,0 +1,4 @@
+aug_waste_yolov12s_e200 | mulai   | 2026-10-30 03:04:19
+aug_waste_yolov12s_e200 | selesai | 2026-10-30 11:35:38 | durasi sesi ini 8.522 jam
+waste_yolov12s_e200 | mulai   | 2026-10-30 11:35:38
+waste_yolov12s_e200 | selesai | 2026-10-30 15:20:50 | durasi sesi ini 3.753 jam

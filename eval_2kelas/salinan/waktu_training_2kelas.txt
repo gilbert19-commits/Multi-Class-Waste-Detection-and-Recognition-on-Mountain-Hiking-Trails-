@@ -1,0 +1,68 @@
+yolov12s_2kelas | mulai   | 2026-10-30 23:09:08 | batch=-1
+yolov12s_2kelas | awal training (epoch 1) | args.batch=12 | batch dipakai=12 | imgsz efektif=512 | workers=4
+yolov12s_2kelas | epoch 1 selesai | 2026-10-30 23:11:04 | batch dipakai=12 | durasi epoch 78.3 s (termasuk validasi)
+yolov12s_2kelas | DIBATALKAN (epochs=100, berhenti di epoch 16) | 2026-10-30 23:29:22 | atas permintaan pengguna diganti 200 epoch; folder dipindah ke runs_2kelas/_dibatalkan_e100/
+yolov12s_2kelas | mulai   | 2026-10-30 23:29:46 | batch=-1
+yolov12s_2kelas | awal training (epoch 1) | args.batch=12 | batch dipakai=12 | imgsz efektif=512 | workers=4
+yolov12s_2kelas | epoch 1 selesai | 2026-10-30 23:31:39 | batch dipakai=12 | durasi epoch 79.6 s (termasuk validasi)
+yolov12s_2kelas | akhir training | batch dipakai=12 | epoch terakhir=200
+yolov12s_2kelas | selesai | 2026-10-31 03:12:29 | durasi sesi ini 3.712 jam
+yolov12n_2kelas | mulai   | 2026-10-31 03:12:29 | batch=-1
+yolov12n_2kelas | awal training (epoch 1) | args.batch=23 | batch dipakai=23 | imgsz efektif=512 | workers=4
+yolov12n_2kelas | epoch 1 selesai | 2026-10-31 03:13:45 | batch dipakai=23 | durasi epoch 46.1 s (termasuk validasi)
+yolov12n_2kelas | akhir training | batch dipakai=23 | epoch terakhir=200
+yolov12n_2kelas | selesai | 2026-10-31 05:23:05 | durasi sesi ini 2.177 jam
+yolov12m_2kelas | mulai   | 2026-10-31 05:23:05 | batch=-1
+yolov12m_2kelas | awal training (epoch 1) | args.batch=6 | batch dipakai=6 | imgsz efektif=512 | workers=4
+yolov12m_2kelas | epoch 1 selesai | 2026-10-31 05:26:08 | batch dipakai=6 | durasi epoch 152.9 s (termasuk validasi)
+yolov12m_2kelas | akhir training | batch dipakai=6 | epoch terakhir=200
+yolov12m_2kelas | selesai | 2026-10-31 12:47:35 | durasi sesi ini 7.408 jam
+yolov12l_2kelas | mulai   | 2026-10-31 12:47:35 | batch=-1
+yolov12l_2kelas | awal training (epoch 1) | args.batch=3 | batch dipakai=3 | imgsz efektif=512 | workers=4
+yolov12l_2kelas | epoch 1 selesai | 2026-10-31 12:54:35 | batch dipakai=3 | durasi epoch 388.0 s (termasuk validasi)
+yolov12l_2kelas | DIHENTIKAN SEMENTARA setelah epoch 46 | 2026-10-31 17:20:56 | permintaan pengguna: patience 100 -> 50 untuk model yang belum selesai (l, x, YOLOv8); s/n/m tetap patience 100
+yolov12l_2kelas | mulai   | 2026-10-31 17:21:01 | batch=-1
+yolov12l_2kelas | awal training (epoch 47) | args.batch=3 | batch dipakai=3 | imgsz efektif=512 | workers=4 | epochs=200 | patience=50 | EarlyStopping dipulihkan: best_epoch=46, best_fitness=0.28939
+yolov12l_2kelas | epoch 47 selesai | 2026-10-31 17:27:45 | batch dipakai=3 | durasi epoch 368.7 s (termasuk validasi)
+yolov12l_2kelas | akhir training | batch dipakai=3 | epoch terakhir=200
+yolov12l_2kelas | selesai | 2026-11-01 08:25:04 | durasi sesi ini 15.068 jam
+yolov12x_2kelas | mulai   | 2026-11-01 08:25:04 | batch=-1
+yolov12x_2kelas | awal training (epoch 1) | args.batch=2 | batch dipakai=2 | imgsz efektif=512 | workers=4 | epochs=200 | patience=50
+yolov12x_2kelas | epoch 1 selesai | 2026-11-01 08:35:56 | batch dipakai=2 | durasi epoch 614.1 s (termasuk validasi)
+PENUNGGU YOLOv8 | 2026-11-01 19:20:24 | PID penunggu 59420 menunggu PID 58456 (antrian YOLOv12) selesai
+yolov12x_2kelas | akhir training | batch dipakai=2 | epoch terakhir=200
+yolov12x_2kelas | selesai | 2026-11-02 13:52:41 | durasi sesi ini 29.460 jam
+PENUNGGU YOLOv8 | 2026-11-02 13:53:37 | PID 58456 selesai, mulai antrian YOLOv8
+yolov8s_2kelas | mulai   | 2026-11-02 13:53:39 | batch=16
+yolov8s_2kelas | awal training (epoch 1) | args.batch=16 | batch dipakai=16 | imgsz efektif=512 | workers=0 | epochs=200 | patience=50
+yolov8s_2kelas | epoch 1 selesai | 2026-11-02 13:55:13 | batch dipakai=16 | durasi epoch 88.4 s (termasuk validasi)
+yolov8s_2kelas | akhir training | batch dipakai=16 | epoch terakhir=200
+yolov8s_2kelas | selesai | 2026-11-02 18:30:40 | durasi sesi ini 4.617 jam
+yolov8n_2kelas | mulai   | 2026-11-02 18:30:40 | batch=16
+yolov8n_2kelas | awal training (epoch 1) | args.batch=16 | batch dipakai=16 | imgsz efektif=512 | workers=0 | epochs=200 | patience=50
+yolov8n_2kelas | epoch 1 selesai | 2026-11-02 18:32:01 | batch dipakai=16 | durasi epoch 79.9 s (termasuk validasi)
+yolov8n_2kelas | DIHENTIKAN SEMENTARA | 2026-11-02 19:55:30 | setelah epoch 67 tersimpan, untuk mengganti workers 0 -> 4 (permintaan pengguna: GPU util ~20%, menunggu data). yolov8s selesai dengan workers=0; yolov8n epoch 1-67 workers=0, epoch 68+ workers=4; m/l/x workers=4
+yolov8n_2kelas | mulai   | 2026-11-02 19:55:33 | batch=16
+yolov8n_2kelas | awal training (epoch 68) | args.batch=16 | batch dipakai=16 | imgsz efektif=512 | workers=4 | epochs=200 | patience=50 | EarlyStopping dipulihkan: best_epoch=63, best_fitness=0.30337
+yolov8n_2kelas | epoch 68 selesai | 2026-11-02 19:56:42 | batch dipakai=16 | durasi epoch 35.4 s (termasuk validasi)
+yolov8n_2kelas | DIHENTIKAN SEMENTARA | 2026-11-02 20:00:35 | setelah epoch 74 tersimpan, untuk mengganti batch yolov8m/l/x ke AutoBatch -1 (permintaan pengguna). yolov8n tetap batch 16 (resume dari checkpoint)
+yolov8n_2kelas | mulai   | 2026-11-02 20:00:37 | batch=-1
+yolov8n_2kelas | awal training (epoch 75) | args.batch=16 | batch dipakai=16 | imgsz efektif=512 | workers=4 | epochs=200 | patience=50 | EarlyStopping dipulihkan: best_epoch=73, best_fitness=0.31738
+yolov8n_2kelas | epoch 75 selesai | 2026-11-02 20:01:44 | batch dipakai=16 | durasi epoch 35.1 s (termasuk validasi)
+yolov8n_2kelas | akhir training | batch dipakai=16 | epoch terakhir=200
+yolov8n_2kelas | selesai | 2026-11-02 21:19:56 | durasi sesi ini 1.322 jam
+yolov8m_2kelas | mulai   | 2026-11-02 21:19:56 | batch=-1
+yolov8m_2kelas | awal training (epoch 1) | args.batch=11 | batch dipakai=11 | imgsz efektif=512 | workers=4 | epochs=200 | patience=50
+yolov8m_2kelas | epoch 1 selesai | 2026-11-02 21:21:58 | batch dipakai=11 | durasi epoch 91.9 s (termasuk validasi)
+yolov8m_2kelas | akhir training | batch dipakai=11 | epoch terakhir=171
+yolov8m_2kelas | selesai | 2026-11-03 01:08:18 | durasi sesi ini 3.806 jam
+yolov8l_2kelas | mulai   | 2026-11-03 01:08:18 | batch=-1
+yolov8l_2kelas | awal training (epoch 1) | args.batch=5 | batch dipakai=5 | imgsz efektif=512 | workers=4 | epochs=200 | patience=50
+yolov8l_2kelas | epoch 1 selesai | 2026-11-03 01:11:35 | batch dipakai=5 | durasi epoch 167.1 s (termasuk validasi)
+yolov8l_2kelas | akhir training | batch dipakai=5 | epoch terakhir=200
+yolov8l_2kelas | selesai | 2026-11-03 09:07:29 | durasi sesi ini 7.986 jam
+yolov8x_2kelas | mulai   | 2026-11-03 09:07:29 | batch=-1
+yolov8x_2kelas | awal training (epoch 1) | args.batch=3 | batch dipakai=3 | imgsz efektif=512 | workers=4 | epochs=200 | patience=50
+yolov8x_2kelas | epoch 1 selesai | 2026-11-03 09:12:38 | batch dipakai=3 | durasi epoch 279.7 s (termasuk validasi)
+yolov8x_2kelas | akhir training | batch dipakai=3 | epoch terakhir=200
+yolov8x_2kelas | selesai | 2026-11-03 22:06:19 | durasi sesi ini 12.981 jam

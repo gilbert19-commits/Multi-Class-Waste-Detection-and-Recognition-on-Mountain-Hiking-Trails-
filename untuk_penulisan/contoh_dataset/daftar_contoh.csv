@@ -1,0 +1,29 @@
+jenis,file_png,sumber,kelas,lebar,tinggi,n_objek,file_asal
+utuh,utuh/Burangrang_1.png,Burangrang,metal and glass,514,514,1,IMG_5342_JPG_jpg.rf.a3941a76d9f539aa281265ea3d2dcfe0.jpg
+utuh,utuh/Burangrang_2.png,Burangrang,lightweight litter,514,514,1,WhatsApp-Video-2026-04-20-at-13-01-17_frame_000224_jpg.rf.3781d40dc820cbf292125d53ed577fff.jpg
+utuh,utuh/Burangrang_3.png,Burangrang,lightweight litter,514,514,1,IMG_5222_JPG_jpg.rf.521b4cae3636d96a282db9958303148e.jpg
+utuh,utuh/Burangrang_4.png,Burangrang,lightweight litter,514,514,1,IMG_5243_JPG_jpg.rf.c7d79834dbb3cd6ec8db722182be70ab.jpg
+utuh,utuh/UAVVaste_1.png,UAVVaste,lightweight litter;metal and glass,514,514,8,batch_01_frame_9_jpg.rf.ca2c671d3529364ac50e1c30b90bdcd3.jpg
+utuh,utuh/UAVVaste_2.png,UAVVaste,lightweight litter;metal and glass,514,514,3,BATCH_d08_img_4150_jpg.rf.717cdd8ccd0d908f6e0a99d164146188.jpg
+utuh,utuh/UAVVaste_3.png,UAVVaste,lightweight litter,514,514,3,BATCH_s04_img_8360_jpg.rf.330521cb51563f480433c1ea6117ad4d.jpg
+utuh,utuh/UAVVaste_4.png,UAVVaste,lightweight litter,514,514,7,BATCH_d07_img_650_jpg.rf.fdd5769c543983303d9d816cd27d6e75.jpg
+utuh,utuh/TACO_1.png,TACO,metal and glass,514,514,1,000026_jpg.rf.2a2ba88350863e9b2efbcd0b369ac715.jpg
+utuh,utuh/TACO_2.png,TACO,metal and glass,514,514,1,000061_jpg.rf.d587c0c3b87960734bb1de61b665022a.jpg
+utuh,utuh/TACO_3.png,TACO,lightweight litter,514,514,1,000060_jpg.rf.467752cd4ab8492a534b9a262f7aed60.jpg
+utuh,utuh/TACO_4.png,TACO,lightweight litter,514,514,1,000025_jpg.rf.6e1882b38ea0e2513a4a0f2e37074b7e.jpg
+crop,crop/lightweight_litter_1_16x14.png,Burangrang,lightweight litter,16,14,1,IMG_5462_JPG_jpg.rf.d88857d3aed189ad478cca703372e870.jpg
+crop,crop/lightweight_litter_2_28x22.png,Burangrang,lightweight litter,28,22,1,IMG_5155_JPG_jpg.rf.ef1c23247620d0be62b1c4c209590cbb.jpg
+crop,crop/lightweight_litter_3_38x44.png,Burangrang,lightweight litter,38,44,1,IMG_5157_JPG_jpg.rf.35e67ba4a89a649d7b59ac09bf8c6c7d.jpg
+crop,crop/lightweight_litter_4_42x98.png,Burangrang,lightweight litter,42,98,1,IMG_5468_JPG_jpg.rf.105644c6e0432068ccad8f6bc8968743.jpg
+crop,crop/lightweight_litter_5_118x106.png,Burangrang,lightweight litter,118,106,1,IMG_5471_JPG_jpg.rf.af230c9e76ad42ca5b4270d0c0ab38f1.jpg
+crop,crop/lightweight_litter_6_153x177.png,TACO,lightweight litter,153,177,1,IMG_5044_JPG.rf.bcbf140b8f7fa50efc707d8518b0a86a.jpg
+crop,crop/lightweight_litter_7_254x332.png,TACO,lightweight litter,254,332,1,000026_jpg.rf.6eea6a959012f9027fd1f3064a5afc2d.jpg
+crop,crop/lightweight_litter_8_501x438.png,TACO,lightweight litter,501,438,1,IMG_5002_JPG.rf.bb089aef0cb7de897e74e37c423c3fc9.jpg
+crop,crop/metal_and_glass_1_19x15.png,UAVVaste,metal and glass,19,15,1,batch_02_img_3640_jpg.rf.1160d504c5ec8e1b400659c28f6db4f8.jpg
+crop,crop/metal_and_glass_2_36x19.png,UAVVaste,metal and glass,36,19,1,BATCH_s05_img_9400_jpg.rf.94f4bfe2e7563f1f5a76c4ce8d463351.jpg
+crop,crop/metal_and_glass_3_62x25.png,UAVVaste,metal and glass,62,25,1,BATCH_s04_img_7380_jpg.rf.154c336648b2e9daa4d550364a9e3a5a.jpg
+crop,crop/metal_and_glass_4_59x54.png,TACO,metal and glass,59,54,1,000111_JPG.rf.171eddcf1e2701f8408af4d49b298be6.jpg
+crop,crop/metal_and_glass_5_118x74.png,Burangrang,metal and glass,118,74,1,IMG_5342_JPG_jpg.rf.a3941a76d9f539aa281265ea3d2dcfe0.jpg
+crop,crop/metal_and_glass_6_209x105.png,TACO,metal and glass,209,105,1,000026_jpg.rf.2a2ba88350863e9b2efbcd0b369ac715.jpg
+crop,crop/metal_and_glass_7_212x176.png,TACO,metal and glass,212,176,1,000029_jpg.rf.44c97a6bd8bf37346810564659bc3d04.jpg
+crop,crop/metal_and_glass_8_265x352.png,TACO,metal and glass,265,352,1,IMG_4916_JPG.rf.a162963e8808b107d4edc4587eec92f6.jpg

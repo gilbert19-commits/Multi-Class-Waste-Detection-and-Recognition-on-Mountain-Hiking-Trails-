@@ -1,0 +1,11 @@
+model,kertas_plastik_puntungRokok->kertas_plastik_puntungRokok,kertas_plastik_puntungRokok->logam_kaleng_kaca,kertas_plastik_puntungRokok->latar,logam_kaleng_kaca->kertas_plastik_puntungRokok,logam_kaleng_kaca->logam_kaleng_kaca,logam_kaleng_kaca->latar,latar->kertas_plastik_puntungRokok,latar->logam_kaleng_kaca,latar->latar
+YOLOv12n,693,30,275,37,65,27,176,33,0
+YOLOv12s,716,33,249,39,68,22,146,27,0
+YOLOv12m,721,28,249,45,63,21,125,32,0
+YOLOv12l,705,22,271,38,68,23,128,23,0
+YOLOv12x,683,24,291,39,66,24,121,22,0
+YOLOv8n,674,34,290,36,65,28,206,26,0
+YOLOv8s,731,35,232,38,71,20,161,30,0
+YOLOv8m,700,45,253,38,71,20,171,37,0
+YOLOv8l,705,33,260,36,71,22,138,26,0
+YOLOv8x,674,37,287,40,68,21,137,26,0

@@ -1,0 +1,2 @@
+yolov8l.pt | run=v8l | batch=16 | batch=16 berjalan tanpa CUDA OOM
+yolov8x.pt | run=v8x | batch=16 | batch=16 berjalan tanpa CUDA OOM

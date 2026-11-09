@@ -1,0 +1,14 @@
+pola_nama,sumber_aturan_lama,sumber_aturan_usulan,train,valid,test,total,cocok_nama_TACO,cocok_nama_UAVVaste,tidak_cocok_keduanya,objek_lightweight_train,objek_metal_train,objek_lightweight_valid,objek_metal_valid,objek_lightweight_test,objek_metal_test,test_tumpang_tindih_daftar_hasil_2kelas
+WhatsApp-Video-#-#-#-at-#-#-#_frame_#,Burangrang,Burangrang,2052,68,200,2320,0,0,2320,124,0,6,0,13,0,0
+IMG_#_JPG,Burangrang,Burangrang,1116,29,100,1245,0,0,1245,2511,10,63,0,194,1,0
+batch_s#_img_#,UAVVaste,UAVVaste,948,101,54,1103,0,1103,0,3869,864,462,68,265,39,38
+#,TACO,TACO,963,84,33,1080,1080,0,0,1813,605,154,42,64,9,25
+BATCH_d#_img_#,UAVVaste,UAVVaste,891,86,55,1032,0,1032,0,2749,320,299,27,172,19,45
+batch_#_img_#,UAVVaste,UAVVaste,786,82,42,910,0,910,0,1786,343,203,52,106,22,29
+BATCH_s#_img_#,UAVVaste,UAVVaste,735,60,36,831,0,831,0,2489,730,251,46,128,20,27
+IMG_#,Burangrang,TACO,504,41,13,558,558,0,0,943,141,99,11,16,8,10
+batch_#_frame_#,UAVVaste,UAVVaste,189,19,8,216,0,216,0,582,123,83,14,26,6,5
+GOPR#,Burangrang,UAVVaste,183,20,6,209,0,209,0,431,30,49,6,15,5,5
+camera_img_#,Unknown,UAVVaste,18,1,3,22,0,22,0,6,15,0,2,3,0,2
+photo_#-#-#_#-#-#,Unknown,UAVVaste,18,2,0,20,0,20,0,175,6,31,3,0,0,0
+DJI_#,Unknown,UAVVaste,6,2,0,8,0,8,0,136,0,41,11,0,0,0

@@ -1,0 +1,16 @@
+train: train/images
+val: valid/images
+test: test/images
+nc: 4
+names:
+- kertas_tisu
+- logam_kaleng_kaca
+- plastik
+- puntung_rokok
+roboflow:
+  workspace: weapon-mpr3p
+  project: ta-rhzr5
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/weapon-mpr3p/ta-rhzr5/dataset/2
+path: D:/Goji/gilbert/Halomok/Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-/augmented

@@ -1,0 +1,197 @@
+{
+ "yolov8n": {
+  "model": "YOLOv8n",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.7514153980834568,
+  "mAP75": 0.3949699559202282,
+  "mAP50_95": 0.4109241431077126,
+  "n_prediksi": 12947
+ },
+ "yolov8s": {
+  "model": "YOLOv8s",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.7958969912285409,
+  "mAP75": 0.45587700507948764,
+  "mAP50_95": 0.4574625963168935,
+  "n_prediksi": 6675
+ },
+ "yolov8m": {
+  "model": "YOLOv8m",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.7809974510444255,
+  "mAP75": 0.4524828451594122,
+  "mAP50_95": 0.45008057777630367,
+  "n_prediksi": 6204
+ },
+ "yolov8l": {
+  "model": "YOLOv8l",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.7850858837599556,
+  "mAP75": 0.4477299090884292,
+  "mAP50_95": 0.4496741042608436,
+  "n_prediksi": 4394
+ },
+ "yolov8x": {
+  "model": "YOLOv8x",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.7701521519852355,
+  "mAP75": 0.45811283814969517,
+  "mAP50_95": 0.4429647909331879,
+  "n_prediksi": 4580
+ },
+ "yolov12n": {
+  "model": "YOLOv12n",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.756750131559879,
+  "mAP75": 0.42688666480523607,
+  "mAP50_95": 0.4280313290966927,
+  "n_prediksi": 9760
+ },
+ "yolov12s": {
+  "model": "YOLOv12s",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.793324998546888,
+  "mAP75": 0.45648020841627407,
+  "mAP50_95": 0.45871874776811605,
+  "n_prediksi": 5840
+ },
+ "yolov12m": {
+  "model": "YOLOv12m",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.7968107125600336,
+  "mAP75": 0.4864088974883897,
+  "mAP50_95": 0.46551653088233247,
+  "n_prediksi": 5243
+ },
+ "yolov12l": {
+  "model": "YOLOv12l",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.789375998702383,
+  "mAP75": 0.47662195875027424,
+  "mAP50_95": 0.4590548032015856,
+  "n_prediksi": 6164
+ },
+ "yolov12x": {
+  "model": "YOLOv12x",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": false,
+  "mAP50": 0.7829962926743965,
+  "mAP75": 0.4585313850091558,
+  "mAP50_95": 0.45540572327402806,
+  "n_prediksi": 5740
+ },
+ "yolo26n": {
+  "model": "YOLO26n",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": true,
+  "mAP50": 0.7695458772394435,
+  "mAP75": 0.43748100043290816,
+  "mAP50_95": 0.4433983336701557,
+  "n_prediksi": 9035
+ },
+ "yolo26s": {
+  "model": "YOLO26s",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": true,
+  "mAP50": 0.7851187065652583,
+  "mAP75": 0.4744308667892789,
+  "mAP50_95": 0.46089791520721207,
+  "n_prediksi": 6130
+ },
+ "yolo26m": {
+  "model": "YOLO26m",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": true,
+  "mAP50": 0.7946517971020266,
+  "mAP75": 0.46800771471914704,
+  "mAP50_95": 0.4634258070959807,
+  "n_prediksi": 6181
+ },
+ "yolo26l": {
+  "model": "YOLO26l",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": true,
+  "mAP50": 0.7860726529895927,
+  "mAP75": 0.494722627522066,
+  "mAP50_95": 0.4678266602780126,
+  "n_prediksi": 4888
+ },
+ "yolo26x": {
+  "model": "YOLO26x",
+  "n_gambar": 550,
+  "n_objek": 1131,
+  "kelas_gt": [
+   0
+  ],
+  "end2end": true,
+  "mAP50": 0.7788995576719318,
+  "mAP75": 0.4653415809239435,
+  "mAP50_95": 0.45867530074397944,
+  "n_prediksi": 5353
+ }
+}

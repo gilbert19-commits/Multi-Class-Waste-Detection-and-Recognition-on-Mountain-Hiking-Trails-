@@ -1,0 +1,7 @@
+pattern,test,train,valid,All
+BATCH_dXX_img,55,297,86,438
+BATCH_sXX_img,36,245,60,341
+batch_01_frame,8,63,19,90
+batch_XX_img,42,262,82,386
+batch_sXX_img,54,316,101,471
+All,195,1183,348,1726

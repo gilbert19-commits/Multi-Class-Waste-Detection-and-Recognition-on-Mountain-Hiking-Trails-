@@ -1,0 +1,21 @@
+test_set,kelas,metrik,v12,v8,delta,ci_lo,ci_hi,kesimpulan
+full,kertas_tisu,FN,146.0,155.0,-9.0,-25.0,5.0,setara
+full,kertas_tisu,FP,145.0,160.0,-15.0,-44.025,11.0,setara
+full,logam_kaleng_kaca,FN,65.0,63.0,2.0,-6.0,11.0,setara
+full,logam_kaleng_kaca,FP,57.0,79.0,-22.0,-41.0,-1.9750000000000227,YOLOv12 lebih baik
+full,plastik,FN,268.0,276.0,-8.0,-34.025,15.0,setara
+full,plastik,FP,370.0,349.0,21.0,-21.0,64.0,setara
+full,puntung_rokok,FN,1.0,0.0,1.0,0.0,3.0,setara
+full,puntung_rokok,FP,10.0,9.0,1.0,-7.0,8.0,setara
+full,TOTAL,FN,480.0,494.0,-14.0,-43.0,13.024999999999977,setara
+full,TOTAL,FP,582.0,597.0,-15.0,-72.0,41.02499999999998,setara
+full,mAP50,mAP50,0.5233493349822477,0.5535818306164302,-0.03023249563418251,-0.23938605589113346,0.17569420550377882,setara
+clean,kertas_tisu,FN,51.0,53.0,-2.0,-10.0,5.0,setara
+clean,kertas_tisu,FP,35.0,33.0,2.0,-13.0,16.0,setara
+clean,logam_kaleng_kaca,FN,23.0,18.0,5.0,-1.0,11.0,setara
+clean,logam_kaleng_kaca,FP,15.0,25.0,-10.0,-20.025,0.0,setara
+clean,plastik,FN,98.0,101.0,-3.0,-18.0,11.0,setara
+clean,plastik,FP,137.0,117.0,20.0,-5.0,46.0,setara
+clean,TOTAL,FN,172.0,172.0,0.0,-19.0,17.0,setara
+clean,TOTAL,FP,194.0,181.0,13.0,-22.025,47.0,setara
+clean,mAP50,mAP50,0.4693354337236079,0.4803693916528835,-0.011033957929275584,-0.06833105175081142,0.04523110188229537,setara

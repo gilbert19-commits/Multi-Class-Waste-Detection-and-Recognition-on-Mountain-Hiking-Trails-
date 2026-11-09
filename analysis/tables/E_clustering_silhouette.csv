@@ -1,0 +1,4 @@
+k,Silhouette (PCA 50D),Silhouette (Raw 512D),Cluster Distribution
+3,0.1469,0.1161,"{0: np.int64(180), 1: np.int64(211), 2: np.int64(139)}"
+4,0.1507,0.1161,"{0: np.int64(134), 1: np.int64(106), 2: np.int64(98), 3: np.int64(192)}"
+5,0.1553,0.1206,"{0: np.int64(73), 1: np.int64(106), 2: np.int64(99), 3: np.int64(200), 4: np.int64(52)}"

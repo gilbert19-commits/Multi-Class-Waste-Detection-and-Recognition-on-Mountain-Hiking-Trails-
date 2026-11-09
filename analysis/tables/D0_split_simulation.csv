@@ -1,0 +1,4 @@
+,citra,kertas_tisu,logam_kaleng_kaca,plastik,puntung_rokok,citra_%
+train,2763,1519,1063,4687,61,70.0
+valid,593,324,227,1023,14,15.0
+test,592,329,226,1040,14,15.0

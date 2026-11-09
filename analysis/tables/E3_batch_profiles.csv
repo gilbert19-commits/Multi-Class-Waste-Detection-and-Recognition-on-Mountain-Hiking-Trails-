@@ -1,0 +1,6 @@
+Pattern,N_Files,N_Instances,Median_Resolution,Mean_Obj_Per_Image,Median_BBox_Area,Pct_Small_BBox,Pct_kertas_tisu,Pct_logam,Pct_plastik,Pct_puntung
+BATCH_dXX_img,438,1652,640x640,3.77,0.1880,6.4%,33.9%,9.7%,56.4%,0.0%
+BATCH_sXX_img,341,1586,640x640,4.65,0.1872,4.2%,17.0%,20.1%,62.9%,0.0%
+batch_01_frame,90,387,640x640,4.30,0.2023,4.7%,16.0%,16.3%,67.7%,0.0%
+batch_XX_img,386,1144,640x640,2.96,0.1662,5.0%,23.4%,17.0%,59.6%,0.0%
+batch_sXX_img,471,2532,640x640,5.38,0.1685,4.4%,21.8%,16.3%,61.9%,0.0%

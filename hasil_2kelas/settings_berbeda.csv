@@ -1,0 +1,12 @@
+sumber,setting,nilai_dan_model
+args.yaml,batch,"-1: YOLOv8m,YOLOv8l,YOLOv8x,YOLOv12n,YOLOv12s,YOLOv12m,YOLOv12x,YOLO26n,YOLO26s,YOLO26m,YOLO26l,YOLO26x | 16: YOLOv8n,YOLOv8s | 3: YOLOv12l"
+args.yaml,patience,"100: YOLOv12n,YOLOv12s,YOLOv12m | 50: YOLOv8n,YOLOv8s,YOLOv8m,YOLOv8l,YOLOv8x,YOLOv12l,YOLOv12x,YOLO26n,YOLO26s,YOLO26m,YOLO26l,YOLO26x"
+args.yaml,resume,"D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\runs_2kelas\yolov12l_2kelas\weights\last.pt: YOLOv12l | D:\Goji\gilbert\Halomok\Multi-Class-Waste-Detection-and-Recognition-on-Mountain-Hiking-Trails-\runs_2kelas\yolov8n_2kelas\weights\last.pt: YOLOv8n | False: YOLOv8s,YOLOv8m,YOLOv8l,YOLOv8x,YOLOv12n,YOLOv12s,YOLOv12m,YOLOv12x,YOLO26n,YOLO26s,YOLO26m,YOLO26l,YOLO26x"
+args.yaml,warmup_bias_lr,"0.0: YOLOv8n,YOLOv12l | 0.1: YOLOv8s,YOLOv8m,YOLOv8l,YOLOv8x,YOLOv12n,YOLOv12s,YOLOv12m,YOLOv12x,YOLO26n,YOLO26s,YOLO26m,YOLO26l,YOLO26x"
+args.yaml,workers,"0: YOLOv8s | 4: YOLOv8n,YOLOv8m,YOLOv8l,YOLOv8x,YOLOv12n,YOLOv12s,YOLOv12m,YOLOv12l,YOLOv12x,YOLO26n,YOLO26s,YOLO26m,YOLO26l,YOLO26x"
+log/best.pt,batch,"11: YOLOv8m | 12: YOLOv12s | 14: YOLO26s | 16: YOLOv8n,YOLOv8s | 2: YOLOv12x,YOLO26x | 23: YOLOv12n | 27: YOLO26n | 3: YOLOv8x,YOLOv12l | 4: YOLO26l | 5: YOLOv8l | 6: YOLOv12m | 7: YOLO26m"
+log/best.pt,akumulasi_gradien,"11: YOLOv12m | 13: YOLOv8l | 16: YOLO26l | 2: YOLO26n | 21: YOLOv8x,YOLOv12l | 3: YOLOv12n | 32: YOLOv12x,YOLO26x | 4: YOLOv8n,YOLOv8s | 5: YOLOv12s,YOLO26s | 6: YOLOv8m | 9: YOLO26m"
+log/best.pt,weight_decay_efektif,"0.000421875: YOLO26n | 0.00046875: YOLOv12s | 0.0004921875: YOLOv8x,YOLOv12l,YOLO26m | 0.0005: YOLOv8n,YOLOv8s,YOLOv12x,YOLO26l,YOLO26x | 0.0005078125: YOLOv8l | 0.000515625: YOLOv8m,YOLOv12m | 0.0005390625: YOLOv12n | 0.000546875: YOLO26s"
+log/best.pt,patience_per_sesi,"e1:50: YOLOv8s,YOLOv8m,YOLOv8l,YOLOv8x,YOLOv12x,YOLO26n,YOLO26s,YOLO26m,YOLO26l,YOLO26x | e1:50;e68:50;e75:50: YOLOv8n | e1:TIDAK TERCATAT: YOLOv12n,YOLOv12s,YOLOv12m | e1:TIDAK TERCATAT;e47:50: YOLOv12l"
+log/best.pt,workers_per_sesi,"e1:0: YOLOv8s | e1:0;e68:4;e75:4: YOLOv8n | e1:4: YOLOv8m,YOLOv8l,YOLOv8x,YOLOv12n,YOLOv12s,YOLOv12m,YOLOv12x,YOLO26n,YOLO26s,YOLO26m,YOLO26l,YOLO26x | e1:4;e47:4: YOLOv12l"
+log/best.pt,transfer_pretrained,"1080/1092: YOLO26l,YOLO26x | 1239/1245: YOLOv12x | 1239/1245;1245/1245: YOLOv12l | 319/355;355/355: YOLOv8n | 349/355: YOLOv8s | 469/475: YOLOv8m | 589/595: YOLOv8l,YOLOv8x | 606/708: YOLO26n | 640/691: YOLOv12n | 685/691: YOLOv12s | 696/708: YOLO26s | 745/751: YOLOv12m | 756/768: YOLO26m"

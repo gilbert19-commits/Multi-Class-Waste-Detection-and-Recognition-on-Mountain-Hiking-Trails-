@@ -1,0 +1,6 @@
+Kategori Citra,Jumlah Citra Test,% Citra Test,Jumlah Instans Objek,% Instans Objek
+Near-Duplicate (SSIM > 0.90),0,0.00%,0,0.00%
+Sangat Mirip (0.70 <= SSIM < 0.90),1,0.18%,1,0.09%
+TOTAL TERPAPAR LEAKAGE (SSIM >= 0.70),1,0.18%,1,0.09%
+Bersih / Cukup Berbeda (SSIM < 0.70 atau Non-Burangrang),549,99.82%,1130,99.91%
+TOTAL TEST SET,550,100.00%,1131,100.00%

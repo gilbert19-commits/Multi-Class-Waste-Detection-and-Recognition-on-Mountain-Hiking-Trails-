@@ -1,0 +1,3 @@
+Dataset,Train & Test,Train & Valid,Valid & Test
+TA-1 (Baseline),185,342,77
+augmented (Augmented),185,342,77

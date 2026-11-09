@@ -1,0 +1,5 @@
+Sumber Dataset,Jumlah File di TA-1 (Raw),Jumlah Citra Unik (Piksel),Rasio Duplikasi,Target Proposal,Selisih (Unik - Proposal)
+UAVVaste,1726,1724,1.00x,772,952
+TACO,438,438,1.00x,306,132
+Mandiri (Burangrang),1762,1761,1.00x,749,1012
+Lainnya / Unclassified,22,22,1.00x,0,22

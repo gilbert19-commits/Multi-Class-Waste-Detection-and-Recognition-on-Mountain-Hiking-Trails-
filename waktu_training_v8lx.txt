@@ -1,0 +1,4 @@
+v8l | mulai   | 2026-10-28 13:05:14 | batch=16
+v8l | selesai | 2026-10-28 19:22:27 | durasi sesi ini 6.287 jam
+v8x | mulai   | 2026-10-28 19:22:27 | batch=16
+v8x | selesai | 2026-10-29 23:19:14 | durasi sesi ini 27.946 jam

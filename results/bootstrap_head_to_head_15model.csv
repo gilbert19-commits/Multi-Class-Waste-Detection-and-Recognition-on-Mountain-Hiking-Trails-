@@ -1,0 +1,47 @@
+pasangan,test_set,kelas,metrik,v12,v8,delta,ci_lo,ci_hi,kesimpulan
+YOLOv12l aug vs YOLOv8l aug,full,kertas_tisu,FN,161.0,145.0,16.0,5.0,28.024999999999977,YOLOv12 lebih buruk
+YOLOv12l aug vs YOLOv8l aug,full,kertas_tisu,FP,177.0,169.0,8.0,-17.0,33.02499999999998,setara
+YOLOv12l aug vs YOLOv8l aug,full,logam_kaleng_kaca,FN,67.0,65.0,2.0,-6.024999999999999,11.0,setara
+YOLOv12l aug vs YOLOv8l aug,full,logam_kaleng_kaca,FP,60.0,90.0,-30.0,-50.0,-11.0,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,full,plastik,FN,300.0,325.0,-25.0,-51.025,-1.0,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,full,plastik,FP,306.0,356.0,-50.0,-83.0,-15.0,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,full,puntung_rokok,FN,0.0,0.0,0.0,0.0,0.0,setara
+YOLOv12l aug vs YOLOv8l aug,full,puntung_rokok,FP,3.0,8.0,-5.0,-12.0,2.0,setara
+YOLOv12l aug vs YOLOv8l aug,full,TOTAL,FN,528.0,535.0,-7.0,-35.0,22.024999999999977,setara
+YOLOv12l aug vs YOLOv8l aug,full,TOTAL,FP,546.0,623.0,-77.0,-125.0,-26.950000000000045,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,full,mAP50_3kelas (3 kelas),mAP50,0.5092589006812243,0.4812278412519755,0.028031059429248772,0.00028363046796266644,0.05448282545457599,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,full,mAP50_semua_kelas_ber_GT (4 kelas),mAP50,0.6306941755109182,0.6096708809389816,0.021023294571936635,0.00021272285097201406,0.0452488949826869,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,clean,kertas_tisu,FN,55.0,48.0,7.0,0.0,14.0,setara
+YOLOv12l aug vs YOLOv8l aug,clean,kertas_tisu,FP,42.0,46.0,-4.0,-17.025,9.0,setara
+YOLOv12l aug vs YOLOv8l aug,clean,logam_kaleng_kaca,FN,21.0,20.0,1.0,-2.0249999999999986,4.0,setara
+YOLOv12l aug vs YOLOv8l aug,clean,logam_kaleng_kaca,FP,19.0,25.0,-6.0,-17.0,4.024999999999977,setara
+YOLOv12l aug vs YOLOv8l aug,clean,plastik,FN,106.0,124.0,-18.0,-34.0,-2.0,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,clean,plastik,FP,108.0,131.0,-23.0,-47.025,1.0,setara
+YOLOv12l aug vs YOLOv8l aug,clean,puntung_rokok,FP,0.0,5.0,-5.0,-10.0,-1.0,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,clean,TOTAL,FN,182.0,192.0,-10.0,-29.0,8.0,setara
+YOLOv12l aug vs YOLOv8l aug,clean,TOTAL,FP,169.0,207.0,-38.0,-73.0,-3.0,YOLOv12 lebih baik
+YOLOv12l aug vs YOLOv8l aug,clean,mAP50_3kelas (3 kelas),mAP50,0.418242555040083,0.4044157747809698,0.013826780259113214,-0.03679441849892797,0.05391705123516471,setara
+YOLOv12l aug vs YOLOv8l aug,clean,mAP50_semua_kelas_ber_GT (3 kelas),mAP50,0.418242555040083,0.4044157747809698,0.013826780259113214,-0.03679441849892797,0.05391705123516471,setara
+YOLOv12x aug vs YOLOv8x aug,full,kertas_tisu,FN,164.0,159.0,5.0,-9.024999999999999,20.0,setara
+YOLOv12x aug vs YOLOv8x aug,full,kertas_tisu,FP,192.0,141.0,51.0,26.0,79.0,YOLOv12 lebih buruk
+YOLOv12x aug vs YOLOv8x aug,full,logam_kaleng_kaca,FN,75.0,59.0,16.0,6.0,27.0,YOLOv12 lebih buruk
+YOLOv12x aug vs YOLOv8x aug,full,logam_kaleng_kaca,FP,61.0,66.0,-5.0,-25.0,16.0,setara
+YOLOv12x aug vs YOLOv8x aug,full,plastik,FN,374.0,292.0,82.0,53.0,112.0,YOLOv12 lebih buruk
+YOLOv12x aug vs YOLOv8x aug,full,plastik,FP,317.0,296.0,21.0,-18.025,63.049999999999955,setara
+YOLOv12x aug vs YOLOv8x aug,full,puntung_rokok,FN,0.0,0.0,0.0,0.0,0.0,setara
+YOLOv12x aug vs YOLOv8x aug,full,puntung_rokok,FP,1.0,7.0,-6.0,-12.0,-1.0,YOLOv12 lebih baik
+YOLOv12x aug vs YOLOv8x aug,full,TOTAL,FN,613.0,510.0,103.0,68.0,140.0,YOLOv12 lebih buruk
+YOLOv12x aug vs YOLOv8x aug,full,TOTAL,FP,571.0,510.0,61.0,2.9750000000000014,125.02499999999998,YOLOv12 lebih buruk
+YOLOv12x aug vs YOLOv8x aug,full,mAP50_3kelas (3 kelas),mAP50,0.4866334851876979,0.5077783193878399,-0.021144834200142015,-0.055959791697786254,0.011998081972015526,setara
+YOLOv12x aug vs YOLOv8x aug,full,mAP50_semua_kelas_ber_GT (4 kelas),mAP50,0.6137251138907734,0.6295837395408799,-0.015858625650106428,-0.04403508938478738,0.009632099417023612,setara
+YOLOv12x aug vs YOLOv8x aug,clean,kertas_tisu,FN,57.0,56.0,1.0,-4.0,6.0,setara
+YOLOv12x aug vs YOLOv8x aug,clean,kertas_tisu,FP,44.0,31.0,13.0,0.0,28.0,setara
+YOLOv12x aug vs YOLOv8x aug,clean,logam_kaleng_kaca,FN,22.0,20.0,2.0,-2.0,6.0,setara
+YOLOv12x aug vs YOLOv8x aug,clean,logam_kaleng_kaca,FP,14.0,15.0,-1.0,-8.0,6.024999999999977,setara
+YOLOv12x aug vs YOLOv8x aug,clean,plastik,FN,139.0,104.0,35.0,17.0,53.0,YOLOv12 lebih buruk
+YOLOv12x aug vs YOLOv8x aug,clean,plastik,FP,105.0,104.0,1.0,-24.0,26.024999999999977,setara
+YOLOv12x aug vs YOLOv8x aug,clean,puntung_rokok,FP,0.0,4.0,-4.0,-9.0,0.0,setara
+YOLOv12x aug vs YOLOv8x aug,clean,TOTAL,FN,218.0,180.0,38.0,18.0,60.0,YOLOv12 lebih buruk
+YOLOv12x aug vs YOLOv8x aug,clean,TOTAL,FP,163.0,154.0,9.0,-23.0,43.0,setara
+YOLOv12x aug vs YOLOv8x aug,clean,mAP50_3kelas (3 kelas),mAP50,0.4025915799873275,0.4624464203708438,-0.05985484038351635,-0.12667222083540633,0.007510195314320132,setara
+YOLOv12x aug vs YOLOv8x aug,clean,mAP50_semua_kelas_ber_GT (3 kelas),mAP50,0.4025915799873275,0.4624464203708438,-0.05985484038351635,-0.12667222083540633,0.007510195314320132,setara
